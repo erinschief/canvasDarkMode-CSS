@@ -1,0 +1,1062 @@
+@-moz-document regexp("https://canvas\\..*\\.edu.*") {
+:root {
+    --color_01: #8B1F41; /*main accent*/
+    --color_02: #E87722; /*secondary accent*/
+    --color_03: rgb(44, 44, 44); /*main bg*/
+    --color_04: rgb(55, 55, 55); /*secondary bg*/
+    --color_05: rgb(66, 66, 66); /*tertiary bg*/
+    --color_06: rgb(77, 77, 77); /*quaternary bg*/
+    --color_07: none;
+    --color_08: none;
+    --color_09: none;
+    --color_10: rgb(255, 255, 255); /*pure white*/
+    --color_11: rgb(215, 215, 215); /*secondary white*/
+    --color_12: rgb(200, 200, 200); /*tertiary white*/
+    --color_13: none;
+    --color_14: #000000; /*black*/
+    --color_15: #FFFFFF; /*white*/
+    
+	--ic-brand-primary: var(--color_01);
+	--ic-brand-font-color-dark: var(--color_10);
+    --ic-brand-font-color-dark-lightened-30: var(--color_10);
+	--fCrpb-color: var(--color_10);
+	--fNHEA-labelColor: var(--color_10);
+	--dLdjY-arrowColor: var(--color_10);
+	--MlJlv-textColor: var(--color_10);
+	--cvphu-background: var(--color_04);
+	--cvphu-color: var(--color_10); 
+	--yyQPt-hoverBorderColor: var(--color_10)
+}
+
+a:focus, a:hover { /*link hover color*/
+	color: var(--color_01);
+	filter: brightness(1.25);
+}
+.ic-Table.ic-Table--hover-row tbody tr:hover, .ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-neutral:hover, .ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-success:hover, .ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-alert:hover, .ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-danger:hover { /*this is the table hover!*/
+    background-color: var(--color_04) !important;
+}
+
+a { /*link underline*/
+    color: var(--color_10);
+}
+p{
+    font-size: 17px;
+}
+body {
+    min-height: 100vh;
+    background: var(--color_03) !important;
+    color: var(--color_10) !important;
+}
+h1 {
+	color: var(--color_10) !important;
+	font-weight: bold !important;
+}
+
+.Underline-All-Links__enabled a:not(.Button):not(.ui-button):not(.btn):not(.ui-button):not(.ui-tabs-anchor):focus, .Underline-All-Links__enabled a:not(.Button):not(.ui-button):not(.btn):not(.ui-button):not(.ui-tabs-anchor):hover {
+	color: var(--color_01);
+	text-decoration: none;
+}
+
+/*Nav bar*/
+.ic-app-header {
+	background-color: var(--color_01);
+}
+.ic-app-header__menu-list-link .ic-icon-svg {
+	fill: var(--color_10);
+}
+
+/*Header*/
+.ic-Dashboard-header, body.dashboard-is-planner .ic-Dashboard-header  {
+	position: relative;
+}
+.ic-Dashboard-header__layout {
+    background: var(--color_03);
+	border-bottom-color: var(--color_10);
+}
+
+/*right sidebar*/
+#right-side-wrapper {
+	display: none;
+	background: none;
+	padding-top: 12px;
+}
+.ic-sidebar-logo__image {
+	display: none;
+}
+#right-side h2, #right-side .h2 {
+	font-size: 1.2rem;
+	border-bottom-color: var(--color_10);
+	font-weight: bold;
+}
+.btn, .Button, .ui-button {
+    background: none;
+    color: var(--color_10);
+	padding: 0px;
+	border: none;
+}
+
+/*Dashboard*/
+.ic-DashboardCard {
+	background: var(--color_04);
+}
+.ic-DashboardCard__header_content {
+	background: var(--color_04);
+}
+.ic-DashboardCard__header-button {
+	border: none !important;
+}
+
+html body.with-right-side.Underline-All-Links__enabled.primary-nav-expanded.context-user_120560.responsive_admin_settings.responsive_awareness.responsive_misc.webkit.safari.ff.no-touch div#application.ic-app div#wrapper.ic-Layout-wrapper div#main.ic-Layout-columns div#not_right_side.ic-app-main-content div#content-wrapper.ic-Layout-contentWrapper div#content.ic-Layout-contentMain div#dashboard.ic-dashboard-app div#DashboardCard_Container div.ic-DashboardCard__box div.ic-DashboardCard div.ic-DashboardCard__header div span button.Button.Button--icon-action-rev.ic-DashboardCard__header-button:hover {
+	background: none;
+	color: var(--color_10);
+}
+
+html body.with-right-side.Underline-All-Links__enabled.primary-nav-expanded.context-user_120560.responsive_admin_settings.responsive_awareness.responsive_misc.webkit.safari.ff.no-touch div#application.ic-app div#wrapper.ic-Layout-wrapper div#main.ic-Layout-columns div#not_right_side.ic-app-main-content div#content-wrapper.ic-Layout-contentWrapper div#content.ic-Layout-contentMain div#dashboard.ic-dashboard-app div#DashboardCard_Container div.ic-DashboardCard__box div.ic-DashboardCard div.ic-DashboardCard__header a.ic-DashboardCard__link div.ic-DashboardCard__header_content h3.ic-DashboardCard__header-title.ellipsis span {
+	color: var(--color_10) !important;
+}
+.cAqHo_eAjd {
+	background: var(--color_03);
+}
+.eoNrR_blJt {
+	background: var(--color_03);
+	color: var(--color_10);
+}
+.sJGfW_bGBk {
+	background: var(--color_03);
+}
+.sJGfW_blJt {
+	color: var(--color_10);
+}
+
+/*List View*/
+.eHiXd_eYmo, a.eHiXd_eYmo, button.eHiXd_eYmo, button.eHiXd_eYmo[type="button"], button.eHiXd_eYmo[type="reset"], button.eHiXd_eYmo[type="submit"] {
+	background: none;
+	border-color: var(--color_10);
+	color: var(--color_10);
+}
+.PlannerHeader-styles__root {
+	background: none;
+}
+/*add sidebar*/
+.UpdateItemTray-styles__root {
+	background: var(--color_04);
+}
+.dyUpz_bGBk {
+	background: var(--color_04);
+	color: var(--color_10);
+}
+.dyUpz_bPWd {
+	background: none;
+	color: var(--color_10);
+}
+.dyUpz_bPWd.dyUpz_fGhm {
+	background-color: var(--color_01);
+	border-radius: var(--dfDow-borderRadius);
+	color: var(--dfDow-selectedColor);
+}
+.bgKsu_blJt {
+	color: var(--color_10);
+}
+.bgKsu_dtDb {
+	background: none;
+}
+.bNerA_bGBk.bNerA_DpxJ.bNerA_eFno, .bNerA_bGBk.bNerA_cKZZ, .bNerA_dTOw {
+	margin-bottom: 0px;
+}
+.eJkkQ_diPG, .eJkkQ_fEMB, .eJkkQ_eOlt, .eJkkQ_fvoZ, .eJkkQ_bIuM, .eJkkQ_fyZW, .eJkkQ_cuyj, .eJkkQ_gaix {
+	background: var(--color_04);
+}
+.fOyUs_bGBk, .fOyUs_desw, .fOyUs_cBHs, .fOyUs_eWbJ, .fOyUs_eeJl, .fOyUs_cBtr, .fOyUs_fuTR, .XBLto_bXVH {
+	background: none;
+	color: var(--color_10);
+}
+
+.Day-styles__root {
+	color: var(--color_10);
+	background: none;
+}
+.EmptyDays-styles__root {
+	background: none;
+}
+.Grouping-styles__title {
+	background: none;
+}
+.Grouping-styles__title::after {
+	background: none;
+}
+.MlJlv_btWg {
+	color: var(--color_10);
+}
+
+/*Recent activity*/
+.recent-activity-header {
+	border-bottom: 1px solid var(--color_10);
+}
+.recent_activity > li {
+	border-bottom: 1px solid var(--color_10);
+}
+.recent_activity .image-block-image i::before {
+	color: var(--color_10);
+	font-size: 28px;
+}
+.stream_header:hover {
+	background: var(--color_04);
+}
+.stream-details tr:hover {
+	background: var(--color_04);
+}
+
+/*notif*/
+.ic-notification__content {
+	background: var(--color_03);
+}
+
+/*Dashboard color picker*/
+.DashboardCardMenu__ColorPicker {
+	background: var(--color_03);
+}
+.fOyUs_fZwI, .fOyUs_kXoP {
+	background: var(--color_03);
+}
+.bdYPe_eLeB[aria-selected] {
+	background: var(--color_04);
+	color: var(--color_10);
+	font-weight: bold;
+}
+.bdYPe_eLeB {
+	border: 1px solid var(--color_10);
+	color: var(--color_10);
+}
+
+/*Footer*/
+.ic-app-footer__links a {
+    color: var(--color_10);
+}
+
+/*Course page*/
+#breadcrumbs {
+	background: none;
+}
+.ic-app-nav-toggle-and-crumbs {
+	border-bottom: 1px solid var(--color_10);
+}
+
+.list-view a.active {
+	border-left: 2px solid var(--color_01);
+	color: var(--color_10);
+}
+.pages.show .course-title {
+	color: var(--color_10);
+}
+#syllabus tr.date.related td, #syllabus tr.date.related th, #syllabus tr.date.selected td, #syllabus tr.date.selected th { /*course summary*/
+	background: var(--color_04);
+}
+#right-side .right-side-list li em, #right-side .right-side-list li p {
+	color: var(--color_11);
+}
+#right-side .events_list .event-details::after, #right-side .events_list .todo-details::after, #right-side .to-do-list .event-details::after, #right-side .to-do-list .todo-details::after { /*recent feedback*/
+	background: none
+}
+
+/*Mdule container*/
+.header-bar { /*removes header*/
+	border: none;
+	background: none;
+    min-height: 0px;
+    padding-bottom: 0px;
+}
+.item-group-container {
+	background: none;
+}
+.item-group-condensed .ig-header {
+	margin-top: 15px;
+	background-color: var(--color_04);
+	color: var(--color_10);
+}
+.ig-header .name {
+	color: var(--color_10);
+    text-shadow: none;
+}
+.item-group-condensed .ig-row {
+	background: var(--color_05);
+	color: var(--color_10);
+}
+.ig-list .ig-row a.ig-title {
+	color: var(--color-15);
+}
+.ig-list .ig-row:hover { /*hover highlight*/
+    background-color: var(--color_03);
+}
+
+/*Announcements*/
+select { /*filter dropdown*/
+	background-color: var(--color_04);
+}
+.cWmNi_bGBk {
+	background: none;
+}
+.bwOAM_cwos, input[type].bwOAM_cwos { /*search bar*/
+	color: var(--color_10);
+	background: var(--color_03);
+}
+.esvoZ_bGBk {
+	fill: var(--color_10);
+}
+.eHiXd_brAJ:active, .eHiXd_brAJ:focus, .eHiXd_brAJ:hover, a.eHiXd_brAJ:active, a.eHiXd_brAJ:focus, a.eHiXd_brAJ:hover, button.eHiXd_brAJ:active, button.eHiXd_brAJ:focus, button.eHiXd_brAJ:hover, button.eHiXd_brAJ[type="button"]:active, button.eHiXd_brAJ[type="button"]:focus, button.eHiXd_brAJ[type="button"]:hover, button.eHiXd_brAJ[type="reset"]:active, button.eHiXd_brAJ[type="reset"]:focus, button.eHiXd_brAJ[type="reset"]:hover, button.eHiXd_brAJ[type="submit"]:active, button.eHiXd_brAJ[type="submit"]:focus, button.eHiXd_brAJ[type="submit"]:hover { /*external feeds*/
+	color: var(--color_01);
+}
+.bbhNB_bGBk { /*Avi*/
+	background-size: cover;
+	background-color: var(--color_04);
+	border-color: var(--color_04);
+}
+.ic-item-row__content-col p, .ic-item-row__content-col h4, .ic-item-row__content-col .ic-announcement-row__content { /*announcement subtext*/
+	color: var(--color_11);
+}
+
+/*Syllabus*/
+.ic-Table {
+	background: none;
+}
+#syllabus tr.date.date_passed td, #syllabus tr.date.date_passed th {
+	background-color: transparent;
+}
+table.summary td, table.summary tbody th {
+	border-bottom: none;
+	background-color: transparent;
+}
+
+/*Pages page*/
+.header-row a.sort-field-active i {
+	color: var(--color_10);
+}
+.header-row a.sort-field i {
+	color: var(--color_10);
+}
+.ic-Table th {
+	border-bottom-color: var(--color_10);
+}
+.ic-Table.ic-Table--striped tbody tr:nth-child(2n+1) {
+	background: var(--color_03);
+}
+
+/*Pages sub page*/
+
+/*Mini cal*/
+.mini-cal-header {
+	color: var(--color_10);
+}
+.mini_calendar .day.other_month {
+	color: var(--color_10);
+	font-weight: lighter;
+}
+.mini_calendar .day {
+	color: var(--color_10);
+	font-weight: bold;
+}
+.mini_calendar .day.today {
+	background-color: var(--color_01);
+}
+.mini_calendar .day:hover, .mini_calendar .day.related, .mini_calendar .day.drop_target {
+	background: var(--color_06);
+	opacity: .7;
+}
+.mini_calendar .day.has_event {
+	background: var(--color_04);
+}
+
+/*Grades*/
+.eHiXd_bXiG, a.eHiXd_bXiG, button.eHiXd_bXiG, button.eHiXd_bXiG[type="button"], button.eHiXd_bXiG[type="reset"], button.eHiXd_bXiG[type="submit"] {
+	background: var(--color_01);
+	border-color: transparent;
+	color: var(--color_10);
+}
+.dLdjY_bGBk .dLdjY_bDLZ {
+	background: none;
+	color: var(--color_10);
+}
+#grades_summary th.title {
+	border-bottom-color: var(--color_10);
+}
+.ic-Table td {
+	border-bottom-color: var(--color_10);
+}
+#grades_summary .tooltip .grade:hover .tooltip_wrap, #grades_summary .tooltip .grade:hover .tooltip_text, #grades_summary .tooltip .grade:focus .tooltip_wrap, #grades_summary .tooltip .grade:focus .tooltip_text {
+	visibility: hidden;
+}
+#grades_summary .tooltip:active .tooltip_wrap, #grades_summary .tooltip:active .tooltip_text {
+	visibility: hidden;
+}
+.standalone-icon::before {
+	color: var(--color_10);
+}
+#grades_summary td.details a:hover, #grades_summary td.details a:focus {
+	color: var(--color_10);
+}
+
+/*Rubric*/
+.react-rubric th.rubric-title {
+	background-color: var(--color_04);
+	color: var(--color_10);
+}
+.react-rubric thead {
+	background-color: var(--color_04);
+	color: var(--color_10);
+}
+.ic-Table tbody th {
+	border-bottom-color: var(--color_10);
+}
+.eQCNs_bGBk {
+	background-color: var(--color_04);
+	color: var(--color_10);
+}
+
+/*People*/
+.btn:active, .Button:active, .ui-button:active {
+	background: var(--color_10);
+}
+.al-options {
+	background-color: var(--color_04);
+	box-shadow: none;
+	border-style: solid;
+	border-color: var(--color_10);
+	text-align: left;
+}
+.ui-widget-content { /*header*/
+	border: 1px solid;
+	color: var(--color_10);
+}
+.ui-tabs {
+	background: none !important;
+}
+.ui-tabs .ui-tabs-nav {
+	border: none;
+}
+.ui-tabs .ui-tabs-nav li {
+	border: 1px solid;
+	background: none;
+	border-color: var(--color_10);
+}
+.ui-tabs .ui-tabs-nav li a {
+	color: var(--color_10);
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active, .ui-tabs .ui-tabs-nav li.ui-tabs-active.ui-state-hover, .ui-tabs .ui-tabs-nav li.ui-tabs-active:hover {
+	border-color: var(--color_10);
+	background: none;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a {
+	border: none;
+	background: var(--color_04);
+	color: var(--color_10);
+	font-weight: bold;
+}
+.ui-tabs .ui-tabs-nav li.ui-state-hover a, .ui-tabs .ui-tabs-nav li:hover a {
+	background: var(--color_04);
+	color: var(--color_01);
+}
+.ui-tabs .ui-tabs-panel { /*main cell*/
+	background: var(--color_03);
+}
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input { /*search*/
+	background: none;
+	border: 1px solid var(--color_10);
+	box-shadow: none;
+	color: var(--color_10);
+	transition: none;
+}
+select {
+	width: 220px;
+	border: 1px solid var(--color_10);
+	background: none;
+}
+.form-dialog {
+	padding-bottom: 0px !important;
+}
+.avatar {
+	border: 2px solid var(--color_05);
+	background-color: var(--color_05);
+}
+
+/*Assignments*/
+select.ic-Input, textarea.ic-Input, input[type="text"].ic-Input, input[type="password"].ic-Input, input[type="datetime"].ic-Input, input[type="datetime-local"].ic-Input, input[type="date"].ic-Input, input[type="month"].ic-Input, input[type="time"].ic-Input, input[type="week"].ic-Input, input[type="number"].ic-Input, input[type="email"].ic-Input, input[type="url"].ic-Input, input[type="search"].ic-Input, input[type="tel"].ic-Input, input[type="color"].ic-Input, .uneditable-input.ic-Input { /*search bar*/
+	background: none;
+	border-color: var(--color_10);
+	transition: none;
+}
+.fNHEA_cjSw.fNHEA_ksNK .fNHEA_cSXm { /*show-by buttons*/
+	background-color: var(--color_05);
+	border: 1px solid white;
+}
+.item-group-condensed {
+	padding: 4px;
+}
+.pill { /*show by type pill*/
+	border: 1px solid var(--color_10);
+	box-shadow: none;
+}
+.pill > li {
+	border-right: 1px solid var(--color_10);
+}
+.ag-header-controls .tooltip_link {
+	color: var(--color_10);
+}
+
+.accessible-toggler {
+	color: var(--color_10);
+}
+.accessible-toggler:hover, .accessible-toggler:focus {
+	color: var(--color_01);
+	text-decoration: none;
+}
+
+/*Files*/
+.ef-item-row:hover {
+	background-color: var(--color_04);
+}
+
+/*My media*/
+.ic-Login-confirmation__header {
+	background: var(--color_04);
+}
+.ic-Login-confirmation__content {
+	background: var(--color_04);
+}
+
+.ic-Login-confirmation__actions {
+	border-radius: 3px
+}
+html body.full-width.modal.body--login-confirmation.no-headers.Underline-All-Links__enabled.primary-nav-expanded.responsive_admin_settings.responsive_awareness.responsive_misc.webkit.safari.ff.no-touch div#application.ic-app div#wrapper.ic-Layout-wrapper div#main.ic-Layout-columns div#not_right_side.ic-app-main-content div#content-wrapper.ic-Layout-contentWrapper div#content.ic-Layout-contentMain div#modal-box.ic-Login-confirmation div.ic-Login-confirmation__content form#oauth2_accept_form div.button_box.ic-Login-confirmation__actions a.Button.Button--block {
+	border: 1px solid var(--color_10);
+}
+html body.full-width.modal.body--login-confirmation.no-headers.Underline-All-Links__enabled.primary-nav-expanded.responsive_admin_settings.responsive_awareness.responsive_misc.webkit.safari.ff.no-touch div#application.ic-app div#wrapper.ic-Layout-wrapper div#main.ic-Layout-columns div#not_right_side.ic-app-main-content div#content-wrapper.ic-Layout-contentWrapper div#content.ic-Layout-contentMain div#modal-box.ic-Login-confirmation div.ic-Login-confirmation__content form#oauth2_accept_form div.button_box.ic-Login-confirmation__actions input.Button.Button--primary.Button--block {
+	border: 2px solid var(--color_01);
+}
+.btn:hover, .Button:hover, .ui-button:hover, .ui-button.ui-state-hover {
+	background: var(--color_10);
+	color: var(--color_04);
+}
+.btn-primary:hover, .Button--primary:hover {
+	background: var(--color_01);
+	color: var(--color_10);
+}
+
+/*Account popover*/
+.navigation-tray-container {
+	background: var(--color_04);	
+}
+.fOyUs_fKyb {
+	border: 1px solid var(--color_10);
+	background: none;
+}
+.fQfxa_dqAF.fQfxa_buuG {
+	background: none;
+	border-color: var(--color_10);
+	color: var(--color_10);
+}
+a.fbyHH_bGBk, button.fbyHH_bGBk {
+	color: var(--color_10);
+}
+
+/*Color picker*/
+.ColorPicker__Container {
+	background: var(--color_03);
+}
+.fQfxa_bGBk:hover .fQfxa_dqAF.fQfxa_buuG {
+	background: var(--color_10);
+	color: var(--color_03);
+}
+
+/*All Courses*/
+.course-list-unpublished-course-row {
+	background: none;
+}
+.course-list-table .course-list-table-row:hover {
+	background-color: var(--color_04);
+}
+
+/*Discussions*/
+.pinned-discussions-v2__wrapper, .unpinned-discussions-v2__wrapper {
+	border: none;
+	background-color: var(--color_04);
+}
+.ic-discussion-row {
+	background-color: var(--color_04);
+}
+.eHiXd_brAJ, a.eHiXd_brAJ, button.eHiXd_brAJ, button.eHiXd_brAJ[type="button"], button.eHiXd_brAJ[type="reset"], button.eHiXd_brAJ[type="submit"] {
+	color: var(--color_10);
+}
+.ic-unread-badge__total-count {
+	background: var(--color_05);
+}
+.closed-for-comments-discussions-v2__wrapper {
+	border: none;
+	background-color: var(--color_04);
+}
+.discussions-v2__container-image {
+	background: none;
+	border: 1px solid var(--color_10);
+}
+
+/*discussion view*/
+.toolbarView .headerBar {
+	background: var(--color_04);
+	border: 1px solid var(--color_10);
+}
+.topic {
+	background: var(--color_04);
+}
+.discussion_entry {
+	background: var(--color_04);
+}
+.discussion-fyi {
+	color: var(--color_11);
+}
+
+/*Quizzes*/
+.ig-list .ig-row .ig-empty-msg {
+	background: var(--color_05);
+	color: var(--color_10);
+	border-bottom: 1px solid var(--color_10);
+}
+
+/*Quiz*/
+html body.with-left-side.course-menu-expanded.with-right-side.quizzes.Underline-All-Links__enabled.primary-nav-expanded.context-course_113042.responsive_admin_settings.responsive_awareness.responsive_misc.webkit.safari.ff.no-touch div#application.ic-app div#wrapper.ic-Layout-wrapper div#main.ic-Layout-columns div#not_right_side.ic-app-main-content div#content-wrapper.ic-Layout-contentWrapper div#content.ic-Layout-contentMain div#quiz_show header.quiz-header div.take_quiz_button a#take_quiz_link.btn.btn-primary {
+	padding: 8px !important;
+	border: 2px solid var(--color_10);
+}
+#questions.assessing {
+	background: none;
+}
+.question .header {
+	font-size: 1.2em;
+	font-weight: bold;
+	border-bottom: 1px solid var(--color_10);
+	background-color: var(--color_04);
+	padding: 8px 20px;
+	margin: 0;
+}
+.question .header .question_points_holder {
+	color: var(--color_10);
+}
+.question {
+	border: 1px solid var(--color_10);
+	background-color: var(--color_04);
+}
+.rce_links {
+	float: none;
+}
+.mce-toolbar .mce-btn i { /*toolbar*/
+	color: var(--color_10);
+}
+.mce-toolbar .mce-btn:hover i {
+	background: var(--color_10);
+}
+.mce-container, .mce-container-body {
+	display: block;
+}
+.mce-caret {
+	border-top: 4px solid var(--color_10);
+}
+.mce-menubtn span {
+	color: var(--color_10);
+}
+.mce-listbox button {
+	padding-right: 0px;
+}
+.mce-btn.mce-active, .mce-btn.mce-active:hover {
+	background: none;
+	border: none;
+}
+.mce-menu-item-normal.mce-active { /*active dropdown option*/
+	background: var(--color_01);
+}
+.mce-menu-item-normal.mce-active .mce-text {
+	color: var(--color_10);
+}
+.mce-menu {
+	background-color: var(--color_04);
+}
+.mce-panel.mce-menu {
+	border: 1px solid var(--color_10);
+}
+.mce-menu-item .mce-ico, .mce-menu-item .mce-text {
+	color: var(--color_10);
+	background: none !important;
+}
+.mce-menu-item:hover .mce-text {
+	color: var(--color_04) !important;
+}
+.mce-menu-item:hover {
+	background: var(--color_10);
+}
+
+#last_saved_indicator {
+	color: var(--color_11);
+}
+#submit_quiz_form .button-container .btn, #submit_quiz_form #submit_quiz_button {
+	padding: 4px;
+	background: var(--color_01);
+	color: var(--color_10);
+}
+#submit_quiz_form .button-container .btn, #submit_quiz_form #submit_quiz_button:hover {
+	background: var(--color_01);
+	opacity: .8;
+	color: var(--color_10);
+}
+ul#question_list li i {
+	color: var(--color_10);
+}
+ul#question_list li.answered a {
+	color: var(--color_12);
+}
+
+.quiz-submission, .question_editing {
+	background: none;
+}
+.module-sequence-footer .module-sequence-footer-content {
+	background: none;
+	border: none;
+}
+.quiz_score .score_value {
+	color: var(--color_10);
+}
+
+/*submission*/
+#right-side .details .header {
+	color: var(--color_10);
+}
+.Submission__Link--has-icon .icon-rubric, .Submission__Link--has-icon .icon-check, .Submission__Link--has-icon .icon-warning, .Submission__List .icon-rubric, .Submission__List .icon-check, .Submission__List .icon-warning {
+	color: var(--color_10);
+}
+/*submission details*/
+.file-upload-submission {
+	background: var(--color_04);
+}
+div#rubric_holder {
+	background: var(--color_04) !important;
+}
+.submission-details-comments .comments {
+	background-color: var(--color_04);
+}
+a.media-comment { /*remove media comment icon*/
+	color: var(--color_10);
+	padding: 1px 0 1px 1px;
+	background: none;
+}
+html body.with-left-side.course-menu-expanded.assignments.Underline-All-Links__enabled.primary-nav-expanded.context-course_104023.responsive_admin_settings.responsive_awareness.responsive_misc.webkit.safari.ff.no-touch div#application.ic-app div#wrapper.ic-Layout-wrapper div#main.ic-Layout-columns div#not_right_side.ic-app-main-content div#content-wrapper.ic-Layout-contentWrapper div#content.ic-Layout-contentMain.padless div.submission-details-container div.submission-details-comments div div.comments div#add_comment_form div.comment_attachments div.comment_attachment_input.nobr a.delete_comment_attachment_link.no-hover i.icon-end {
+	display: none;
+}
+html body.with-left-side.course-menu-expanded.assignments.Underline-All-Links__enabled.primary-nav-expanded.context-course_113042.responsive_admin_settings.responsive_awareness.responsive_misc.webkit.safari.ff.no-touch div#application.ic-app div#wrapper.ic-Layout-wrapper div#main.ic-Layout-columns div#not_right_side.ic-app-main-content div#content-wrapper.ic-Layout-contentWrapper div#content.ic-Layout-contentMain.padless div.submission-details-container div.submission-details-comments div div.comments div#add_comment_form div.button-container button.Button.Button--primary.save_comment_button {
+	background: var(--color_01);
+	padding: 5px;
+}
+
+/*rubric*/
+.rubric_container .rubric_title {
+	background: var(--color_04);
+	border-color: var(--color_10);
+}
+.rubric_container thead th {
+	background: var(--color_04);
+}
+
+/*Cal*/
+/*TODO: cal day highlight + table borders*/
+#calendar_header .navigation_buttons .ui-button {
+	padding-left: 8px !important;
+}
+i[class*="icon-"]::before, i[class^="icon-"]::before, a[class*="icon-"]::before, a[class^="icon-"]::before {
+	vertical-align: central;
+}
+.btn.active, .btn.Button--active, .btn.ui-button.ui-state-active, .ui-progressbar .btn.ui-button.ui-widget-header, .Button.active, .active.ui-button, .Button.Button--active, .Button--active.ui-button, .ui-button.ui-state-active, .ui-progressbar .ui-button.ui-widget-header, .ui-button.ui-state-active:hover, .ui-button.ui-state-active.ui-state-hover {
+	background: var(--color_10);
+	border-color: var(--color_10);
+	color: var(--color_03);
+}
+#create_new_event_link {
+	color: var(--color_10);
+}
+html body.full-width.no-page-block.hide-content-while-scripts-not-loaded.with-right-side.Underline-All-Links__enabled.primary-nav-expanded.context-user_120560.responsive_admin_settings.responsive_awareness.responsive_misc.webkit.safari.ff.no-touch div#application.ic-app div#wrapper.ic-Layout-wrapper div#main.ic-Layout-columns div#not_right_side.ic-app-main-content div#content-wrapper.ic-Layout-contentWrapper div#content.ic-Layout-contentMain div#calendar_header div.calendar_header.header-table div.header-table-row div.calendar_action_buttons.header-table-cell.header-table-right a#create_new_event_link.btn:hover {
+	color: var(--color_03);
+}
+.fc-view-container *, .fc-view-container ::before, .fc-view-container ::after {
+	background: var(--color_04);
+	border-radius: 3px;
+	color: var(--color_10);
+}
+.fc-state-default {
+	color: var(--color_10);
+	text-shadow: none;
+}
+.ui-dialog.ui-widget-content {
+	border: none;
+	box-shadow: none;
+}
+.ui-dialog .ui-dialog-titlebar.ui-widget-header, .ui-dialog .ui-datepicker .ui-widget-header.ui-datepicker-header, .ui-datepicker .ui-dialog .ui-widget-header.ui-datepicker-header {
+	background: var(--color_03);
+	border-bottom: 1px solid var(--color_10);
+}
+.ui-dialog .ui-dialog-titlebar-close:not(.ui-state-focus) {
+	border: none;
+}
+.ui-dialog .ui-dialog-titlebar-close span {
+	transition: none;
+	background: none;
+}
+.ui-dialog .ui-dialog-titlebar-close:before {
+	color: var(--color_10);
+	font-size: 24px;
+	content: "\2717";
+}
+.ui-dialog .ui-dialog-content {
+	background: var(--color_03);
+}
+.ui-datepicker-header.ui-widget-header {
+	background: var(--color_04);
+	border-color: var(--color_10);
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-prev.ui-state-hover,
+.ui-datepicker .ui-datepicker-header .ui-datepicker-next.ui-state-hover {
+	border: none;
+	background-color: var(--color_03);
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-prev:before {
+	color: var(--color_10);
+	font-size: 16px;
+	padding-left: 8px;
+	content: "\140A";
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-prev {
+	background: none;
+	opacity: 1;
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-next:before {
+	color: var(--color_10);
+	font-size: 16px;
+	padding-right: 8px;
+	content: "\1405";
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-next {
+	background: none;
+	opacity: 1;
+}
+body > #ui-datepicker-div {
+	background: var(--color_04);
+	border-color: var(--color_10);
+}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+	border: 1px solid var(--color_10);
+	background: none;
+	color: var(--color_10);
+	text-shadow: none;
+	box-shadow: none;
+}
+
+/*In-progress: week view*/
+.fc-unthemed th, .fc-unthemed td, .fc-unthemed thead, .fc-unthemed tbody, .fc-unthemed .fc-divider, .fc-unthemed .fc-row, .fc-unthemed .fc-popover {
+	border-color: var(--color_10);
+}
+#calendar-app .fc-month-view .fc-widget-header, #calendar-drag-and-drop-container .fc-month-view .fc-widget-header {
+	color: var(--color_10);
+	border-left: .5px solid var(--color_10);
+	border-right: .5px solid var(--color_10);
+}
+#calendar-app .fc-month-view .fc-today, #calendar-drag-and-drop-container .fc-month-view .fc-today {
+	background: var(--color_05);
+	color: var(--color_01);
+}
+
+/*TODO: Agenda View*/
+
+#minical {
+	background: none;
+	border: none;
+}
+#minical .fc-toolbar {
+	border-bottom: none;
+}
+#minical .fc-toolbar h2, #minical .fc-toolbar .h2 {
+	color: var(--color_10);
+}
+#minical .fc-widget-content {
+	border: .5px solid var(--color_10);
+}
+#context-list-holder, #undated-events {
+	background: var(--color_04);
+}
+#context-list .not-checked {
+	color: var(--color_10);
+	text-decoration: none !important;
+}
+#context-list .context_list_context {
+	text-decoration: underline;
+}
+#context-list .context_list_context:hover {
+	background: var(--color_04);
+}
+#context-list .ContextList__MoreBtn {
+	border: none;
+}
+#undated-events .event {
+	background: var(--color_04);
+	line-height: 1.5;
+	padding: 0;
+	border: none;
+}
+
+.event-details { /*event details popover*/
+	border: none;
+	box-shadow: none;
+	background: none;
+}
+.event-details-header, .event-details-content, .event-details-footer {
+	border-bottom-color: var(--color_10);
+}
+.event-details-timestring {
+	color: var(--color_10);
+}
+.close {
+	color: var(--color_03);
+	font-size: 24pt;
+	text-shadow: none;
+	text-decoration: none !important;
+}
+
+/*Inbox*/
+.menu-item__badge {
+	border: none;
+	background: var(--color_01) !important;
+	color: var(--color_10);
+	line-height: 18px;
+}
+.conversations .panel {
+	background: var(--color_03);
+	border-bottom: 1px solid var(--color_10);
+}
+.dropdown-toggle {
+	border: 1px solid var(--color_10);
+}
+.caret {
+	border-top-color: var(--color_10);
+}
+div#course-filter-bs.dropdown-menu.open {
+	background: var(--color_04);
+}
+.bootstrap-select.btn-group .dropdown-menu.inner {
+	background: var(--color_14);
+}
+.dropdown-menu {
+	background-color: var(--color_04);
+}
+.Underline-All-Links__enabled a:not(.Button):not(.ui-button):not(.btn):not(.ui-button):not(.ui-tabs-anchor):not([data-cid*="Button"]) {
+	color: var(--color_10);
+}
+.ac-input-box {
+	background: var(--color_03);
+	border: 1px solid var(--color_10);
+}
+.ac-result-container {
+	background: var(--color_04);
+	border: 1px solid var(--color_10);
+}
+.ac-result-list .back {
+	color: var(--color_10);
+}
+.ac-result.selected, .ac-result:hover {
+	background: var(--color_01);
+	color: var(--color_10);
+}
+.yyQPt_cSXm { /*check box*/
+	background: none;
+	border: 1px solid var(--color_10);
+	color: var(--color_10);
+}
+.yyQPt_cjfS .yyQPt_cSXm { /*check box checked*/
+	background: var(--color_04);
+	border-color: var(--color_10);
+}
+.yyQPt_Ffcq .yyQPt_cSXm { /*check box hover*/
+	border-color: var(--color_10);
+	background: var(--color_04);
+}
+
+.message-list .date {
+	color: var(--color_11);
+}
+.message-list .messages > li {
+	background: var(--color_03);
+	color: var(--color_10);
+	border-bottom: 1px solid var(--color_10);
+}
+.message-list .messages > li.active {
+	background: var(--color_04);
+}
+.message-list .author {
+	color: var(--color_10);
+}
+.message-list .subject {
+	color: var(--color_10);
+}
+.message-list .summary {
+	color: var(--color_11);
+}
+.message-list .message-count {
+	background-color: var(--color_01);
+}
+.message-detail.span8 .no-messages, .message-detail.conversations__message-detail .no-messages {
+	color: var(--color_10);
+}
+.message-detail.span8 .user-info .context, .message-detail.conversations__message-detail .user-info .context {
+	color: var(--color_11);
+}
+html body.ic-no-flex-layout.full-width.Underline-All-Links__enabled.primary-nav-expanded.responsive_admin_settings.responsive_awareness.responsive_misc.webkit.safari.ff.no-touch div#application.ic-app div#wrapper.ic-Layout-wrapper div#main.ic-Layout-columns div#not_right_side.ic-app-main-content div#content-wrapper.ic-Layout-contentWrapper div#content.ic-Layout-contentMain div.conversations div.messaging-wrapper div.message-list-scroller div.message-list ul.messages.unstyled.collectionViewItems li.active div.message-right-column a.star-btn {
+	text-decoration: none;
+}
+.message-detail.span8 .message-detail-actions li a, .message-detail.span8 .actions li a, .message-detail.conversations__message-detail .message-detail-actions li a, .message-detail.conversations__message-detail .actions li a {
+	color: var(--color_10);
+}
+.message-detail.span8 .date, .message-detail.conversations__message-detail .date {
+	color: var(--color_11);
+}
+
+/*Help side panel*/
+.cjUyb_bGBk.cjUyb_eQnG, input.cjUyb_bGBk[type].cjUyb_eQnG {
+	color: var(--color_10);
+}
+hr {
+	border-top: 1px solid var(--color_10);
+}
+
+/*Settings*/
+.feature-flags {
+	border: 1px solid var(--color_10);
+	color: var(--color_10);
+}
+
+/*alert bkgd*/
+.fvvQs_bGBk {
+	background: rgba(0, 0, 0, .75);
+}
+.ic-flash-warning {
+	background: var(--color_03);
+}
+
+/*Mobile fixes*/
+.mobile-header-hamburger, .mobile-header-title {
+	padding: 15.6px;
+}
+}
+
+@-moz-document regexp("https://canvas\\..*\\.edu/conversations.*"), regexp("https://canvas\\..*\\.edu/calendar.*") {
+.btn, .Button, .ui-button {
+	padding: 9px !important;
+}
+}
+
+@-moz-document regexp("https://canvas\\..*\\.edu.*") {
+/*Embedded views*/
+/*TODO: Inline viewer*/
+/*TODO: Zoom*/
+/*TODO: Course Chat*/
+
+}
