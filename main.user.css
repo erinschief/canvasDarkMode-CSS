@@ -7,11 +7,12 @@
 @license		AGPL-3.0-only
 @homepageURL	https://github.com/erinschief/canvasDarkMode-CSS
 @updateURL		https://github.com/erinschief/canvasDarkMode-CSS
+@advanced color user-accent "Accent color" #8B1F41
 ==/UserStyle== */
 
 @-moz-document regexp("https://canvas\\..*\\.edu.*") {
 :root {
-    --color_01: #8B1F41; /*main accent*/
+    --color_01: /*[[user-accent]]*/; /*main accent*/
     --color_02: #E87722; /*secondary accent*/
     --color_03: rgb(44, 44, 44); /*main bg*/
     --color_04: rgb(55, 55, 55); /*secondary bg*/
