@@ -217,6 +217,17 @@
     .stream-details tr:hover {
         background: var(--color_04);
     }
+	
+	/*unfavorite course alert*/
+	.cDMBL_bGBk {
+	background: var(--color_03);
+	}
+	.deUoG_bGBk {
+	background: var(--color_03);
+	}
+	.dNoYT_bGBk {
+	background: var(--color_03);
+	}
     
     /*notif*/
     .ic-notification__content {
