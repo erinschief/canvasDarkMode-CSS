@@ -35,15 +35,11 @@
         --ic-link-color: var(--accent);
         --ic-link-color-darkened-10: var(--accent);
         --ic-link-color-lightened-10: var(--accent);
+        --ic-brand-global-nav-bgd: var(--accent);
 
         --ic-brand-font-color-dark: var(--white_1);
         --ic-brand-font-color-dark-lightened-15: var(--white_1);
         --ic-brand-font-color-dark-lightened-30: var(--white_1);
-
-        --ic-brand-global-nav-bgd: var(--accent);
-        --ic-brand-global-nav-logo-bgd: var(--accent);
-        --ic-brand-global-nav-avatar-border: var(--grey_2);
-        --ic-brand-global-nav-menu-item__badge-text: var(--white_1);
 
         /*these are weird variables in canvas which have been root recolored for expediency*/
         --fCrpb-color: var(--white_1);
