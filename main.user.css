@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.0.1
+@version        1.0.2
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -10,7 +10,7 @@
 @advanced color user-accent "Accent color" #8B1F41
 ==/UserStyle== */
 
-@-moz-document regexp("https://canvas\\..*\\.edu.*") {
+@-moz-document regexp("https://canvas\..*\.edu.*") {
     :root {
         /*Custom colors*/
         --accent: /*[[user-accent]]*/; /*main accent*/
@@ -1082,13 +1082,13 @@
     }
     }
     
-    @-moz-document regexp("https://canvas\\..*\\.edu/conversations.*"), regexp("https://canvas\\..*\\.edu/calendar.*") {
+    @-moz-document regexp("https://canvas\..*\.edu/(calendar|conversations).*") {
     .btn, .Button, .ui-button {
         padding: 9px !important;
     }
     }
     
-    @-moz-document regexp("https://canvas\\..*\\.edu.*") {
+    @-moz-document regexp("https://canvas\..*\.edu.*") {
     /*Embedded views*/
     /*TODO: Inline viewer*/
     /*TODO: Zoom*/
