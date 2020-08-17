@@ -545,6 +545,11 @@
         color: var(--accent);
         text-decoration: none;
     }
+    html body.ic-framed-lti-tool.with-left-side.course-menu-expanded.assignments.Underline-All-Links__enabled.primary-nav-expanded.context-course_116526.responsive_awareness.responsive_misc.webkit.safari.ff.no-touch div#application.ic-app div#wrapper.ic-Layout-wrapper div#main.ic-Layout-columns div#not_right_side.ic-app-main-content div#content-wrapper.ic-Layout-contentWrapper div#content.ic-Layout-contentMain div.tool_content_wrapper form#tool_form.hide div div.load_tab div button.btn { /*external website button*/
+        padding: 2px;
+        border: 1px solid var(--white_1);
+        background: var(--grey_2);
+}
     
     /*Files*/
     .ef-item-row:hover {
