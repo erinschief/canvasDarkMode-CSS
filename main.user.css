@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.0.5
+@version        1.0.6
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -553,6 +553,9 @@
     
     /*Files*/
     .ef-item-row:hover {
+        background-color: var(--grey_2);
+    }
+    .ef-item-row.ef-item-selected {
         background-color: var(--grey_2);
     }
     .ftPBL_bGBk:not(.ftPBL_bGiS) { /*drop files here to upload*/
