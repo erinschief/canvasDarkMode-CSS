@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.0.7
+@version        1.0.8
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -976,9 +976,6 @@
     }
     
     /*Inbox*/
-    html body.with-right-side.Underline-All-Links__enabled.primary-nav-expanded.context-user_120560.responsive_awareness.responsive_misc.webkit.safari.ff.no-touch div#application.ic-app header#header.ic-app-header.no-print div.ic-app-header__main-navigation ul#menu.ic-app-header__menu-list li.menu-item.ic-app-header__menu-list-item a#global_nav_conversations_link.ic-app-header__menu-list-link div.menu-item-icon-container span.menu-item__badge {
-        border: 1px solid var(--white_1);
-    }
     .menu-item__badge {
         border: none;
         background: var(--accent) !important;
