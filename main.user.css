@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.1.0
+@version        1.1.1
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -13,17 +13,17 @@
 @var checkbox	simpleDash	"Disable course Dashboard images & shorten card height"	0
 ==/UserStyle== */
 
-@-moz-document regexp("https://canvas\..*\.edu.*") 
+@-moz-document regexp("https://canvas\..*\.edu.*") {
 
-if simpleDash { /*remove course card images & shorten*/
-    .ic-DashboardCard__header_image {
-        background-image: none !important;
+    if simpleDash { /*remove course card images & shorten*/
+        .ic-DashboardCard__header_image {
+            background-image: none !important;
+        }
+        .ic-DashboardCard__header_hero {
+            height: 100px;
+            opacity: 1 !important;
+        }
     }
-    .ic-DashboardCard__header_hero {
-        height: 100px;
-        opacity: 1 !important;
-    } 
-}
 
     :root {
         /*Custom colors*/
@@ -1109,17 +1109,17 @@ if simpleDash { /*remove course card images & shorten*/
     .mobile-header-hamburger, .mobile-header-title {
         padding: 15.6px;
     }
-    }
+}
     
-    @-moz-document regexp("https://canvas\..*\.edu/(calendar|conversations).*") {
+@-moz-document regexp("https://canvas\..*\.edu/(calendar|conversations).*") {
     .btn, .Button, .ui-button {
         padding: 9px !important;
     }
-    }
+}
     
-    @-moz-document regexp("https://canvas\..*\.edu.*") {
+@-moz-document regexp("https://canvas\..*\.edu.*") {
     /*Embedded views*/
     /*TODO: Inline viewer*/
     /*TODO: Zoom*/
     /*TODO: Course Chat*/
-    }
+}
