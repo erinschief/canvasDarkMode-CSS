@@ -1,16 +1,30 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.0.8
+@version        1.1.0
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
 @homepageURL	https://github.com/erinschief/canvasDarkMode-CSS
 @updateURL		https://raw.githubusercontent.com/erinschief/canvasDarkMode-CSS/master/main.user.css
 @advanced color user-accent "Accent color" #8B1F41
+
+@preprocessor stylus
+@var checkbox	simpleDash	"Disable course Dashboard images & shorten card height"	0
 ==/UserStyle== */
 
-@-moz-document regexp("https://canvas\..*\.edu.*") {
+@-moz-document regexp("https://canvas\..*\.edu.*") 
+
+if simpleDash { /*remove course card images & shorten*/
+    .ic-DashboardCard__header_image {
+        background-image: none !important;
+    }
+    .ic-DashboardCard__header_hero {
+        height: 100px;
+        opacity: 1 !important;
+    } 
+}
+
     :root {
         /*Custom colors*/
         --accent: /*[[user-accent]]*/; /*main accent*/
@@ -89,9 +103,6 @@
     }
     
     /*Header*/
-    .ic-Dashboard-header, body.dashboard-is-planner .ic-Dashboard-header  {
-        position: relative;
-    }
     .ic-Dashboard-header__layout {
         background: var(--grey_1);
         border-bottom-color: var(--white_1);
