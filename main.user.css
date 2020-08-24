@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.1.5
+@version        1.1.6
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -157,6 +157,13 @@
     .PlannerHeader-styles__root {
         background: none;
     }
+    [dir="ltr"] .Grouping-styles__title {
+        color: var(--white_1);
+    }
+    .Grouping-styles__overlay.Grouping-styles__withImage { /*disable course bkd images in list view*/
+        opacity: 1;
+    }
+
     /*add sidebar*/
     .UpdateItemTray-styles__root {
         background: var(--grey_2);
@@ -819,8 +826,7 @@
         background: var(--grey_2);
     }
     
-    /*Cal*/
-    /*TODO: cal day highlight + table borders*/
+    /*Calendar*/
     #calendar_header .navigation_buttons .ui-button {
         padding-left: 8px !important;
     }
@@ -838,6 +844,7 @@
     html body.full-width.no-page-block.hide-content-while-scripts-not-loaded.with-right-side.Underline-All-Links__enabled.primary-nav-expanded.context-user_120560.responsive_admin_settings.responsive_awareness.responsive_misc.webkit.safari.ff.no-touch div#application.ic-app div#wrapper.ic-Layout-wrapper div#main.ic-Layout-columns div#not_right_side.ic-app-main-content div#content-wrapper.ic-Layout-contentWrapper div#content.ic-Layout-contentMain div#calendar_header div.calendar_header.header-table div.header-table-row div.calendar_action_buttons.header-table-cell.header-table-right a#create_new_event_link.btn:hover {
         color: var(--grey_1);
     }
+    
     .fc-view-container *, .fc-view-container ::before, .fc-view-container ::after {
         background: var(--grey_2);
         border-radius: 3px;
@@ -847,6 +854,19 @@
         color: var(--white_1);
         text-shadow: none;
     }
+    .fc-unthemed th, .fc-unthemed td, .fc-unthemed thead, .fc-unthemed tbody, .fc-unthemed .fc-divider, .fc-unthemed .fc-row, .fc-unthemed .fc-popover { /*week view grid*/
+        border-color: var(--white_1);
+    }
+    #calendar-app .fc-agendaWeek-view .fc-day-grid .fc-today, #calendar-drag-and-drop-container .fc-agendaWeek-view .fc-day-grid .fc-today { /*today highlight*/
+        border: 3px solid var(--accent);
+    }
+    #calendar-app .fc-agendaWeek-view .fc-time-grid .fc-today, #calendar-drag-and-drop-container .fc-agendaWeek-view .fc-time-grid .fc-today {
+        border: 3px solid var(--accent);
+    }
+    #calendar-app .fc-agendaWeek-view .fc-event, #calendar-drag-and-drop-container .fc-agendaWeek-view .fc-event { /*event highlight*/
+        background: var(--grey_2);
+    }
+
     .ui-dialog.ui-widget-content {
         border: none;
         box-shadow: none;
@@ -910,8 +930,14 @@
         text-shadow: none;
         box-shadow: none;
     }
+    #calendar-app .fc-event, #calendar-drag-and-drop-container .fc-event {
+        background: none;
+    }
+    .event-details { /*event details*/
+        border-bottom: 1px solid var(--white_1);
+    }
     
-    /*In-progress: week view*/
+    /*Week view*/
     .fc-unthemed th, .fc-unthemed td, .fc-unthemed thead, .fc-unthemed tbody, .fc-unthemed .fc-divider, .fc-unthemed .fc-row, .fc-unthemed .fc-popover {
         border-color: var(--white_1);
     }
@@ -925,9 +951,18 @@
         color: var(--accent);
     }
     
-    /*TODO: Agenda View*/
+    /*Agenda View*/
+    .agenda-wrapper {
+        background: none;
+    }
+    .agenda-day.agenda-today {
+        background: none;
+    }
+    .agenda-day {
+        border-bottom: 1px solid var(--white_1);
+    }
 
-    
+    /*Mini cal*/
     #minical {
         background: none;
         border: none;
@@ -965,9 +1000,9 @@
     }
     
     .event-details { /*event details popover*/
-        border: none;
-        box-shadow: none;
-        background: none;
+        border: 1.5px solid var(--white_1);
+        background: var(--grey_2);
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.6) !important;
     }
     .event-details-header, .event-details-content, .event-details-footer {
         border-bottom-color: var(--white_1);
@@ -1115,6 +1150,7 @@
     
 @-moz-document regexp("https://canvas\..*\.edu.*") {
     /*Embedded views*/
+
     /*TODO: Inline viewer*/
     /*TODO: Zoom*/
     /*TODO: Course Chat*/
