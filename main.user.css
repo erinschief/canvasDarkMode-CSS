@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.1.8
+@version        1.1.9
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -113,6 +113,9 @@
         color: var(--white_1);
         padding: 0px;
         border: none;
+    }
+    .fOyUs_bGBk, .fOyUs_desw, .fOyUs_cBHs, .fOyUs_eWbJ, .fOyUs_eeJl, .fOyUs_cBtr, .fOyUs_fuTR, .XBLto_bXVH { /*to do subtext*/
+        color: var(--white_2);
     }
     
     /*Dashboard*/
@@ -1013,15 +1016,12 @@
         padding: 0;
         border: none;
     }
-    
-    .event-details { /*event details popover*/
-        border: 1.5px solid var(--white_1);
+    #minical .fc-content-skeleton .fc-state-highlight {
+        text-decoration: underline;
+        font-weight: bold;
         background: var(--grey_2);
-        box-shadow: 2px 2px 10px rgba(0,0,0,0.6) !important;
     }
-    .event-details-header, .event-details-content, .event-details-footer {
-        border-bottom-color: var(--white_1);
-    }
+    
     .event-details-timestring {
         color: var(--white_1);
     }
@@ -1160,6 +1160,15 @@
 @-moz-document regexp("https://canvas\..*\.edu/(calendar|conversations).*") {
     .btn, .Button, .ui-button {
         padding: 9px !important;
+    }
+
+    .event-details { /*event details popover*/
+        border: 1.5px solid var(--white_1);
+        background: var(--grey_2);
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.6) !important;
+    }
+    .event-details-header, .event-details-content, .event-details-footer {
+        border-bottom-color: var(--white_1);
     }
 }
     
