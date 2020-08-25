@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.1.9
+@version        1.1.10
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -950,9 +950,6 @@
     }
     #calendar-app .fc-event, #calendar-drag-and-drop-container .fc-event {
         background: none;
-    }
-    .event-details { /*event details*/
-        border-bottom: 1px solid var(--white_1);
     }
     
     /*Week view*/
