@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.1.6
+@version        1.1.7
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -845,9 +845,15 @@
         color: var(--grey_1);
     }
     
+    .calendar.fc.fc-ltr.fc-unthemed { /*calendar top border*/
+        border-top: 1px solid var(--white_1);
+    }
+    #calendar-app .fc-agendaWeek-view .fc-widget-header, #calendar-app .fc-agendaWeek-view .fc-axis, #calendar-drag-and-drop-container .fc-agendaWeek-view .fc-widget-header, #calendar-drag-and-drop-container .fc-agendaWeek-view .fc-axis {
+        background: none;
+    }
     .fc-view-container *, .fc-view-container ::before, .fc-view-container ::after {
-        background: var(--grey_2);
-        border-radius: 3px;
+        background: none;
+        border-radius: 1px;
         color: var(--white_1);
     }
     .fc-state-default {
@@ -864,7 +870,10 @@
         border: 3px solid var(--accent);
     }
     #calendar-app .fc-agendaWeek-view .fc-event, #calendar-drag-and-drop-container .fc-agendaWeek-view .fc-event { /*event highlight*/
-        background: var(--grey_2);
+        background: none;
+    }
+    .fc-event .fc-bg {
+        background: none;
     }
 
     .ui-dialog.ui-widget-content {
@@ -977,7 +986,7 @@
         border: .5px solid var(--white_1);
     }
     #context-list-holder, #undated-events {
-        background: var(--grey_2);
+        background: none;
     }
     #context-list .not-checked {
         color: var(--white_1);
