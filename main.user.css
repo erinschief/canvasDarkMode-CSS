@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.1.7
+@version        1.1.8
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -847,6 +847,12 @@
     
     .calendar.fc.fc-ltr.fc-unthemed { /*calendar top border*/
         border-top: 1px solid var(--white_1);
+    }
+    #calendar-app .fc-agendaWeek-view .fc-widget-header, #calendar-app .fc-agendaWeek-view .fc-axis, #calendar-drag-and-drop-container .fc-agendaWeek-view .fc-widget-header, #calendar-drag-and-drop-container .fc-agendaWeek-view .fc-axis {
+        background: var(--grey_1);
+    }
+    #calendar-app .fc-agendaWeek-view .fc-body, #calendar-drag-and-drop-container .fc-agendaWeek-view .fc-body {
+        background-color: var(--grey_1);
     }
     #calendar-app .fc-agendaWeek-view .fc-widget-header, #calendar-app .fc-agendaWeek-view .fc-axis, #calendar-drag-and-drop-container .fc-agendaWeek-view .fc-widget-header, #calendar-drag-and-drop-container .fc-agendaWeek-view .fc-axis {
         background: none;
