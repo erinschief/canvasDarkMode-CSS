@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.1.12
+@version        1.1.13
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -100,7 +100,7 @@
         border: 1px solid var(--white_1);
     }
     .btn.disabled, .btn[disabled], .Button.disabled, .disabled.ui-button, .ui-button.ui-state-disabled, .Button[disabled], [disabled].ui-button {
-        background: none;
+        background: none !important;
         color: var(--white_2);
         opacity: 1;
         padding-top: 12px;
