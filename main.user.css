@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.1.11
+@version        1.1.12
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -83,7 +83,7 @@
         border: none;
     }
     .btn:hover, .Button:hover, .ui-button:hover, .ui-button.ui-state-hover {
-        background: var(--white_1);
+        background: var(--white_1) !important;
         color: var(--grey_2);
     }
     .btn-primary, .Button--primary {
