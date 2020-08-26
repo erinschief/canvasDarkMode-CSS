@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.1.10
+@version        1.1.11
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -51,16 +51,12 @@
         --cvphu-background: var(--grey_2);
     }
     
+    a { /*link underline*/
+        color: var(--white_1);
+    }
     a:focus, a:hover { /*link hover color*/
         color: var(--accent);
         filter: brightness(1.25);
-    }
-    .ic-Table.ic-Table--hover-row tbody tr:hover, .ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-neutral:hover, .ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-success:hover, .ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-alert:hover, .ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-danger:hover { /*this is the table hover!*/
-        background-color: var(--grey_2) !important;
-    }
-    
-    a { /*link underline*/
-        color: var(--white_1);
     }
     p{
         font-size: 17px;
@@ -74,10 +70,41 @@
         color: var(--white_1) !important;
         font-weight: bold !important;
     }
-    
     .Underline-All-Links__enabled a:not(.Button):not(.ui-button):not(.btn):not(.ui-button):not(.ui-tabs-anchor):focus, .Underline-All-Links__enabled a:not(.Button):not(.ui-button):not(.btn):not(.ui-button):not(.ui-tabs-anchor):hover {
         color: var(--accent);
         text-decoration: none;
+    }
+
+    /*Buttons*/
+    .btn, .Button, .ui-button {
+        background: none;
+        color: var(--white_1);
+        padding: 0px;
+        border: none;
+    }
+    .btn:hover, .Button:hover, .ui-button:hover, .ui-button.ui-state-hover {
+        background: var(--white_1);
+        color: var(--grey_2);
+    }
+    .btn-primary, .Button--primary {
+        background: var(--accent) !important;
+        color: var(--white_1) !important;
+        padding: 6px;
+    }
+    .btn-primary:hover, .Button--primary:hover {
+        filter: brightness(1.25);
+    }
+    .btn, .Button[type="submit"] {
+        color: var(--white_1);
+        padding: 6px;
+        border: 1px solid var(--white_1);
+    }
+    .btn.disabled, .btn[disabled], .Button.disabled, .disabled.ui-button, .ui-button.ui-state-disabled, .Button[disabled], [disabled].ui-button {
+        background: none;
+        color: var(--white_2);
+        opacity: 1;
+        padding-top: 12px;
+        border-top: 1px solid var(--white_1);
     }
     
     /*Nav bar*/
@@ -107,12 +134,6 @@
         font-size: 1.2rem;
         border-bottom-color: var(--white_1);
         font-weight: bold;
-    }
-    .btn, .Button, .ui-button {
-        background: none;
-        color: var(--white_1);
-        padding: 0px;
-        border: none;
     }
     .fOyUs_bGBk, .fOyUs_desw, .fOyUs_cBHs, .fOyUs_eWbJ, .fOyUs_eeJl, .fOyUs_cBtr, .fOyUs_fuTR, .XBLto_bXVH { /*to do subtext*/
         color: var(--white_2);
@@ -331,6 +352,14 @@
     .ig-list .ig-row:hover { /*hover highlight*/
         background-color: var(--grey_1);
     }
+    .module-sequence-footer-button--previous {
+        border-radius: 3px;
+        border: 1px solid var(--white_1);
+    }
+    .module-sequence-footer-button--next {
+        border-radius: 3px;
+        border: 1px solid var(--white_1);
+    }
     
     /*Announcements*/
     select { /*filter dropdown*/
@@ -358,10 +387,42 @@
         color: var(--white_2);
     }
     
-    /*Syllabus*/
+    /*ic-table*/
     .ic-Table {
         background: none;
     }
+    .ic-Table.ic-Table--hover-row tbody tr:hover, .ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-neutral:hover, .ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-success:hover, .ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-alert:hover, .ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-danger:hover { /*this is the table hover!*/
+        background-color: var(--grey_2) !important;
+    }
+    .ic-Table tr.ic-Table__row--bg-neutral {
+        background-color: var(--grey_2);
+    }
+    .ic-Table tr.ic-Table__row--bg-danger {
+        background: none;
+        z-index: 1;
+    }
+    .ic-Table tr.ic-Table__row--bg-danger {
+        background: #EA3333;
+        opacity: .8;
+        z-index: 2;
+    }
+    .ic-Table tr.ic-Table__row--bg-success {
+        background: none;
+    }
+    .ic-Table th {
+        border-bottom-color: var(--white_1);
+    }
+    .ic-Table.ic-Table--striped tbody tr:nth-child(2n+1) {
+        background: var(--grey_1);
+    }
+    .ic-Table td {
+        border-bottom-color: var(--white_1);
+    }
+    .ic-Table tbody th {
+        border-bottom-color: var(--white_1);
+    }
+
+    /*Syllabus*/
     #syllabus tr.date.date_passed td, #syllabus tr.date.date_passed th {
         background-color: transparent;
     }
@@ -376,12 +437,6 @@
     }
     .header-row a.sort-field i {
         color: var(--white_1);
-    }
-    .ic-Table th {
-        border-bottom-color: var(--white_1);
-    }
-    .ic-Table.ic-Table--striped tbody tr:nth-child(2n+1) {
-        background: var(--grey_1);
     }
     
     /*Pages sub page*/
@@ -422,9 +477,6 @@
     #grades_summary th.title {
         border-bottom-color: var(--white_1);
     }
-    .ic-Table td {
-        border-bottom-color: var(--white_1);
-    }
     #grades_summary .tooltip .grade:hover .tooltip_wrap, #grades_summary .tooltip .grade:hover .tooltip_text, #grades_summary .tooltip .grade:focus .tooltip_wrap, #grades_summary .tooltip .grade:focus .tooltip_text {
         visibility: hidden;
     }
@@ -446,9 +498,6 @@
     .react-rubric thead {
         background-color: var(--grey_2);
         color: var(--white_1);
-    }
-    .ic-Table tbody th {
-        border-bottom-color: var(--white_1);
     }
     .eQCNs_bGBk {
         background-color: var(--grey_2);
@@ -512,6 +561,9 @@
         width: 220px;
         border: 1px solid var(--white_1);
         background: none;
+    }
+    .form-actions {
+        border-color: var(--white_1);
     }
     .form-dialog {
         padding-bottom: 0px !important;
@@ -589,14 +641,6 @@
     }
     html body.full-width.modal.body--login-confirmation.no-headers.Underline-All-Links__enabled.primary-nav-expanded.responsive_admin_settings.responsive_awareness.responsive_misc.webkit.safari.ff.no-touch div#application.ic-app div#wrapper.ic-Layout-wrapper div#main.ic-Layout-columns div#not_right_side.ic-app-main-content div#content-wrapper.ic-Layout-contentWrapper div#content.ic-Layout-contentMain div#modal-box.ic-Login-confirmation div.ic-Login-confirmation__content form#oauth2_accept_form div.button_box.ic-Login-confirmation__actions input.Button.Button--primary.Button--block {
         border: 2px solid var(--accent);
-    }
-    .btn:hover, .Button:hover, .ui-button:hover, .ui-button.ui-state-hover {
-        background: var(--white_1);
-        color: var(--grey_2);
-    }
-    .btn-primary:hover, .Button--primary:hover {
-        background: var(--accent);
-        color: var(--white_1);
     }
     
     /*Account popover*/
@@ -747,6 +791,25 @@
     }
     .mce-menu-item:hover {
         background: var(--white_1);
+    }
+    .mce-menu-item:hover, .mce-menu-item.mce-selected, .mce-menu-item:focus {
+        background: var(--white_1);
+    }
+    .mce-menu-item:hover .mce-text, .mce-menu-item.mce-selected .mce-text, .mce-menu-item:focus .mce-text {
+        color: var(--grey_1);
+    }
+    .mce-menu-item.mce-selected .mce-caret, .mce-menu-item:focus .mce-caret, .mce-menu-item:hover .mce-caret {
+        border-left-color: var(--grey_1);
+    }
+    .mce-menu-item.mce-disabled:hover {
+        background: var(--white_1);
+    }
+    .mce-grid-border a:hover, .mce-grid-border a.mce-active {
+        background: var(--white_1);
+    }
+    .mce-label {
+        color: var(--white_1);
+        text-shadow: none;
     }
     
     #last_saved_indicator {
@@ -1141,6 +1204,10 @@
     }
     
     /*alert bkgd*/
+    .alert-info {
+        background-color: var(--grey_3);
+        color: var(--white_2);
+    }
     .fvvQs_bGBk {
         background: rgba(0, 0, 0, .75);
     }
