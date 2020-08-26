@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.1.15
+@version        1.2.0
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -73,6 +73,9 @@
     .Underline-All-Links__enabled a:not(.Button):not(.ui-button):not(.btn):not(.ui-button):not(.ui-tabs-anchor):focus, .Underline-All-Links__enabled a:not(.Button):not(.ui-button):not(.btn):not(.ui-button):not(.ui-tabs-anchor):hover {
         color: var(--accent);
         text-decoration: none;
+    }
+    p span, h1 span, h2 span, h3 span, h4 span, table tbody tr td ul li span { /*html themed black text fix*/
+        color: var(--white_1) !important;
     }
 
     /*Buttons*/
