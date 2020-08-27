@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.2.1
+@version        1.3.0
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -70,6 +70,9 @@
         color: var(--white_1) !important;
         font-weight: bold !important;
     }
+    h2, h3, h4 {
+        color: var(--white_1) !important;
+    }
     .Underline-All-Links__enabled a:not(.Button):not(.ui-button):not(.btn):not(.ui-button):not(.ui-tabs-anchor):focus, .Underline-All-Links__enabled a:not(.Button):not(.ui-button):not(.btn):not(.ui-button):not(.ui-tabs-anchor):hover {
         color: var(--accent);
         text-decoration: none;
@@ -92,6 +95,7 @@
     .btn-primary, .Button--primary {
         background: var(--accent) !important;
         color: var(--white_1) !important;
+        border: none !important;
         padding: 6px;
     }
     .btn-primary:hover, .Button--primary:hover {
@@ -103,6 +107,9 @@
         color: var(--white_1);
         padding: 6px;
         border: 1px solid var(--white_1);
+    }
+    .btn-block, .Button--block {
+        padding: 6;
     }
     .btn.disabled, .btn[disabled], .Button.disabled, .disabled.ui-button, .ui-button.ui-state-disabled, .Button[disabled], [disabled].ui-button {
         background: none !important;
@@ -281,20 +288,27 @@
         background: var(--grey_1);
     }
     
-    /*Dashboard color picker*/
-    .DashboardCardMenu__ColorPicker {
-        background: var(--grey_1);
+    /*Color picker*/
+    .ColorPicker__Container {
+        background: none;
     }
     .fOyUs_fZwI, .fOyUs_kXoP {
-        background: var(--grey_1);
+        background: var(--grey_2);
     }
     .bdYPe_eLeB[aria-selected] {
-        background: var(--grey_2);
+        background: var(--grey_3);
         color: var(--white_1);
         font-weight: bold;
     }
     .bdYPe_eLeB {
         border: 1px solid var(--white_1);
+        color: var(--white_1);
+    }
+    .bdYPe_eLeB:not([aria-selected]):not([aria-disabled]):hover, .bdYPe_eLeB[aria-selected] {
+        background: var(--grey_2);
+        border-color: var(--white_1);
+    }
+    .bdYPe_eLeB:hover, .bdYPe_eLeB[aria-disabled], .bdYPe_eLeB[aria-selected] {
         color: var(--white_1);
     }
     
@@ -328,7 +342,7 @@
         background: none
     }
     
-    /*Mdule container*/
+    /*Modules container*/
     .header-bar { /*removes header*/
         border: none;
         background: none;
@@ -365,6 +379,14 @@
         border-radius: 3px;
         border: 1px solid var(--white_1);
     }
+
+    /*completion prerequisites*/
+    #module_prerequisites_list {
+        color: var(--white_1) !important;
+    }
+    #module_prerequisites_list li.module li.requirement.locked_requirement a {
+        color: var(--white_3) !important;
+    }
     
     /*Announcements*/
     select { /*filter dropdown*/
@@ -375,7 +397,10 @@
     }
     .bwOAM_cwos, input[type].bwOAM_cwos { /*search bar*/
         color: var(--white_1);
-        background: var(--grey_1);
+        background: none;
+    }
+    .bwOAM_cwos::placeholder, input[type].bwOAM_cwos::placeholder {
+        color: var(--white_2);
     }
     .esvoZ_bGBk {
         fill: var(--white_1);
@@ -663,15 +688,6 @@
         color: var(--white_1);
     }
     
-    /*Color picker*/
-    .ColorPicker__Container {
-        background: var(--grey_1);
-    }
-    .fQfxa_bGBk:hover .fQfxa_dqAF.fQfxa_buuG {
-        background: var(--white_1);
-        color: var(--grey_1);
-    }
-    
     /*All Courses*/
     .course-list-unpublished-course-row {
         background: none;
@@ -702,6 +718,74 @@
         background: none;
         border: 1px solid var(--white_1);
     }
+    .fOyUs_fzxW, .fOyUs_elGp { /*all sections hover bubble*/
+        background: var(--grey_1);
+        color: var(--white_1);
+    }
+    .yyQPt_blJt { /*discussion settings*/
+        color: var(--white_1);
+    }
+
+    /*create new discussion*/
+    .published-status.unpublished {
+        color: var(--white_2);
+    }
+    .DyQTK_ddES.DyQTK_EwaR:hover { /*post to bubble*/
+        background-color: var(--white_1);
+        color: var(--grey_1);
+    }
+    .esvoZ_bGBk { /*post to bubble x*/
+        fill: white;
+    }
+    .esvoZ_bGBk:hover {
+        fill: black;
+    }
+    legend {
+        color: var(--white_1);
+        border-bottom: 1px solid var(--white_1);
+    }
+    .dXATK_cAug { /*links files images*/
+        border: 1px solid white;
+        color: var(--white_1);
+        background: var(--grey_1);
+    }
+    .dXATK_cAug:not([aria-selected]):not([aria-disabled]):hover, .dXATK_cAug[aria-selected] {
+        background: var(--grey_2);
+        border: 1px solid var(--white_1);
+    }
+    .dXATK_cAug:hover, .dXATK_cAug[aria-disabled], .dXATK_cAug[aria-selected] {
+        color: var(--white_1);	font-weight: bold;
+    }
+    .cDwzl_caGd { /*tabbed view background*/
+        background: var(--grey_2);
+        border-color: var(--white_1);
+        color: var(--white_1);
+    }
+    .eHiXd_ddES, a.eHiXd_ddES, button.eHiXd_ddES, button.eHiXd_ddES[type="button"], button.eHiXd_ddES[type="reset"], button.eHiXd_ddES[type="submit"] {
+        background: var(--grey_2);
+        border-color: var(--white_1);
+    }
+    .fTsnK_bGBk { /*carat*/
+        fill: var(--white_1);
+    }
+    .eHiXd_ddES:active, .eHiXd_ddES:hover, a.eHiXd_ddES:active, a.eHiXd_ddES:hover, button.eHiXd_ddES:active, button.eHiXd_ddES:hover, button.eHiXd_ddES[type="button"]:active, button.eHiXd_ddES[type="button"]:hover, button.eHiXd_ddES[type="reset"]:active, button.eHiXd_ddES[type="reset"]:hover, button.eHiXd_ddES[type="submit"]:active, button.eHiXd_ddES[type="submit"]:hover { /*links > folder hover*/
+        background: var(--grey_3);
+    }
+    ._hpjm5j:hover { /*links > file hover*/
+        background-color: var(--grey_3) !important;
+    }
+    ._1iyfu1y { /*files > folders text*/
+        color: white !important;
+    }
+    ._1iyfu1y:hover {
+        background: var(--grey_3) !important;
+    }
+    ._xl47ao2 { /*files > file text*/
+        color: white;
+    }
+    ._xl47ao2:hover {
+        background: var(--grey_3) !important;
+    }
     
     /*discussion view*/
     .toolbarView .headerBar {
@@ -715,6 +799,9 @@
         background: var(--grey_2);
     }
     .discussion-fyi {
+        color: var(--white_2);
+    }
+    .discussion-pubdate, .discussion-tododate {
         color: var(--white_2);
     }
     
@@ -751,6 +838,8 @@
     .rce_links {
         float: none;
     }
+
+    /*Content editor toolbar*/
     .mce-toolbar .mce-btn i { /*toolbar*/
         color: var(--white_1);
     }
@@ -810,6 +899,10 @@
     .mce-grid-border a:hover, .mce-grid-border a.mce-active {
         background: var(--white_1);
     }
+    .mce-floatpanel.mce-popover {
+        background: var(--grey_2);
+        border: 1px solid var(--white_1);
+    }
     .mce-label {
         color: var(--white_1);
         text-shadow: none;
@@ -845,6 +938,7 @@
         overflow: auto;
     }
     
+    /*Quiz submitted*/
     .quiz-submission, .question_editing {
         background: none;
     }
@@ -854,6 +948,12 @@
     }
     .quiz_score .score_value {
         color: var(--white_1);
+    }
+    #quiz-submission-version-table .submission-pending-review {
+        color: var(--white_2);
+    }
+    .summary .footnote {
+        color: var(--white_2);
     }
     
     /*submission*/
@@ -1094,6 +1194,9 @@
         text-shadow: none;
         text-decoration: none !important;
     }
+    .datetime_suggest {
+        color: var(--white_2);
+    }
     
     /*Inbox*/
     .menu-item__badge {
@@ -1222,6 +1325,15 @@
     .mobile-header-hamburger, .mobile-header-title {
         padding: 15.6px;
     }
+
+    .equation_image { /*image background to make black images legible*/
+        background: aliceblue;
+    }
+
+    /*other versions button*/
+    .ally-accessible-versions > .ally-prominent-af-download-button {
+        background-image: url(https://raw.githubusercontent.com/erinschief/canvasDarkMode-CSS/master/alt-formats-icon-white.svg);
+    }
 }
     
 @-moz-document regexp("https://canvas\..*\.edu/(calendar|conversations).*") {
@@ -1238,11 +1350,96 @@
         border-bottom-color: var(--white_1);
     }
 }
-    
-@-moz-document regexp("https://canvas\..*\.edu.*") {
-    /*Embedded views*/
 
-    /*TODO: Inline viewer*/
-    /*TODO: Zoom*/
-    /*TODO: Course Chat*/
+@-moz-document regexp(".*zoom.us.*") {
+    /*ZOOM*/
+    .zm-comp-header {
+        background: var(--grey_2) !important;
+    }
+    body {
+        background: var(--grey_2);
+        color: var(--white_1);
+    }
+    .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab-active {
+        color: var(--white_1) !important;
+        background: var(--grey_3);
+        font-weight: bold !important;
+    }
+    .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab {
+        background: none;
+        color: var(--white_1);
+        border: 1px solid var(--white_1);
+        font-weight: normal;
+    }
+    .ant-btn, .ant-checkbox-wrapper, .ant-dropdown-menu-item, .ant-input, .ant-pagination-item a { /*show my meetings only*/
+        color: var(--white_1);
+    }
+    .ant-table-thead > tr > th {
+        background: none !important;
+    }
+    .ant-table-column-title {
+        color: var(--white_1) !important;
+    }
+    .ant-table-row {
+        color: var(--white_1) !important;
+    }
+    .ant-table-tbody > tr.ant-table-row-hover:not(.ant-table-expanded-row) > td, .ant-table-tbody > tr:hover:not(.ant-table-expanded-row) > td, .ant-table-thead > tr.ant-table-row-hover:not(.ant-table-expanded-row) > td, .ant-table-thead > tr:hover:not(.ant-table-expanded-row) > td {
+        background: var(--grey_3);
+    }
+    html body div#root div.min-react-bootstrap div.integration-lti-home div div div.ant-tabs.ant-tabs-top.ant-tabs-card.ant-tabs-no-animation div.ant-tabs-content.ant-tabs-content-no-animated.ant-tabs-top-content.ant-tabs-card-content div.ant-tabs-tabpane.ant-tabs-tabpane-active div div.ant-spin-nested-loading div.ant-spin-container div#integration-meeting-list div div.ant-table-wrapper div.ant-spin-nested-loading div.ant-spin-container div.ant-table.ant-table-default.ant-table-scroll-position-left div.ant-table-content div.ant-table-body table tbody.ant-table-tbody tr.ant-table-row.ant-table-row-level-0 td div div {
+        color: var(--white_2) !important;
+    }
+    .ant-btn {
+        background: none !important;
+    }
+    .integration-meeting-detail {
+        color: var(--white_1);
+    }
+    .integration-meeting-detail label {
+        color: var(--white_1);
+    }
+    .integration-meeting-detail .meeting-audio label, .integration-meeting-detail .meeting-options label, .integration-meeting-detail .meeting-video label, .integration-meeting-detail .meeting-video legend {
+        color: var(--white_1);
+    }
+    .meeting-line-margin div span {
+        color: var(--white_2) !important;
+    }
+    .poll-tab .poll .poll-des .poll-des-label {
+        color: var(--white_1);
+    }
+    .anticon {
+        color: var(--white_1);
+    }
+    .ant-pagination-item {
+        background: none !important;
+    }
+    .ant-pagination-disabled .ant-pagination-item-link, .ant-pagination-disabled:focus .ant-pagination-item-link, .ant-pagination-disabled:focus a, .ant-pagination-disabled:hover .ant-pagination-item-link, .ant-pagination-disabled:hover a, .ant-pagination-disabled a {
+        background: none;
+        border-color: var(--white_1);
+    }
+    .ant-pagination-next .ant-pagination-item-link, .ant-pagination-prev .ant-pagination-item-link {
+        background: none;
+        border: 1px solid var(--white_1);
+    }
+}
+
+@-moz-document regexp("https://canvadocs.instructure.com.*") {
+    /*Inline viewer*/
+    .Pages {
+        background-color: var(--grey_3) !important;
+    }
+    .ViewerControls {
+        background-color: var(--grey_2);
+        color: var(--white_1);
+    }
+    .AnnotationControlButton {
+        color: var(--white_1);
+        background: none;
+    }
+    .AnnotationControlButton-outer {
+        border: none;
+    }
+    .AnnotationControlButton:hover:enabled {
+        background-color: var(--grey_3);
+    }
 }
