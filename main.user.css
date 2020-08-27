@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.3.2
+@version        1.3.3
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -1326,7 +1326,11 @@
         padding: 15.6px;
     }
 
+    /*Equations*/
     .equation_image { /*image background to make black images legible*/
+        background: aliceblue;
+    }
+    .question img, .answer img {
         background: aliceblue;
     }
 
