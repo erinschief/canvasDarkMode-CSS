@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.3.0
+@version        1.3.1
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -1337,6 +1337,20 @@
 }
     
 @-moz-document regexp("https://canvas\..*\.edu/(calendar|conversations).*") {
+    :root {
+        /*Custom colors*/
+        --accent: /*[[user-accent]]*/; /*main accent*/
+
+        --grey_1: rgb(44, 44, 44); /*main bg*/
+        --grey_2: rgb(55, 55, 55); /*secondary bg*/
+        --grey_3: rgb(66, 66, 66); /*tertiary bg*/
+        --grey_4: rgb(77, 77, 77); /*quaternary bg*/
+
+        --white_1: rgb(255, 255, 255); /*pure white*/
+        --white_2: rgb(215, 215, 215); /*secondary white*/
+        --white_3: rgb(200, 200, 200); /*tertiary white*/
+    }
+
     .btn, .Button, .ui-button {
         padding: 9px !important;
     }
@@ -1353,6 +1367,20 @@
 
 @-moz-document regexp(".*zoom.us.*") {
     /*ZOOM*/
+    :root {
+        /*Custom colors*/
+        --accent: /*[[user-accent]]*/; /*main accent*/
+
+        --grey_1: rgb(44, 44, 44); /*main bg*/
+        --grey_2: rgb(55, 55, 55); /*secondary bg*/
+        --grey_3: rgb(66, 66, 66); /*tertiary bg*/
+        --grey_4: rgb(77, 77, 77); /*quaternary bg*/
+
+        --white_1: rgb(255, 255, 255); /*pure white*/
+        --white_2: rgb(215, 215, 215); /*secondary white*/
+        --white_3: rgb(200, 200, 200); /*tertiary white*/
+    }
+
     .zm-comp-header {
         background: var(--grey_2) !important;
     }
@@ -1425,6 +1453,20 @@
 
 @-moz-document regexp("https://canvadocs.instructure.com.*") {
     /*Inline viewer*/
+    :root {
+        /*Custom colors*/
+        --accent: /*[[user-accent]]*/; /*main accent*/
+
+        --grey_1: rgb(44, 44, 44); /*main bg*/
+        --grey_2: rgb(55, 55, 55); /*secondary bg*/
+        --grey_3: rgb(66, 66, 66); /*tertiary bg*/
+        --grey_4: rgb(77, 77, 77); /*quaternary bg*/
+
+        --white_1: rgb(255, 255, 255); /*pure white*/
+        --white_2: rgb(215, 215, 215); /*secondary white*/
+        --white_3: rgb(200, 200, 200); /*tertiary white*/
+    }
+
     .Pages {
         background-color: var(--grey_3) !important;
     }
