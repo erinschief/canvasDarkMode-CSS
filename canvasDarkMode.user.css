@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.3.4
+@version        1.3.5
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -1366,92 +1366,6 @@
     }
     .event-details-header, .event-details-content, .event-details-footer {
         border-bottom-color: var(--white_1);
-    }
-}
-
-@-moz-document regexp(".*zoom.us.*") {
-    /*ZOOM*/
-    :root {
-        /*Custom colors*/
-        --accent: /*[[user-accent]]*/; /*main accent*/
-
-        --grey_1: rgb(44, 44, 44); /*main bg*/
-        --grey_2: rgb(55, 55, 55); /*secondary bg*/
-        --grey_3: rgb(66, 66, 66); /*tertiary bg*/
-        --grey_4: rgb(77, 77, 77); /*quaternary bg*/
-
-        --white_1: rgb(255, 255, 255); /*pure white*/
-        --white_2: rgb(215, 215, 215); /*secondary white*/
-        --white_3: rgb(200, 200, 200); /*tertiary white*/
-    }
-
-    .zm-comp-header {
-        background: var(--grey_2) !important;
-    }
-    body {
-        background: var(--grey_2);
-        color: var(--white_1);
-    }
-    .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab-active {
-        color: var(--white_1) !important;
-        background: var(--grey_3);
-        font-weight: bold !important;
-    }
-    .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab {
-        background: none;
-        color: var(--white_1);
-        border: 1px solid var(--white_1);
-        font-weight: normal;
-    }
-    .ant-btn, .ant-checkbox-wrapper, .ant-dropdown-menu-item, .ant-input, .ant-pagination-item a { /*show my meetings only*/
-        color: var(--white_1);
-    }
-    .ant-table-thead > tr > th {
-        background: none !important;
-    }
-    .ant-table-column-title {
-        color: var(--white_1) !important;
-    }
-    .ant-table-row {
-        color: var(--white_1) !important;
-    }
-    .ant-table-tbody > tr.ant-table-row-hover:not(.ant-table-expanded-row) > td, .ant-table-tbody > tr:hover:not(.ant-table-expanded-row) > td, .ant-table-thead > tr.ant-table-row-hover:not(.ant-table-expanded-row) > td, .ant-table-thead > tr:hover:not(.ant-table-expanded-row) > td {
-        background: var(--grey_3);
-    }
-    html body div#root div.min-react-bootstrap div.integration-lti-home div div div.ant-tabs.ant-tabs-top.ant-tabs-card.ant-tabs-no-animation div.ant-tabs-content.ant-tabs-content-no-animated.ant-tabs-top-content.ant-tabs-card-content div.ant-tabs-tabpane.ant-tabs-tabpane-active div div.ant-spin-nested-loading div.ant-spin-container div#integration-meeting-list div div.ant-table-wrapper div.ant-spin-nested-loading div.ant-spin-container div.ant-table.ant-table-default.ant-table-scroll-position-left div.ant-table-content div.ant-table-body table tbody.ant-table-tbody tr.ant-table-row.ant-table-row-level-0 td div div {
-        color: var(--white_2) !important;
-    }
-    .ant-btn {
-        background: none !important;
-    }
-    .integration-meeting-detail {
-        color: var(--white_1);
-    }
-    .integration-meeting-detail label {
-        color: var(--white_1);
-    }
-    .integration-meeting-detail .meeting-audio label, .integration-meeting-detail .meeting-options label, .integration-meeting-detail .meeting-video label, .integration-meeting-detail .meeting-video legend {
-        color: var(--white_1);
-    }
-    .meeting-line-margin div span {
-        color: var(--white_2) !important;
-    }
-    .poll-tab .poll .poll-des .poll-des-label {
-        color: var(--white_1);
-    }
-    .anticon {
-        color: var(--white_1);
-    }
-    .ant-pagination-item {
-        background: none !important;
-    }
-    .ant-pagination-disabled .ant-pagination-item-link, .ant-pagination-disabled:focus .ant-pagination-item-link, .ant-pagination-disabled:focus a, .ant-pagination-disabled:hover .ant-pagination-item-link, .ant-pagination-disabled:hover a, .ant-pagination-disabled a {
-        background: none;
-        border-color: var(--white_1);
-    }
-    .ant-pagination-next .ant-pagination-item-link, .ant-pagination-prev .ant-pagination-item-link {
-        background: none;
-        border: 1px solid var(--white_1);
     }
 }
 
