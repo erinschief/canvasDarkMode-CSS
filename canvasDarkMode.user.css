@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.3.5
+@version        1.3.6
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -733,12 +733,6 @@
     .DyQTK_ddES.DyQTK_EwaR:hover { /*post to bubble*/
         background-color: var(--white_1);
         color: var(--grey_1);
-    }
-    .esvoZ_bGBk { /*post to bubble x*/
-        fill: white;
-    }
-    .esvoZ_bGBk:hover {
-        fill: black;
     }
     legend {
         color: var(--white_1);
