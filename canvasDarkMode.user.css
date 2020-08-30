@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.3.6
+@version        1.3.7
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -228,10 +228,6 @@
     }
     .eJkkQ_diPG, .eJkkQ_fEMB, .eJkkQ_eOlt, .eJkkQ_fvoZ, .eJkkQ_bIuM, .eJkkQ_fyZW, .eJkkQ_cuyj, .eJkkQ_gaix {
         background: var(--grey_2);
-    }
-    .fOyUs_bGBk, .fOyUs_desw, .fOyUs_cBHs, .fOyUs_eWbJ, .fOyUs_eeJl, .fOyUs_cBtr, .fOyUs_fuTR, .XBLto_bXVH {
-        background: none;
-        color: var(--white_1);
     }
     html body.with-right-side.Underline-All-Links__enabled.primary-nav-expanded.context-user_120560.responsive_awareness.responsive_misc.webkit.safari.ff.no-touch div#application.ic-app div#wrapper.ic-Layout-wrapper div#main.ic-Layout-columns div#not_right_side.ic-app-main-content div#right-side-wrapper.ic-app-main-content__secondary aside#right-side div.Sidebar__TodoListContainer div ul#planner-todosidebar-item-list.fOyUs_bGBk.tTloz_bGBk.tTloz_fLbg.undefined li.fOyUs_bGBk.dxCCp_bGBk.dxCCp_fLbg.dxCCp_ycrn.dxCCp_cfzP div.ToDoSidebarItem div.ToDoSidebarItem__Info ul.fOyUs_bGBk.tTloz_bGBk.tTloz_eXrk.undefined li.fOyUs_bGBk.dxCCp_bGBk.dxCCp_eXrk.dxCCp_doqw.dxCCp_dnHs { /*assignment date subtext*/
         color: var(--white_2);
