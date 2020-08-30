@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.3.7
+@version        1.4.0
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -1391,5 +1391,44 @@
     }
     .AnnotationControlButton:hover:enabled {
         background-color: var(--grey_3);
+    }
+}
+
+@-moz-document regexp("https://prod.ally.ac/accessibleversions?locale=en&platformName=canvas&platformUi=.*") {
+    body {
+        color: var(--white_1);
+    }
+    .close {
+        color: var(--white_1);
+    }
+    .modal-content {
+        position: relative;
+        background-color: var(--grey_2);
+        border: .5px solid var(--white_1);
+    }
+    
+    .downloadlink-container > a {
+        color: var(--grey_2);
+    }
+    .ally-av-description {
+        color: var(--white_2);
+    }
+    
+    .ally-additional-help-student > a {
+        color: var(--white_1);
+        font-weight: 400;
+    }
+    
+    .modal .modal-body {
+        padding-bottom: 0px !important;
+    }
+    .modal .modal-footer {
+        background: none;
+        padding-top: 0px;
+        border: none;
+    }
+    .ally-av-conditions p {
+        color: var(--white_2);
+        font-style: normal;
     }
 }
