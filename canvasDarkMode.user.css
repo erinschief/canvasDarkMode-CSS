@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.4.5
+@version        1.4.6
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -46,9 +46,7 @@
         --fNHEA-labelColor: var(--white_1);
         --dLdjY-arrowColor: var(--white_1);
         --MlJlv-textColor: var(--white_1);
-        --cvphu-color: var(--white_1); 
         --yyQPt-hoverBorderColor: var(--white_1)
-        --cvphu-background: var(--grey_2);
     }
     
     a { /*link underline*/
@@ -282,6 +280,10 @@
     /*notif*/
     .ic-notification__content {
         background: var(--grey_1);
+    }
+    .cvphu_bgqc {
+        background: var(--grey_1);
+        color: var(--white_1);
     }
     
     /*Color picker*/
@@ -1067,11 +1069,6 @@
         transition: none;
         background: none;
     }
-    .ui-dialog .ui-dialog-titlebar-close:before {
-        color: var(--white_1);
-        font-size: 24px;
-        content: "\2717";
-    }
     .ui-dialog .ui-dialog-content {
         background: var(--grey_1);
     }
@@ -1293,6 +1290,32 @@
         color: var(--white_1);
     }
     .message-detail.span8 .date, .message-detail.conversations__message-detail .date {
+        color: var(--white_2);
+    }
+
+    /*Compose message popup*/
+    .compose-message-dialog .ui-dialog-titlebar-close:hover, .submission-comment-reply-dialog .ui-dialog-titlebar-close:hover { /*close dialog hover highlight*/
+        border: none !important;
+    }
+    .icon-x::before {
+        color: var(--white_1);
+    }
+    .ac-token { /*to: names*/
+        background: var(--grey_2);
+        border: 1px solid var(--white_1);
+    }
+    .ac-token:hover {
+        background: var(--grey_3);
+        border-color: var(--white_1);
+    }
+    .ui-datepicker .ui-datepicker-time, .ui-dialog .ui-dialog-buttonpane, .ui-dialog .ui-datepicker .ui-datepicker-time, .ui-datepicker .ui-dialog .ui-datepicker-time { /*footer*/
+        background-color: var(--grey_2);
+        border-top: 1px solid var(--white_1);
+    }
+    .compose-message-dialog .ui-dialog-buttonset.attachments .ui-button, .submission-comment-reply-dialog .ui-dialog-buttonset.attachments .ui-button {
+        color: var(--white_1);
+    }
+    #compose-new-message .context_messages .collectionViewItems .context-date, #compose-new-message .context_messages .collectionViewItems .context-body, #submission-comment-reply .context_messages .collectionViewItems .context-date, #submission-comment-reply .context_messages .collectionViewItems .context-body { /*previous message text*/
         color: var(--white_2);
     }
     
