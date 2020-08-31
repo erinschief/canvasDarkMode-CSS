@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.4.3
+@version        1.4.4
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -286,7 +286,7 @@
     
     /*Color picker*/
     .dpCPB_caGd {
-        background: var(--grey_1);
+        background: var(--grey_2);
         border-color: var(--white_1);
     }
     .ColorPicker__Container {
@@ -684,8 +684,15 @@
         border-color: var(--white_1);
         color: var(--white_1);
     }
+    .fQfxa_bGBk:hover .fQfxa_dqAF.fQfxa_buuG {
+        background: var(--white_1);
+        color: var(--grey_2);
+    }
     a.fbyHH_bGBk, button.fbyHH_bGBk {
         color: var(--white_1);
+    }
+    .fhWLw_bGBk { /*use high contrast UI toggle*/
+        --fhWLw-borderColor: var(--white_1);
     }
     
     /*All Courses*/
