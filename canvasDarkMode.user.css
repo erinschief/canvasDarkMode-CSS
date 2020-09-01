@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.4.6
+@version        1.4.7
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -130,6 +130,10 @@
         background: var(--grey_1);
         border-bottom-color: var(--white_1);
     }
+    .unpublished_courses_redesign .ic-DashboardCard__box__header {
+        border-bottom: 1px solid var(--white_1);
+        background: none;
+    }
     
     /*right sidebar*/
     #right-side-wrapper {
@@ -144,6 +148,9 @@
         font-size: 1.2rem;
         border-bottom-color: var(--white_1);
         font-weight: bold;
+    }
+    #right-side .right-side-list li a > i { /*right sidebar icons*/
+        color: var(--white_1);
     }
     .fOyUs_bGBk, .fOyUs_desw, .fOyUs_cBHs, .fOyUs_eWbJ, .fOyUs_eeJl, .fOyUs_cBtr, .fOyUs_fuTR, .XBLto_bXVH { /*to do subtext*/
         color: var(--white_2);
@@ -1002,9 +1009,11 @@
     #calendar_header .navigation_buttons .ui-button {
         padding-left: 8px !important;
     }
+    /* TODO: is this necessary?
     i[class*="icon-"]::before, i[class^="icon-"]::before, a[class*="icon-"]::before, a[class^="icon-"]::before {
         vertical-align: central;
     }
+    */
     .btn.active, .btn.Button--active, .btn.ui-button.ui-state-active, .ui-progressbar .btn.ui-button.ui-widget-header, .Button.active, .active.ui-button, .Button.Button--active, .Button--active.ui-button, .ui-button.ui-state-active, .ui-progressbar .ui-button.ui-widget-header, .ui-button.ui-state-active:hover, .ui-button.ui-state-active.ui-state-hover {
         background: var(--white_1);
         border-color: var(--white_1);
@@ -1296,9 +1305,6 @@
     /*Compose message popup*/
     .compose-message-dialog .ui-dialog-titlebar-close:hover, .submission-comment-reply-dialog .ui-dialog-titlebar-close:hover { /*close dialog hover highlight*/
         border: none !important;
-    }
-    .icon-x::before {
-        color: var(--white_1);
     }
     .ac-token { /*to: names*/
         background: var(--grey_2);
