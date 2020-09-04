@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.4.8
+@version        1.4.9
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -856,6 +856,12 @@
     .rce_links {
         float: none;
     }
+    .muted-notice {
+        background: var(--grey_2);
+        background-image: none;
+        border: 1px solid var(--white_1);
+        text-shadow: none;
+    }
 
     /*Content editor toolbar*/
     .mce-toolbar .mce-btn i { /*toolbar*/
@@ -1311,8 +1317,14 @@
     }
 
     /*Compose message popup*/
+    .icon-x::before {
+        color: var(--white_1);
+    }
     .compose-message-dialog .ui-dialog-titlebar-close:hover, .submission-comment-reply-dialog .ui-dialog-titlebar-close:hover { /*close dialog hover highlight*/
         border: none !important;
+    }
+    .bootstrap-select.btn-group .dropdown-menu.inner {
+        background: var(--grey_2);
     }
     .ac-token { /*to: names*/
         background: var(--grey_2);
@@ -1375,6 +1387,19 @@
     /*other versions button*/
     .ally-accessible-versions > .ally-prominent-af-download-button {
         background-image: url(https://raw.githubusercontent.com/erinschief/canvasDarkMode-CSS/master/alt-formats-icon-white.svg);
+    }
+
+    /*Teacher View*/
+    #right_side .content_box { /*speed grader sidebar*/
+        background: none;
+        border-bottom: 1px solid var(--white_1);
+    }
+    #right_side div.comment { /*assignment comments*/
+        border-top: 1px dotted var(--white_2);
+        background: var(--grey_2);
+    }
+    .chpSa_blLZ { /*add comment box*/
+        background: var(--grey_2);
     }
 }
     
@@ -1439,6 +1464,10 @@
     }
     .AnnotationControlButton:hover:enabled {
         background-color: var(--grey_3);
+    }
+    .SecondaryControls {
+        background-color: var(--grey_2);
+        border-bottom: 1px solid var(--white_1);
     }
 }
 
