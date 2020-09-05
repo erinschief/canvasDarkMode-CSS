@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.4.9
+@version        1.4.10
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -427,7 +427,6 @@
     }
     .toolbarView {
         background: none;
-        padding: 58px;
     }
     .discussion-reply-box {
         background: none;
@@ -1087,6 +1086,7 @@
     }
     .ui-dialog .ui-dialog-titlebar-close:not(.ui-state-focus) {
         border: none;
+        color: var(--white_1)
     }
     .ui-dialog .ui-dialog-titlebar-close span {
         transition: none;
@@ -1317,8 +1317,8 @@
     }
 
     /*Compose message popup*/
-    .icon-x::before {
-        color: var(--white_1);
+    .ui-dialog .ui-dialog-titlebar-close:not(.ui-state-focus) { /*weird blue action highlight*/
+        border: none;
     }
     .compose-message-dialog .ui-dialog-titlebar-close:hover, .submission-comment-reply-dialog .ui-dialog-titlebar-close:hover { /*close dialog hover highlight*/
         border: none !important;
