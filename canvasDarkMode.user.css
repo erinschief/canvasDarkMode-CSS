@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.4.10
+@version        1.5.0
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -23,6 +23,9 @@
         --white_1: rgb(255, 255, 255); /*pure white*/
         --white_2: rgb(215, 215, 215); /*secondary white*/
         --white_3: rgb(200, 200, 200); /*tertiary white*/
+
+        --alert-red: rgb(235, 50, 50);
+        --highlight-blue: rgb(75, 120, 220);
         
         /*Rethemed canvas colors*/
         --ic-brand-primary: var(--accent); /*this is an important one as it affects many other canvas variables*/
@@ -448,7 +451,7 @@
         z-index: 1;
     }
     .ic-Table tr.ic-Table__row--bg-danger {
-        background: #EA3333;
+        background: var(--alert-red);
         opacity: .8;
         z-index: 2;
     }
@@ -565,8 +568,8 @@
         text-align: left;
     }
     .ui-widget-content { /*header*/
-        border: 1px solid;
-        color: var(--white_1);
+        border: 1px solid var(--white_1);
+        background: var(--grey_2);
     }
     .ui-tabs {
         background: none !important;
@@ -1390,6 +1393,11 @@
     }
 
     /*Teacher View*/
+    .yyQPt_cjfS .yyQPt_blJt { /*checked label color*/
+        color: var(--white_1);
+    }
+    
+    /*Speedgrader*/
     #right_side .content_box { /*speed grader sidebar*/
         background: none;
         border-bottom: 1px solid var(--white_1);
@@ -1398,8 +1406,99 @@
         border-top: 1px dotted var(--white_2);
         background: var(--grey_2);
     }
+    #right_side div.comment .delete_comment_link, #right_side div.comment .submit_comment_button { /*delete assignment comment*/
+        color: var(--white_2);
+    }
+    #right_side div.comment .comment_citation { /*assignment comment author*/
+        color: var(--white_2)
+    }
     .chpSa_blLZ { /*add comment box*/
         background: var(--grey_2);
+    }
+    #students_selectmenu-menu .ui-state-hover {
+        background-color: var(--grey_3);
+    }
+    #students_selectmenu-menu li {
+        border-bottom: 1px solid var(--white_3);
+    }
+    .not_submitted .ui-selectmenu-item-header {
+        color: var(--white_2);
+    }
+    #section-menu {
+        border: 1px solid var(--white_1);
+    }
+    .ui-selectmenu-menu .ui-state-focus, .ui-selectmenu-menu .ui-state-hover {
+        background: var(--grey_3);
+    }
+    #section-menu ul {
+        background-color: var(--grey_2);
+        left: -202px;
+    }
+    #section-menu ul li:first-of-type {
+        border-bottom: 1px solid var(--white_3);
+    }
+    #section-menu ul li a:hover {
+        background: var(--grey_3);
+    }
+    #students_selectmenu-menu.ui-widget.ui-widget-content.ui-selectmenu-menu-dropdown.ui-corner-bottom {
+        height: 350px;
+    }
+    #width_resizer {
+        background: var(--white_2) url("/dist/images/splitpane_handle-ew-1b67cccf0f.gif") no-repeat scroll 50% 50%;
+        border-right: none;
+    }
+    
+    /*Grades Table*/
+    .slick-header-column {
+        background-color: var(--grey_1);
+    }
+    .ui-state-default, .ui-widget-header .ui-state-default {
+        border: 1px solid var(--white_1);
+    }
+    .container_0 .slick-cell:first-child {
+        border-left: 1px solid var(--white_2);
+    }
+    .container_0 .slick-cell, .container_1 .slick-cell {
+        border-bottom: 1px solid var(--white_2);
+        border-right: 1px solid;
+        padding: 0;
+        overflow: visible;
+    }
+    .student-name {
+        text-shadow: none;
+    }
+    .secondary-info {
+        color: var(--white_2);
+    }
+    .even .slick-cell {
+        background-color: var(--grey_2);
+    }
+    .odd .slick-cell {
+        background-color: var(--grey_2);
+        filter: brightness(1.15);
+    }
+    .gradebook-cell.grayed-out {
+        background-color: var(--grey_2);
+        filter: brightness(.75);
+    }
+    .even .gradebook-cell.missing {
+        background-color: var(--alert-red);
+        filter: opacity(.5);
+    }
+    .odd .gradebook-cell.missing {
+        background-color: var(--alert-red);
+        filter: opacity(.5);
+    }
+    .even .gradebook-cell.late {
+        background-color: var(--highlight-blue);
+        filter: opacity(.7);
+    }
+    .odd .gradebook-cell.late {
+        background-color: var(--highlight-blue);
+        filter: opacity(.7);
+    }
+    .letter-grade-points, .gpa-scale-points {
+        color: var(--white_2);
     }
 }
     
@@ -1466,8 +1565,18 @@
         background-color: var(--grey_3);
     }
     .SecondaryControls {
+        top: 48px;
         background-color: var(--grey_2);
         border-bottom: 1px solid var(--white_1);
+    }
+    .ViewerControls--with-annotations {
+        height: 48px;
+    }
+    .ColorButton {
+        background: none;
+    }
+    .SecondaryControls-label {
+        color: var(--white_2);
     }
 }
 
