@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.5.1
+@version        1.5.2
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -1577,6 +1577,58 @@
     }
     .SecondaryControls-label {
         color: var(--white_2);
+    }
+
+    /*doc viewer comments*/
+    .PageContainerComments {
+        color: var(--white_1);
+    }
+    .Comment {
+        border-right: 1px solid var(--white_1);
+        border-left: 1px solid var(--white_1);
+        background-color: var(--grey_2);
+    }
+    .CommentGroup-textarea {
+        background: var(--grey_2);
+        -webkit-text-fill-color: var(--white_1) !important;
+    }
+    .Comment:first-of-type, .Comment-root-comment {
+        border-top: 1px solid var(--white_1);
+    }
+    .Comment-isAtBottom, .Comment-isReplyForm {
+        border-bottom: 1px solid var(--white_1);
+    }
+    .CommentGroup .Comment2, .CommentGroup .Comment3, .CommentGroup .Comment4, .CommentGroup .Comment4 {
+        border: .5px solid var(--white_1);
+        background-color: var(--grey_3);
+    }
+    .Comment-reply-number {
+        color: var(--white_2);
+        font-weight: inherit;
+        text-decoration: underline;
+    }
+    .CommentReplyForm {
+        background: var(--grey_2);
+    }
+    .CommentReplyForm .CommentReplyForm-inner {
+        border-top: 1px solid var(--white_1);
+        border-bottom: 1px solid var(--white_1);
+        border-right: 1px solid var(--white_1);
+        border-left: 1px solid var(--white_1);
+    }
+    .inst-button {
+        background-color: var(--grey_3);
+        border: 1px solid var(--white_1);
+        color: var(--white_1);
+    }
+    .inst-button:hover {
+        background-color: var(--white_1);
+        border-color: var(--white_1);
+        color: var(--grey_2);
+    }
+    
+    .CommentGroup-textarea:focus {
+        border: none;
     }
 }
 
