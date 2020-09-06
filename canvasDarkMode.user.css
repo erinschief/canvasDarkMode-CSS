@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.5.2
+@version        1.5.3
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -58,6 +58,9 @@
     a:focus, a:hover { /*link hover color*/
         color: var(--accent);
         filter: brightness(1.25);
+    }
+    img[class="a"]:focus, a:hover { /*remove filter when image is linked*/
+        filter: none;
     }
     p{
         font-size: 17px;
@@ -633,7 +636,7 @@
     }
     .fNHEA_cjSw.fNHEA_ksNK .fNHEA_cSXm { /*show-by buttons*/
         background-color: var(--grey_3);
-        border: 1px solid white;
+        border: 1px solid var(--white_1);
     }
     .item-group-condensed {
         padding: 4px;
@@ -765,7 +768,7 @@
         border-bottom: 1px solid var(--white_1);
     }
     .dXATK_cAug { /*links files images*/
-        border: 1px solid white;
+        border: 1px solid var(--white_1);
         color: var(--white_1);
         background: var(--grey_1);
     }
@@ -795,13 +798,13 @@
         background-color: var(--grey_3) !important;
     }
     ._1iyfu1y { /*files > folders text*/
-        color: white !important;
+        color: var(--white_1) !important;
     }
     ._1iyfu1y:hover {
         background: var(--grey_3) !important;
     }
     ._xl47ao2 { /*files > file text*/
-        color: white;
+        color: var(--white_1);
     }
     ._xl47ao2:hover {
         background: var(--grey_3) !important;
@@ -1025,11 +1028,6 @@
     #calendar_header .navigation_buttons .ui-button {
         padding-left: 8px !important;
     }
-    /* TODO: is this necessary?
-    i[class*="icon-"]::before, i[class^="icon-"]::before, a[class*="icon-"]::before, a[class^="icon-"]::before {
-        vertical-align: central;
-    }
-    */
     .btn.active, .btn.Button--active, .btn.ui-button.ui-state-active, .ui-progressbar .btn.ui-button.ui-widget-header, .Button.active, .active.ui-button, .Button.Button--active, .Button--active.ui-button, .ui-button.ui-state-active, .ui-progressbar .ui-button.ui-widget-header, .ui-button.ui-state-active:hover, .ui-button.ui-state-active.ui-state-hover {
         background: var(--white_1);
         border-color: var(--white_1);
