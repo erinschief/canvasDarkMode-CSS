@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.5.10
+@version        1.5.11
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -599,7 +599,7 @@
         background: none !important;
     }
     .ui-tabs .ui-tabs-nav {
-        border: none;
+        border-bottom-color: var(--white_1);
     }
     .ui-tabs .ui-tabs-nav li {
         border: 1px solid;
@@ -625,6 +625,7 @@
     }
     .ui-tabs .ui-tabs-panel { /*main cell*/
         background: var(--grey_1);
+        border-color: var(--white_1);
     }
     textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input { /*search*/
         background: none;
