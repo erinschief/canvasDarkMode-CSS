@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.5.7
+@version        1.5.8
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -772,18 +772,32 @@
     .yyQPt_blJt { /*discussion settings*/
         color: var(--white_1);
     }
+    .esvoZ_bGBk { /*svg fill*/
+        fill: var(--white_1);
+    }
+    .esvoZ_bGBk:hover { /*svg hover fill*/
+        fill: var(--grey_1);
+    }
 
     /*create new discussion*/
     .published-status.unpublished {
         color: var(--white_2);
     }
-    .DyQTK_ddES.DyQTK_EwaR:hover { /*post to bubble*/
+    .DyQTK_ddES {
+        background-color: var(--grey_1);
+        border: 1px solid var(--white_1);
+    }
+    .DyQTK_ddES.DyQTK_EwaR:hover { /*post to: bubble*/
         background-color: var(--white_1);
         color: var(--grey_1);
     }
     legend {
         color: var(--white_1);
         border-bottom: 1px solid var(--white_1);
+    }
+    div.form-column-right label:hover, div.overrides-column-right label:hover { /*is group discussion hover*/
+        background: var(--white_1);
+        color: var(--grey_1)
     }
     .dXATK_cAug { /*links files images*/
         border: 1px solid var(--white_1);
@@ -844,6 +858,18 @@
     }
     .discussion-pubdate, .discussion-tododate {
         color: var(--white_2);
+    }
+    .dim-till-hover { /*remove weird dimming of bubbles*/
+        opacity: 1;
+    }
+    .entry > .bottom-reply-with-box .discussion-entry-reply-area {
+        padding: 0 0.8em;
+        border-top: 1px solid var(--white_1);
+        background: var(--grey_2);
+    }
+    .entry .cancel_button { /*canvas tried to make the cancel button a different size*/
+        font-size: none;
+        font-size: none;
     }
     
     /*Quizzes*/
@@ -1071,7 +1097,7 @@
         background: none;
     }
     #calendar-app .fc-month-view .fc-body, #calendar-drag-and-drop-container .fc-month-view .fc-body {
-        background-color: none;
+        background: none;
     }
     .fc-view-container *, .fc-view-container ::before, .fc-view-container ::after {
         background: none;
