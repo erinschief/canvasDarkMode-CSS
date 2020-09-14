@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.5.11
+@version        1.6.0
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -1435,6 +1435,14 @@
     /*other versions button*/
     .ally-accessible-versions > .ally-prominent-af-download-button {
         background-image: url(https://raw.githubusercontent.com/erinschief/canvasDarkMode-CSS/master/alt-formats-icon-white.svg);
+    }
+
+    /*External link icon*/
+    .ui-icon {
+        background-image: url(https://raw.githubusercontent.com/erinschief/canvasDarkMode-CSS/master/external-link-icon-white.svg);
+    }
+    .ui-icon-extlink {
+        background-position: 0px 0px;
     }
 
     /*Teacher View*/
