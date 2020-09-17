@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.6.3
+@version        1.6.4
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -873,6 +873,13 @@
     }
     .entry .cancel_button { /*canvas tried to make the cancel button a different size*/
         font-size: .875rem;
+    }
+    .showMore {
+        border-top: 1px solid var(--white_1);
+        background: var(--grey_2);
+    }
+    .showMore:hover {
+        background: var(--grey_3);
     }
     
     /*Quizzes*/
