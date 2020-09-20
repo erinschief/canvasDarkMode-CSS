@@ -2,6 +2,7 @@
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
 @version        1.6.4
+@version        1.6.5
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -305,6 +306,10 @@
         background: var(--grey_1);
         color: var(--white_1);
     }
+    .ic-flash-error {
+        border-color: var(--alert-red);
+        background: var(--grey_1);
+    }
 
     /*Global announcements*/
     .XBLto_ddES {
@@ -451,6 +456,9 @@
     }
     .toolbarView {
         background: none;
+    }
+    .discussion-read-state { /*remove blue border around unread bubble*/
+        border: none;
     }
     .discussion-reply-box {
         background: none;
@@ -648,6 +656,23 @@
     .avatar {
         border: 2px solid var(--grey_3);
         background-color: var(--grey_3);
+    }
+    /*Group management (teacher view)*/
+    .group-category-contents {
+        background: var(--grey_1);
+        border-color: var(--white_1);
+    }
+    .group-summary {
+        font-size: 0.9em;
+        color: var(--white_2);
+    }
+    .group-user {
+        border: 1px solid var(--white_1);
+        background: var(--grey_2);
+    }
+    .group-user-name {
+        max-width: 120%;
+        color: var(--white_1);
     }
     
     /*Assignments*/
@@ -1065,6 +1090,12 @@
     }
     .submission-details-comments .comments {
         background-color: var(--grey_2);
+    }
+    .comment div { /*submission comments*/
+        color: var(--white_2) important;
+    }
+    div.comment {
+        color: white !important;
     }
     a.media-comment { /*remove media comment icon*/
         color: var(--white_1);
