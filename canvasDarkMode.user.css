@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.6.6
+@version        1.6.7
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -216,6 +216,15 @@
     }
     .Grouping-styles__overlay.Grouping-styles__withImage { /*disable course bkd images in list view*/
         opacity: 1;
+    }
+    .Opportunity-styles__root { /*list view bell submenu*/
+        background: none;
+    }
+    .Opportunity-styles__oppName {
+        color: var(--white_1);
+    }
+    .Opportunity-styles__due {
+        color: var(--white_2);
     }
 
     /*add sidebar*/
