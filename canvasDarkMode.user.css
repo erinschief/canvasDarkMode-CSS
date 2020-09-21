@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.6.5
+@version        1.6.6
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -1472,6 +1472,10 @@
     /*Mobile fixes*/
     .mobile-header-hamburger, .mobile-header-title {
         padding: 15.6px;
+    }
+    button.Button.Button--icon-action-rev.Button--large.mobile-header-hamburger:hover { /*hamburger hover background*/
+        background: var(--accent) !important;
+        filter: brightness(.8);
     }
 
     /*Equations*/
