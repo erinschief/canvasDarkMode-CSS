@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.6.7
+@version        1.6.8
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -926,6 +926,9 @@
     html body.with-left-side.course-menu-expanded.with-right-side.quizzes.Underline-All-Links__enabled.primary-nav-expanded.context-course_113042.responsive_admin_settings.responsive_awareness.responsive_misc.webkit.safari.ff.no-touch div#application.ic-app div#wrapper.ic-Layout-wrapper div#main.ic-Layout-columns div#not_right_side.ic-app-main-content div#content-wrapper.ic-Layout-contentWrapper div#content.ic-Layout-contentMain div#quiz_show header.quiz-header div.take_quiz_button a#take_quiz_link.btn.btn-primary {
         padding: 8px !important;
         border: 2px solid var(--white_1);
+    }
+    .quiz-header {
+        border-bottom: 1px solid var(--white_1);
     }
     #questions.assessing {
         background: none;
