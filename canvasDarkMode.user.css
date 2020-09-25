@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.6.8
+@version        1.6.9
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -52,14 +52,14 @@
         --yyQPt-hoverBorderColor: var(--white_1)
     }
     
-    a { /*link underline*/
+    a { /*link color*/
         color: var(--white_1);
     }
     a:focus, a:hover { /*link hover color*/
         color: var(--accent);
         filter: brightness(1.25);
     }
-    img[class="a"]:focus, a:hover { /*remove filter when image is linked*/
+    img[class="a"]:focus, a:hover { /*remove filter when image is linked. ensures no flickering when moving mouse over image link*/
         filter: none;
     }
     p{
@@ -77,7 +77,7 @@
     h2, h3, h4 {
         color: var(--white_1) !important;
     }
-    .Underline-All-Links__enabled a:not(.Button):not(.ui-button):not(.btn):not(.ui-button):not(.ui-tabs-anchor):focus, .Underline-All-Links__enabled a:not(.Button):not(.ui-button):not(.btn):not(.ui-button):not(.ui-tabs-anchor):hover {
+    .Underline-All-Links__enabled a:not(.Button):not(.ui-button):not(.btn):not(.ui-button):not(.ui-tabs-anchor):focus, .Underline-All-Links__enabled a:not(.Button):not(.ui-button):not(.btn):not(.ui-button):not(.ui-tabs-anchor):hover { /*link hover*/
         color: var(--accent);
         text-decoration: none;
     }
@@ -92,9 +92,32 @@
         padding: 0px;
         border: none;
     }
+    .btn, .Button[type="submit"] {
+        color: var(--white_1);
+        padding: 6px;
+        border: 1px solid var(--white_1);
+    }
+    .btn:active, .Button:active, .ui-button:active {
+        background: var(--white_1);
+    }
+    .btn.active, .btn.Button--active, .btn.ui-button.ui-state-active, .ui-progressbar .btn.ui-button.ui-widget-header, .Button.active, .active.ui-button, .Button.Button--active, .Button--active.ui-button, .ui-button.ui-state-active, .ui-progressbar .ui-button.ui-widget-header, .ui-button.ui-state-active:hover, .ui-button.ui-state-active.ui-state-hover {
+        background: var(--white_1);
+        border-color: var(--white_1);
+        color: var(--grey_1);
+    }
     .btn:hover, .Button:hover, .ui-button:hover, .ui-button.ui-state-hover {
         background: var(--white_1) !important;
         color: var(--grey_2) !important;
+    }
+    .btn-block, .Button--block {
+        padding: 6;
+    }
+    .btn.disabled, .btn[disabled], .Button.disabled, .disabled.ui-button, .ui-button.ui-state-disabled, .Button[disabled], [disabled].ui-button {
+        background: none !important;
+        color: var(--white_2);
+        opacity: 1;
+        padding-top: 12px;
+        border-top: 1px solid var(--white_1);
     }
     .btn-primary, .Button--primary {
         background: var(--accent) !important;
@@ -107,50 +130,38 @@
         color: var(--white_1) !important;
         background: var(--accent) !important;
     }
-    .btn, .Button[type="submit"] {
-        color: var(--white_1);
-        padding: 6px;
-        border: 1px solid var(--white_1);
-    }
-    .btn-block, .Button--block {
-        padding: 6;
-    }
-    .btn.disabled, .btn[disabled], .Button.disabled, .disabled.ui-button, .ui-button.ui-state-disabled, .Button[disabled], [disabled].ui-button {
-        background: none !important;
-        color: var(--white_2);
-        opacity: 1;
-        padding-top: 12px;
-        border-top: 1px solid var(--white_1);
-    }
     
     /*Nav bar*/
-    .ic-app-header {
+    .ic-app-header { /*universal left toolbar*/
         background-color: var(--accent);
     }
-    .ic-app-header__menu-list-link .ic-icon-svg {
+    .ic-app-header__menu-list-link .ic-icon-svg { /*left toolbar icon coloring*/
         fill: var(--white_1);
     }
     
     /*Header*/
-    .ic-Dashboard-header__layout {
+    .ic-Dashboard-header__layout { /*HDashboard header*/
         background: var(--grey_1);
         border-bottom: 1px solid var(--white_1);
     }
-    .unpublished_courses_redesign .ic-DashboardCard__box__header {
+    .unpublished_courses_redesign .ic-DashboardCard__box__header { /*TV: unpublished courses*/
         border-bottom: 1px solid var(--white_1);
         background: none;
     }
     
-    /*right sidebar*/
-    #right-side-wrapper {
+    /*Right Sidebar*/
+    #right-side-wrapper { /*right sidebar area*/
         display: none;
         background: none;
         padding-top: 12px;
     }
-    .ic-sidebar-logo__image {
+    .ic-sidebar-logo__image { /*sidebar top logo*/
         display: none;
     }
-    #right-side h2, #right-side .h2 {
+    #right-side .details .header {
+        color: var(--white_1);
+    }
+    #right-side h2, #right-side .h2 { /*right side headers*/
         font-size: 1.2rem;
         border-bottom: 1px solid var(--white_1);
         font-weight: bold;
@@ -168,9 +179,18 @@
     .fOyUs_bGBk, .fOyUs_desw, .fOyUs_cBHs, .fOyUs_eWbJ, .fOyUs_eeJl, .fOyUs_cBtr, .fOyUs_fuTR, .XBLto_bXVH { /*to do subtext*/
         color: var(--white_2);
     }
+    #right-side .right-side-list li em, #right-side .right-side-list li p {
+        color: var(--white_2);
+    }
+    html body.with-right-side.Underline-All-Links__enabled.primary-nav-expanded.context-user_120560.responsive_awareness.responsive_misc.webkit.safari.ff.no-touch div#application.ic-app div#wrapper.ic-Layout-wrapper div#main.ic-Layout-columns div#not_right_side.ic-app-main-content div#right-side-wrapper.ic-app-main-content__secondary aside#right-side div.Sidebar__TodoListContainer div ul#planner-todosidebar-item-list.fOyUs_bGBk.tTloz_bGBk.tTloz_fLbg.undefined li.fOyUs_bGBk.dxCCp_bGBk.dxCCp_fLbg.dxCCp_ycrn.dxCCp_cfzP div.ToDoSidebarItem div.ToDoSidebarItem__Info ul.fOyUs_bGBk.tTloz_bGBk.tTloz_eXrk.undefined li.fOyUs_bGBk.dxCCp_bGBk.dxCCp_eXrk.dxCCp_doqw.dxCCp_dnHs { /*assignment date subtext*/
+        color: var(--white_2);
+    }
+    #right-side .events_list .event-details::after, #right-side .events_list .todo-details::after, #right-side .to-do-list .event-details::after, #right-side .to-do-list .todo-details::after { /*recent feedback*/
+        background: none
+    }
     
     /*Dashboard*/
-    .ic-DashboardCard {
+    .ic-DashboardCard { /*dashboard header container*/
         background: var(--grey_2);
     }
     .ic-DashboardCard__header_content {
@@ -179,24 +199,22 @@
     .ic-DashboardCard__header-button {
         border: none !important;
     }
-    
-    html body.with-right-side.Underline-All-Links__enabled.primary-nav-expanded.context-user_120560.responsive_admin_settings.responsive_awareness.responsive_misc.webkit.safari.ff.no-touch div#application.ic-app div#wrapper.ic-Layout-wrapper div#main.ic-Layout-columns div#not_right_side.ic-app-main-content div#content-wrapper.ic-Layout-contentWrapper div#content.ic-Layout-contentMain div#dashboard.ic-dashboard-app div#DashboardCard_Container div.ic-DashboardCard__box div.ic-DashboardCard div.ic-DashboardCard__header div span button.Button.Button--icon-action-rev.ic-DashboardCard__header-button:hover {
+    html body.with-right-side.Underline-All-Links__enabled.primary-nav-expanded.context-user_120560.responsive_admin_settings.responsive_awareness.responsive_misc.webkit.safari.ff.no-touch div#application.ic-app div#wrapper.ic-Layout-wrapper div#main.ic-Layout-columns div#not_right_side.ic-app-main-content div#content-wrapper.ic-Layout-contentWrapper div#content.ic-Layout-contentMain div#dashboard.ic-dashboard-app div#DashboardCard_Container div.ic-DashboardCard__box div.ic-DashboardCard div.ic-DashboardCard__header a.ic-DashboardCard__link div.ic-DashboardCard__header_content h3.ic-DashboardCard__header-title.ellipsis span { /*course card ellipsis*/
+        color: var(--white_1) !important;
+    }
+    html body.with-right-side.Underline-All-Links__enabled.primary-nav-expanded.context-user_120560.responsive_admin_settings.responsive_awareness.responsive_misc.webkit.safari.ff.no-touch div#application.ic-app div#wrapper.ic-Layout-wrapper div#main.ic-Layout-columns div#not_right_side.ic-app-main-content div#content-wrapper.ic-Layout-contentWrapper div#content.ic-Layout-contentMain div#dashboard.ic-dashboard-app div#DashboardCard_Container div.ic-DashboardCard__box div.ic-DashboardCard div.ic-DashboardCard__header div span button.Button.Button--icon-action-rev.ic-DashboardCard__header-button:hover { /*course card hover*/
         background: none;
         color: var(--white_1);
     }
-    
-    html body.with-right-side.Underline-All-Links__enabled.primary-nav-expanded.context-user_120560.responsive_admin_settings.responsive_awareness.responsive_misc.webkit.safari.ff.no-touch div#application.ic-app div#wrapper.ic-Layout-wrapper div#main.ic-Layout-columns div#not_right_side.ic-app-main-content div#content-wrapper.ic-Layout-contentWrapper div#content.ic-Layout-contentMain div#dashboard.ic-dashboard-app div#DashboardCard_Container div.ic-DashboardCard__box div.ic-DashboardCard div.ic-DashboardCard__header a.ic-DashboardCard__link div.ic-DashboardCard__header_content h3.ic-DashboardCard__header-title.ellipsis span {
-        color: var(--white_1) !important;
-    }
-    .cAqHo_eAjd {
-        background: var(--grey_1);
-    }
-    .eoNrR_blJt {
-        background: var(--grey_1);
+    .eoNrR_blJt { /*dashboard view popover menu*/
+        background: none;
         color: var(--white_1);
     }
-    .sJGfW_bGBk {
-        background: var(--grey_1);
+    .cAqHo_eAjd { /*move course buttons bottom border*/
+        background: none;
+    }
+    .sJGfW_bGBk { /*move course buttons*/
+        background: none;
     }
     .sJGfW_blJt {
         color: var(--white_1);
@@ -255,9 +273,6 @@
     }
     .eJkkQ_diPG, .eJkkQ_fEMB, .eJkkQ_eOlt, .eJkkQ_fvoZ, .eJkkQ_bIuM, .eJkkQ_fyZW, .eJkkQ_cuyj, .eJkkQ_gaix {
         background: var(--grey_2);
-    }
-    html body.with-right-side.Underline-All-Links__enabled.primary-nav-expanded.context-user_120560.responsive_awareness.responsive_misc.webkit.safari.ff.no-touch div#application.ic-app div#wrapper.ic-Layout-wrapper div#main.ic-Layout-columns div#not_right_side.ic-app-main-content div#right-side-wrapper.ic-app-main-content__secondary aside#right-side div.Sidebar__TodoListContainer div ul#planner-todosidebar-item-list.fOyUs_bGBk.tTloz_bGBk.tTloz_fLbg.undefined li.fOyUs_bGBk.dxCCp_bGBk.dxCCp_fLbg.dxCCp_ycrn.dxCCp_cfzP div.ToDoSidebarItem div.ToDoSidebarItem__Info ul.fOyUs_bGBk.tTloz_bGBk.tTloz_eXrk.undefined li.fOyUs_bGBk.dxCCp_bGBk.dxCCp_eXrk.dxCCp_doqw.dxCCp_dnHs { /*assignment date subtext*/
-        color: var(--white_2);
     }
     
     .Day-styles__root {
@@ -331,30 +346,33 @@
     }
     
     /*Color picker*/
-    .dpCPB_caGd {
-        background: var(--grey_2);
+    .dpCPB_caGd { /*color picker inset*/
+        background: none;
         border-color: var(--white_1);
     }
     .ColorPicker__Container {
         background: none;
     }
-    .fOyUs_fZwI, .fOyUs_kXoP {
+    .fOyUs_fZwI, .fOyUs_kXoP { /*popover menu background*/
         background: var(--grey_2);
     }
-    .bdYPe_eLeB[aria-selected] {
+    .fOyUs_dsNY, .fOyUs_tIxX { /*popover menu main border*/
+        border-color: var(--white_1);
+    }
+    .bdYPe_eLeB[aria-selected] { /*selected tab*/
         background: var(--grey_3);
         color: var(--white_1);
         font-weight: bold;
     }
-    .bdYPe_eLeB {
+    .bdYPe_eLeB { /*unselected tab*/
         border: 1px solid var(--white_1);
         color: var(--white_1);
     }
-    .bdYPe_eLeB:not([aria-selected]):not([aria-disabled]):hover, .bdYPe_eLeB[aria-selected] {
+    .bdYPe_eLeB:not([aria-selected]):not([aria-disabled]):hover, .bdYPe_eLeB[aria-selected] { /*selected tab and tab hover*/
         background: var(--grey_2);
         border-color: var(--white_1);
     }
-    .bdYPe_eLeB:hover, .bdYPe_eLeB[aria-disabled], .bdYPe_eLeB[aria-selected] {
+    .bdYPe_eLeB:hover, .bdYPe_eLeB[aria-disabled], .bdYPe_eLeB[aria-selected] { /*selected tab and tab hover text*/
         color: var(--white_1);
     }
     
@@ -364,10 +382,10 @@
     }
     
     /*Course page*/
-    #breadcrumbs {
+    #breadcrumbs { /*current location tips at top of page*/
         background: none;
     }
-    .ic-app-nav-toggle-and-crumbs {
+    .ic-app-nav-toggle-and-crumbs { /*course page header bar*/
         border-bottom: 1px solid var(--white_1);
     }
     
@@ -380,12 +398,6 @@
     }
     #syllabus tr.date.related td, #syllabus tr.date.related th, #syllabus tr.date.selected td, #syllabus tr.date.selected th { /*course summary*/
         background: var(--grey_2);
-    }
-    #right-side .right-side-list li em, #right-side .right-side-list li p {
-        color: var(--white_2);
-    }
-    #right-side .events_list .event-details::after, #right-side .events_list .todo-details::after, #right-side .to-do-list .event-details::after, #right-side .to-do-list .todo-details::after { /*recent feedback*/
-        background: none
     }
     
     /*Modules container*/
@@ -527,9 +539,7 @@
     .header-row a.sort-field i {
         color: var(--white_1);
     }
-    
-    /*Pages sub page*/
-    
+        
     /*Mini cal*/
     .mini-cal-header {
         color: var(--white_1);
@@ -597,9 +607,6 @@
     }
     
     /*People*/
-    .btn:active, .Button:active, .ui-button:active {
-        background: var(--white_1);
-    }
     .al-options {
         background-color: var(--grey_2);
         box-shadow: none;
@@ -665,7 +672,7 @@
         border: 2px solid var(--grey_3);
         background-color: var(--grey_3);
     }
-    /*Group management (teacher view)*/
+    /*TV: Group management*/
     .group-category-contents {
         background: var(--grey_1);
         border-color: var(--white_1);
@@ -957,6 +964,37 @@
         border: 1px solid var(--white_1);
         text-shadow: none;
     }
+    #last_saved_indicator {
+        color: var(--white_2);
+    }
+    #submit_quiz_form .button-container .btn, #submit_quiz_form #submit_quiz_button {
+        padding: 4px;
+        background: var(--accent);
+        color: var(--white_1);
+    }
+    #submit_quiz_form .button-container .btn, #submit_quiz_form #submit_quiz_button:hover {
+        background: var(--accent) !important;
+        filter: brightness(1.25);
+        color: var(--white_1);
+    }
+    ul#question_list li i {
+        color: var(--white_1);
+    }
+    ul#question_list li.answered a {
+        color: var(--white_3);
+    }
+    ul#question_list li.answered.current_question a {
+        color: var(--accent);
+    }
+    html body.with-left-side.course-menu-expanded.with-right-side.quizzes.Underline-All-Links__enabled.primary-nav-expanded.context-course_118367.responsive_awareness.responsive_misc.webkit.safari.ff.no-touch div#application.ic-app div#wrapper.ic-Layout-wrapper div#main.ic-Layout-columns div#not_right_side.ic-app-main-content div#content-wrapper.ic-Layout-contentWrapper div#content.ic-Layout-contentMain div#quiz_show header.quiz-header div.take_quiz_button a#take_quiz_link.btn.btn-primary {
+        padding: 8px;
+        background: var(--accent)
+    }
+    #questions.assessment_results .question .header {
+        padding: 8px 20px;
+        background-color: var(--grey_2);
+        overflow: auto;
+    }
 
     /*Content editor toolbar*/
     .mce-toolbar .mce-btn i { /*toolbar*/
@@ -1027,36 +1065,6 @@
         text-shadow: none;
     }
     
-    #last_saved_indicator {
-        color: var(--white_2);
-    }
-    #submit_quiz_form .button-container .btn, #submit_quiz_form #submit_quiz_button {
-        padding: 4px;
-        background: var(--accent);
-        color: var(--white_1);
-    }
-    #submit_quiz_form .button-container .btn, #submit_quiz_form #submit_quiz_button:hover {
-        background: var(--accent) !important;
-        filter: brightness(1.25);
-        color: var(--white_1);
-    }
-    ul#question_list li i {
-        color: var(--white_1);
-    }
-    ul#question_list li.answered a {
-        color: var(--white_3);
-    }
-
-    html body.with-left-side.course-menu-expanded.with-right-side.quizzes.Underline-All-Links__enabled.primary-nav-expanded.context-course_118367.responsive_awareness.responsive_misc.webkit.safari.ff.no-touch div#application.ic-app div#wrapper.ic-Layout-wrapper div#main.ic-Layout-columns div#not_right_side.ic-app-main-content div#content-wrapper.ic-Layout-contentWrapper div#content.ic-Layout-contentMain div#quiz_show header.quiz-header div.take_quiz_button a#take_quiz_link.btn.btn-primary {
-        padding: 8px;
-        background: var(--accent)
-    }
-    #questions.assessment_results .question .header {
-        padding: 8px 20px;
-        background-color: var(--grey_2);
-        overflow: auto;
-    }
-    
     /*Quiz submitted*/
     .quiz-submission, .question_editing {
         background: none;
@@ -1085,10 +1093,7 @@
         border-bottom-color: var(--grey_2);
     }
     
-    /*submission*/
-    #right-side .details .header {
-        color: var(--white_1);
-    }
+    /*Submission*/
     .Submission__Link--has-icon .icon-rubric, .Submission__Link--has-icon .icon-check, .Submission__Link--has-icon .icon-warning, .Submission__List .icon-rubric, .Submission__List .icon-check, .Submission__List .icon-warning {
         color: var(--white_1);
     }
@@ -1106,7 +1111,7 @@
         color: var(--white_2) important;
     }
     div.comment {
-        color: white !important;
+        color: var(--white_1) !important;
     }
     a.media-comment { /*remove media comment icon*/
         color: var(--white_1);
@@ -1133,11 +1138,6 @@
     /*Calendar*/
     #calendar_header .navigation_buttons .ui-button {
         padding-left: 8px !important;
-    }
-    .btn.active, .btn.Button--active, .btn.ui-button.ui-state-active, .ui-progressbar .btn.ui-button.ui-widget-header, .Button.active, .active.ui-button, .Button.Button--active, .Button--active.ui-button, .ui-button.ui-state-active, .ui-progressbar .ui-button.ui-widget-header, .ui-button.ui-state-active:hover, .ui-button.ui-state-active.ui-state-hover {
-        background: var(--white_1);
-        border-color: var(--white_1);
-        color: var(--grey_1);
     }
     #create_new_event_link {
         color: var(--white_1);
@@ -1491,7 +1491,7 @@
     }
 
     /*Equations*/
-    .equation_image { /*image background to make black images legible*/
+    .equation_image { /*image background to make black transparent images legible*/
         background: aliceblue;
     }
     .question img, .answer img {
@@ -1516,7 +1516,7 @@
         color: var(--white_1);
     }
     
-    /*Speedgrader*/
+    /*TV: Speedgrader*/
     #right_side .content_box { /*speed grader sidebar*/
         background: none;
         border-bottom: 1px solid var(--white_1);
@@ -1567,7 +1567,7 @@
         border-right: none;
     }
     
-    /*Grades Table*/
+    /*TV: Grades Table*/
     .slick-header-column {
         background-color: var(--grey_1);
     }
@@ -1752,6 +1752,7 @@
 }
 
 @-moz-document regexp("https://prod.ally.ac/accessibleversions.*") {
+    /*Accessible versions popup*/
     :root {
         /*Custom colors*/
         --accent: /*[[user-accent]]*/; /*main accent*/
