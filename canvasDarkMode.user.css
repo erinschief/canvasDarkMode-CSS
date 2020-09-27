@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.6.9
+@version        1.6.10
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -257,7 +257,7 @@
         background: none;
         color: var(--white_1);
     }
-    .dyUpz_bPWd.dyUpz_fGhm {
+    .dyUpz_bPWd.dyUpz_fGhm { /*TODO: what is this shit*/
         background-color: var(--accent);
         border-radius: var(--dfDow-borderRadius);
         color: var(--dfDow-selectedColor);
@@ -964,6 +964,17 @@
         border: 1px solid var(--white_1);
         text-shadow: none;
     }
+    .error_box .error_text { /*quiz submission error box*/
+        filter: brightness(.9);
+        background:var(--accent);
+        border: 1px solid var(--accent);
+        margin-bottom: 2px;
+        margin-left: -45px;
+        margin-right: 20px;
+    }
+    .error_bottom { /*remove error box triangle*/
+        display: none;
+    }
     #last_saved_indicator {
         color: var(--white_2);
     }
@@ -1498,13 +1509,11 @@
         background: aliceblue;
     }
 
-    /*other versions button*/
-    .ally-accessible-versions > .ally-prominent-af-download-button {
+    /*Custom icons*/
+    .ally-accessible-versions > .ally-prominent-af-download-button { /*other versions button*/
         background-image: url(https://raw.githubusercontent.com/erinschief/canvasDarkMode-CSS/master/alt-formats-icon-white.svg);
     }
-
-    /*External link icon*/
-    .ui-icon {
+    .ui-icon { /*external link icon*/
         background-image: url(https://raw.githubusercontent.com/erinschief/canvasDarkMode-CSS/master/external-link-icon-white.svg);
     }
     .ui-icon-extlink {
@@ -1520,6 +1529,9 @@
     #right_side .content_box { /*speed grader sidebar*/
         background: none;
         border-bottom: 1px solid var(--white_1);
+    }
+    #submission_details #submission_files_list .submission-file { /*lower line height to accommodate download icon*/
+        line-height: 1.25;
     }
     #right_side div.comment { /*assignment comments*/
         border-top: 1px dotted var(--white_2);
@@ -1540,14 +1552,34 @@
     #students_selectmenu-menu li {
         border-bottom: 1px solid var(--white_3);
     }
+    #students_selectmenu-menu.ui-widget.ui-widget-content.ui-selectmenu-menu-dropdown.ui-corner-bottom {
+        height: 500px;
+    }
     .not_submitted .ui-selectmenu-item-header {
         color: var(--white_2);
     }
-    #section-menu {
-        border: 1px solid var(--white_1);
+    #prev-student-button.Button.Button--icon-action.gradebookMoveToNext.prev:hover .icon-arrow-left.prev { /*previous student button hover*/
+        color: var(--accent);
+    }
+    #next-student-button.Button.Button--icon-action.gradebookMoveToNext.next:hover .icon-arrow-right.next { /*next student button hover*/
+        color: var(--accent);
     }
     .ui-selectmenu-menu .ui-state-focus, .ui-selectmenu-menu .ui-state-hover {
         background: var(--grey_3);
+    }  
+    #section-menu {
+        border: 1px solid var(--white_1);
+    }
+    #section-menu #section-menu-link:before { /*left arrow restyled*/
+        display: inline;
+        float: left;
+        content: "\25C1";
+        padding-right: 12px;
+    }
+    #section-menu #section-menu-link { /*remove old arrow and fix spacing*/
+        background: none;
+        margin-left: 14px;
+        padding-left: 0px;
     }
     #section-menu ul {
         background-color: var(--grey_2);
@@ -1559,12 +1591,12 @@
     #section-menu ul li a:hover {
         background: var(--grey_3);
     }
-    #students_selectmenu-menu.ui-widget.ui-widget-content.ui-selectmenu-menu-dropdown.ui-corner-bottom {
-        height: 350px;
-    }
     #width_resizer {
         background: var(--white_2) url("/dist/images/splitpane_handle-ew-1b67cccf0f.gif") no-repeat scroll 50% 50%;
         border-right: none;
+    }
+    #width_resizer.highlight { /*remove yellow width resizer highlight*/
+        background: var(--white_2) url("/dist/images/splitpane_handle-ew-1b67cccf0f.gif") no-repeat scroll 50% 50%;
     }
     
     /*TV: Grades Table*/
