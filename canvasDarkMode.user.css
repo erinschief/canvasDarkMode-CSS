@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.6.10
+@version        1.6.11
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -1546,14 +1546,15 @@
     .chpSa_blLZ { /*add comment box*/
         background: var(--grey_2);
     }
+    #students_selectmenu-menu {
+        max-height: 1000px;
+        height: 500px !important;
+    }
     #students_selectmenu-menu .ui-state-hover {
         background-color: var(--grey_3);
     }
     #students_selectmenu-menu li {
         border-bottom: 1px solid var(--white_3);
-    }
-    #students_selectmenu-menu.ui-widget.ui-widget-content.ui-selectmenu-menu-dropdown.ui-corner-bottom {
-        height: 500px;
     }
     .not_submitted .ui-selectmenu-item-header {
         color: var(--white_2);
@@ -1590,6 +1591,9 @@
     }
     #section-menu ul li a:hover {
         background: var(--grey_3);
+    }
+    #grading-box-extended { /*main grade box*/
+        background: var(--grey_2);
     }
     #width_resizer {
         background: var(--white_2) url("/dist/images/splitpane_handle-ew-1b67cccf0f.gif") no-repeat scroll 50% 50%;
@@ -1701,7 +1705,7 @@
     .Pages {
         background-color: var(--grey_3) !important;
     }
-    .ViewerControls {
+    .ViewerControls { /*viewer toolbar*/
         background-color: var(--grey_2);
         color: var(--white_1);
     }
@@ -1714,6 +1718,9 @@
     }
     .AnnotationControlButton:hover:enabled {
         background-color: var(--grey_3);
+    }
+    .AnnotationControlButton.selected .AnnotationControlButton-outer { /*selected tool color*/
+        color: var(--grey_2);
     }
     .SecondaryControls {
         top: 48px;
