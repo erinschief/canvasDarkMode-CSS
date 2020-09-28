@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.6.12
+@version        1.6.13
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -325,9 +325,8 @@
     .ic-notification__content {
         background: var(--grey_1);
     }
-    .cvphu_bgqc {
+    .ic-flash-info, .ic-flash-success, .ic-flash-warning, .ic-flash-error {/*green notification*/
         background: var(--grey_1);
-        color: var(--white_1);
     }
     .ic-flash-error {
         border-color: var(--alert-red);
@@ -343,6 +342,10 @@
     }
     .notification_account_content {
         background: var(--grey_1);
+    }
+    .cvphu_bgqc { /*you can view dismissed announcements global notif*/
+        background: var(--grey_1);
+        color: var(--white_1);
     }
     
     /*Color picker*/
