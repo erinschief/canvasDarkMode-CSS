@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.6.11
+@version        1.6.12
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -978,15 +978,15 @@
     #last_saved_indicator {
         color: var(--white_2);
     }
-    #submit_quiz_form .button-container .btn, #submit_quiz_form #submit_quiz_button {
+    #submit_quiz_form .button-container .btn, #submit_quiz_form #submit_quiz_button { /*submit quiz button*/
         padding: 4px;
         background: var(--accent);
         color: var(--white_1);
     }
-    #submit_quiz_form .button-container .btn, #submit_quiz_form #submit_quiz_button:hover {
+    #submit_quiz_form .button-container .btn, #submit_quiz_form #submit_quiz_button:hover { /*submit quiz button hover*/
         background: var(--accent) !important;
         filter: brightness(1.25);
-        color: var(--white_1);
+        color: var(--white_1) !important;
     }
     ul#question_list li i {
         color: var(--white_1);
