@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.6.13
+@version        1.6.14
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -177,6 +177,7 @@
         line-height: inherit;
     }
     .fOyUs_bGBk, .fOyUs_desw, .fOyUs_cBHs, .fOyUs_eWbJ, .fOyUs_eeJl, .fOyUs_cBtr, .fOyUs_fuTR, .XBLto_bXVH { /*to do subtext*/
+        background: var(--grey_2);
         color: var(--white_2);
     }
     #right-side .right-side-list li em, #right-side .right-side-list li p {
@@ -387,6 +388,9 @@
     /*Course page*/
     #breadcrumbs { /*current location tips at top of page*/
         background: none;
+    }
+    #breadcrumbs > ul > li + li::before { /*white breadcrumb arrow*/
+        background: url("https://raw.githubusercontent.com/erinschief/canvasDarkMode-CSS/master/breadcrumb-arrow-white.svg") no-repeat 50% 50%;
     }
     .ic-app-nav-toggle-and-crumbs { /*course page header bar*/
         border-bottom: 1px solid var(--white_1);
@@ -1121,10 +1125,10 @@
     .submission-details-comments .comments {
         background-color: var(--grey_2);
     }
-    .comment div { /*submission comments*/
-        color: var(--white_2) important;
+    .comment div { /*submission comments subtext*/
+        color: var(--white_2) !important;
     }
-    div.comment {
+    div.comment { /*submission comments main text*/
         color: var(--white_1) !important;
     }
     a.media-comment { /*remove media comment icon*/
