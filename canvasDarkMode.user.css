@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.6.14
+@version        1.6.15
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -612,6 +612,34 @@
         background-color: var(--grey_2);
         color: var(--white_1);
     }
+    .fwfoD_fsuY { /*rubric header text*/
+        color: var(--white_1)
+    }
+    div#rubric_holder { /*window border*/
+        border: 1px solid var(--white_1) !important;
+    }
+    .react-rubric td, .react-rubric th { /*rubric border*/
+        border: 1px solid var(--white_1);
+    }
+    tr.fOyUs_bGBk > td:nth-child(3) { /*pts column text color*/
+        color: var(--white_1);
+    }
+    .fOyUs_bGBk { /*ratings text color*/
+        color: var(--white_1) ;
+    }
+    .rubric { /*enlarged width of rubric window*/
+        max-width: none;
+    }
+    .react-rubric {
+        min-width: 1rem !important;
+    }
+    #rubric_holder { /*ienlarge height and remove scroll area*/
+        max-height: max-content !important;
+        overflow: visible !Important;
+    }
+    .react-rubric .rating-tier { /*rating tier left border color*/
+        border-left: 1px solid var(--white_2);
+    }
     
     /*People*/
     .al-options {
@@ -1121,6 +1149,9 @@
     }
     div#rubric_holder {
         background: var(--grey_2) !important;
+    }
+    .fwfoD_fsuY {
+        color: var(--white_1)
     }
     .submission-details-comments .comments {
         background-color: var(--grey_2);
