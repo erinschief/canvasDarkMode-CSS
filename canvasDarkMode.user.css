@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.6.15
+@version        1.6.16
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -177,7 +177,6 @@
         line-height: inherit;
     }
     .fOyUs_bGBk, .fOyUs_desw, .fOyUs_cBHs, .fOyUs_eWbJ, .fOyUs_eeJl, .fOyUs_cBtr, .fOyUs_fuTR, .XBLto_bXVH { /*to do subtext*/
-        background: var(--grey_2);
         color: var(--white_2);
     }
     #right-side .right-side-list li em, #right-side .right-side-list li p {
@@ -598,6 +597,19 @@
     #grades_summary tr.final_grade {
         border-top: 2px solid var(--white_1);
     }
+    .score_details_table > tbody > tr > td > div > div:nth-child(4), .score_details_table > tbody > tr > td > div > div:nth-child(5) { /*class average grade slider background*/
+        background: var(--grey_2) !important;
+    }
+    .score_details_table > tbody > tr > td > div > div:nth-child(7) { /*class average grade slider*/
+        background: var(--white_2) !important;
+        border-color: var(--white_2) !important;
+    }
+    .grade-summary-graph-component { /*class average grade slider border*/
+        border-color: var(--white_2);
+    }
+    #grades_summary td.details a { /*remove grade details underline*/
+        text-decoration: none;
+    }
     
     /*Rubric*/
     .react-rubric th.rubric-title {
@@ -639,6 +651,9 @@
     }
     .react-rubric .rating-tier { /*rating tier left border color*/
         border-left: 1px solid var(--white_2);
+    }
+    .fwfoD_bGBk { /*grades rubric header*/
+        background: var(--grey_2);
     }
     
     /*People*/
