@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.6.17
+@version        1.6.18
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -625,7 +625,7 @@
         color: var(--white_1);
     }
     .ccWIh_bGBk { /*rubric background*/
-        background: var(--ccWIh-background);
+        background: var(--grey_2);
     }
     .fwfoD_fsuY { /*rubric header text*/
         color: var(--white_1)
