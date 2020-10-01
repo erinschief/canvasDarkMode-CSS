@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.6.20
+@version        1.6.21
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -169,9 +169,6 @@
     }
     #right-side .right-side-list li a > i { /*right sidebar icons*/
         color: var(--white_1);
-    }
-    #right-side .right-side-list .todo-badge-wrapper { /*to-grade alignment*/
-        min-width: 24px;
     }
     #right-side .events_list .event-list-view-calendar[class*="icon-"]::before, #right-side .events_list .event-list-view-calendar[class^="icon-"]::before { /*view calendar alignment*/
         line-height: inherit;
