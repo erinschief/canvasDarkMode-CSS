@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      github.com/erinschief
-@version        1.6.19
+@version        1.6.20
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -1022,8 +1022,8 @@
     }
     .error_box .error_text { /*quiz submission error box*/
         filter: brightness(.9);
-        background:var(--accent);
-        border: 1px solid var(--accent);
+        background:var(--alert-red);
+        border: 1px solid var(--alert-red);
         margin-bottom: 2px;
         margin-left: -45px;
         margin-right: 20px;
@@ -1181,6 +1181,9 @@
         color: var(--white_2) !important;
     }
     div.comment { /*submission comments main text*/
+        color: var(--white_1) !important;
+    }
+    span.comment { /*submission comment text*/
         color: var(--white_1) !important;
     }
     a.media-comment { /*remove media comment icon*/
@@ -1768,6 +1771,9 @@
         background-color: var(--grey_2);
         color: var(--white_1);
     }
+    .download-button--button:hover { /*download button hover*/
+        background-color: var(--grey_3);
+    }
     .AnnotationControlButton {
         color: var(--white_1);
         background: none;
@@ -1775,7 +1781,7 @@
     .AnnotationControlButton-outer {
         border: none;
     }
-    .AnnotationControlButton:hover:enabled {
+    .AnnotationControlButton:hover:enabled { /*tool hover*/
         background-color: var(--grey_3);
     }
     .AnnotationControlButton.selected .AnnotationControlButton-outer { /*selected tool color*/
@@ -1794,6 +1800,12 @@
     }
     .SecondaryControls-label {
         color: var(--white_2);
+    }
+
+    /*pages*/
+    .Page { /*page margins*/
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     /*doc viewer comments*/
@@ -1843,7 +1855,6 @@
         border-color: var(--white_1);
         color: var(--grey_2);
     }
-    
     .CommentGroup-textarea:focus {
         border: none;
     }
