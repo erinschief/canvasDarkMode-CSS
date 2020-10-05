@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
-@namespace      github.com/erinschief
-@version        1.6.21
+@namespace      https://github.com/erinschief
+@version        1.6.22
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -567,14 +567,18 @@
     }
     
     /*Grades*/
-    .eHiXd_bXiG, a.eHiXd_bXiG, button.eHiXd_bXiG, button.eHiXd_bXiG[type="button"], button.eHiXd_bXiG[type="reset"], button.eHiXd_bXiG[type="submit"] {
+    .eHiXd_bXiG, a.eHiXd_bXiG, button.eHiXd_bXiG, button.eHiXd_bXiG[type="button"], button.eHiXd_bXiG[type="reset"], button.eHiXd_bXiG[type="submit"] { /*apply button*/
         background: var(--accent);
         border-color: transparent;
         color: var(--white_1);
     }
-    .dLdjY_bGBk .dLdjY_bDLZ {
+    .dLdjY_bGBk .dLdjY_bDLZ { /*course and arrange by dropdowns*/
         background: none;
         color: var(--white_1);
+    }
+    .student_assignment.final_grade { /*final grade text*/
+        font-size: 20px;
+        text-decoration: underline;
     }
     #grades_summary th.title {
         border-bottom-color: var(--white_1);
@@ -770,9 +774,8 @@
     .accessible-toggler {
         color: var(--white_1);
     }
-    .accessible-toggler:hover, .accessible-toggler:focus {
-        color: var(--accent);
-        text-decoration: none;
+    .accessible-toggler:hover, .accessible-toggler:focus { /*grouping header text hover*/
+        color: inherit;
     }
     
     /*Files*/
