@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.6.23
+@version        1.6.24
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -704,6 +704,9 @@
     }
     .ui-tabs .ui-tabs-nav li.ui-state-hover a, .ui-tabs .ui-tabs-nav li:hover a { /*unselected tab text hover*/
         color: var(--white_1);
+    }
+    .ui-tabs .ui-tabs-nav li.ui-state-focus a, .ui-tabs .ui-tabs-nav li.ui-state-focus.ui-tabs-active a { /*remove underline on select tab*/
+        text-decoration: none;
     }
     .ui-tabs .ui-tabs-panel { /*main cell*/
         background: var(--grey_1);
