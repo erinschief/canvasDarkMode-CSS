@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.6.25
+@version        1.6.26
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -654,7 +654,9 @@
     }
     #rubric_holder { /*ienlarge height and remove scroll area*/
         max-height: max-content !important;
-        overflow: visible !Important;
+		overflow: visible !important;
+		left: 24px !important;
+		right: 24px !important;
     }
     .react-rubric .rating-tier { /*rating tier left border color*/
         border-left: 1px solid var(--white_2);
@@ -837,6 +839,7 @@
         color: var(--white_1);
     }
     .fhWLw_bGBk { /*use high contrast UI toggle*/
+        --fhWLw-background: none;
         --fhWLw-borderColor: var(--white_1) !important;
     }
     
@@ -1211,6 +1214,12 @@
     }
     .rubric_container thead th {
         background: var(--grey_2);
+    }
+    .rubric_container td, .rubric_container th { /*main borders*/
+        border: 1px solid var(--white_1);
+    }
+    .rubric_container table.ratings td { /*inside borders*/
+        border: 1px solid var(--white_1);
     }
     
     /*Calendar*/
