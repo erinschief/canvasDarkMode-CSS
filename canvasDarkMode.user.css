@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.6.26
+@version        1.6.27
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -664,6 +664,19 @@
     .fwfoD_bGBk { /*grades rubric header*/
         background: var(--grey_2);
     }
+    .rubric_container .rubric_title {
+        background: var(--grey_2);
+        border-color: var(--white_1);
+    }
+    .rubric_container thead th {
+        background: var(--grey_2);
+    }
+    .rubric_container td, .rubric_container th { /*main borders*/
+        border: 1px solid var(--white_1);
+    }
+    .rubric_container table.ratings td { /*inside borders*/
+        border-left: 1px solid var(--white_1);
+    }
     
     /*People*/
     .al-options {
@@ -1205,21 +1218,6 @@
     html body.with-left-side.course-menu-expanded.assignments.Underline-All-Links__enabled.primary-nav-expanded.context-course_113042.responsive_admin_settings.responsive_awareness.responsive_misc.webkit.safari.ff.no-touch div#application.ic-app div#wrapper.ic-Layout-wrapper div#main.ic-Layout-columns div#not_right_side.ic-app-main-content div#content-wrapper.ic-Layout-contentWrapper div#content.ic-Layout-contentMain.padless div.submission-details-container div.submission-details-comments div div.comments div#add_comment_form div.button-container button.Button.Button--primary.save_comment_button {
         background: var(--accent);
         padding: 5px;
-    }
-    
-    /*rubric*/
-    .rubric_container .rubric_title {
-        background: var(--grey_2);
-        border-color: var(--white_1);
-    }
-    .rubric_container thead th {
-        background: var(--grey_2);
-    }
-    .rubric_container td, .rubric_container th { /*main borders*/
-        border: 1px solid var(--white_1);
-    }
-    .rubric_container table.ratings td { /*inside borders*/
-        border: 1px solid var(--white_1);
     }
     
     /*Calendar*/
