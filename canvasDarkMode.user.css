@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.7.0
+@version        1.7.1
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -1623,6 +1623,9 @@
     }
     #right_side div.comment .comment_citation { /*assignment comment author*/
         color: var(--white_2)
+    }
+    .chpSa_blLZ { /*assignment comments text*/
+        color: var(--white_1);
     }
     .chpSa_blLZ { /*add comment box*/
         background: var(--grey_2);
