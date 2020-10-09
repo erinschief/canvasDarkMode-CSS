@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.7.1
+@version        1.7.2
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -1607,6 +1607,12 @@
     }
     
     /*TV: Speedgrader*/
+    #gradebook_header { /*header min width resizes below 960px*/
+        min-width: 0px;
+    }
+    #full_width_container { /*main view width resizes below 960px*/
+        min-width: 0px;
+    }
     #right_side .content_box { /*speed grader sidebar*/
         background: none;
         border-bottom: 1px solid var(--white_1);
@@ -1629,6 +1635,12 @@
     }
     .chpSa_blLZ { /*add comment box*/
         background: var(--grey_2);
+    }
+    #right_side div.comment.draft { /*comment draft*/
+        background: var(--grey_2);
+    }
+    #right_side div.comment .delete_comment_link, #right_side div.comment .submit_comment_button { /*comment draft submit button*/
+        background: none;
     }
     #students_selectmenu-menu {
         max-height: 1000px;
