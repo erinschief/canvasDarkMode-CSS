@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.6.27
+@version        1.7.0
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -45,11 +45,12 @@
         --ic-brand-font-color-dark-lightened-30: var(--white_1);
 
         /*these are weird variables in canvas which have been root recolored for expediency*/
+        --dLdjY-arrowColor: var(--white_1);
+        --eAJaG-secondaryColor: var(--white_1);
         --fCrpb-color: var(--white_1);
         --fNHEA-labelColor: var(--white_1);
-        --dLdjY-arrowColor: var(--white_1);
         --MlJlv-textColor: var(--white_1);
-        --yyQPt-hoverBorderColor: var(--white_1)
+        --yyQPt-hoverBorderColor: var(--white_1);
     }
     
     a { /*link color*/
@@ -64,6 +65,9 @@
     }
     p{
         font-size: 17px;
+    }
+    p[style*="background: white;"] { /*remove white highlighted text*/
+		background: none !important;
     }
     body {
         min-height: 100vh;
@@ -343,6 +347,9 @@
     .cvphu_bgqc { /*you can view dismissed announcements global notif*/
         background: var(--grey_1);
         color: var(--white_1);
+    }
+    .fOyUs_bGBk.cvphu_bgqc.cvphu_pypk.eJkkQ_bEpV { /*hide show all announcements banner after cleared announcement*/
+        display: none;
     }
     
     /*Color picker*/
