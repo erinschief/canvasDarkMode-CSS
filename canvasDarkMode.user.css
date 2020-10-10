@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.7.2
+@version        1.7.3
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -322,7 +322,14 @@
 	background: var(--grey_1);
 	}
     
-    /*notif*/
+    /*Banner notif*/
+    .responsive_awareness .ic-flash-info, .ic-flash-success, .ic-flash-warning, .ic-flash-error {
+        width: auto;
+        min-width: 17rem;
+        max-width: 32rem;
+        /* padding-bottom: 12; */
+        margin-bottom: 6px;
+    }
     .ic-notification__content {
         background: var(--grey_1);
     }
@@ -332,6 +339,18 @@
     .ic-flash-error {
         border-color: var(--alert-red);
         background: var(--grey_1);
+    }
+    .ic-flash-warning {
+        background: var(--grey_1);
+    }
+
+    /*alert bkgd*/
+    .alert-info {
+        background-color: var(--grey_3);
+        color: var(--white_2);
+    }
+    .fvvQs_bGBk {
+        background: rgba(0, 0, 0, .75);
     }
 
     /*Global announcements*/
@@ -1559,18 +1578,6 @@
     .feature-flags {
         border: 1px solid var(--white_1);
         color: var(--white_1);
-    }
-    
-    /*alert bkgd*/
-    .alert-info {
-        background-color: var(--grey_3);
-        color: var(--white_2);
-    }
-    .fvvQs_bGBk {
-        background: rgba(0, 0, 0, .75);
-    }
-    .ic-flash-warning {
-        background: var(--grey_1);
     }
     
     /*Mobile fixes*/
