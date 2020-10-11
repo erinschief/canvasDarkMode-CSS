@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.7.3
+@version        1.7.4
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -66,9 +66,6 @@
     p{
         font-size: 17px;
     }
-    p[style*="background: white;"] { /*remove white highlighted text*/
-		background: none !important;
-    }
     body {
         min-height: 100vh;
         background: var(--grey_1) !important;
@@ -86,6 +83,12 @@
         text-decoration: none;
     }
     p span, h1 span, h2 span, h3 span, h4 span, table tbody tr td ul li span { /*html themed black text fix*/
+        color: var(--white_1) !important;
+    }
+    [style*="background: white;"], [style*="background: #ffffff;"], [style*="background-color: white;"] [style*="background-color: #ffffff;"] { /*recolor white highlighted text*/
+		background: none !important;
+    }
+    [style*="color: black;"], [style*="color: #000000;"] { /*recolor black colored highlighted text*/
         color: var(--white_1) !important;
     }
 
