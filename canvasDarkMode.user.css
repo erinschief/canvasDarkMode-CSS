@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.7.5
+@version        1.7.6
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -1247,6 +1247,19 @@
     html body.with-left-side.course-menu-expanded.assignments.Underline-All-Links__enabled.primary-nav-expanded.context-course_113042.responsive_admin_settings.responsive_awareness.responsive_misc.webkit.safari.ff.no-touch div#application.ic-app div#wrapper.ic-Layout-wrapper div#main.ic-Layout-columns div#not_right_side.ic-app-main-content div#content-wrapper.ic-Layout-contentWrapper div#content.ic-Layout-contentMain.padless div.submission-details-container div.submission-details-comments div div.comments div#add_comment_form div.button-container button.Button.Button--primary.save_comment_button {
         background: var(--accent);
         padding: 5px;
+    }
+    .ui-widget-overlay { /*submission details pdf viewer background*/
+        background: rgba(0,0,0,0.5);
+    }
+    .ui-dialog .ui-dialog-titlebar-close span { /*submission preview titlebar*/
+        transition: none;
+        background: url("https://raw.githubusercontent.com/erinschief/canvasDarkMode-CSS/master/icon-x-white.svg") 50% 50% no-repeat;
+        background-size: 10px;
+        opacity: 1;
+    }
+    .ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable { /*pdf preview viewer box*/
+        top: 55px !important;
+        height: 90% !important;
     }
     
     /*Calendar*/
