@@ -1,13 +1,13 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.7.6
+@version        1.7.7
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
 @homepageURL	https://github.com/erinschief/canvasDarkMode-CSS
 @updateURL		https://raw.githubusercontent.com/erinschief/canvasDarkMode-CSS/master/canvasDarkMode.user.css
-@advanced    color   user-accent "Accent color"  #8B1F41
+@advanced       color   user-accent "Accent color"  #8B1F41
 ==/UserStyle== */
 
 @-moz-document regexp("https://canvas.*edu.*") {
@@ -732,7 +732,7 @@
         color: var(--white_1);
     }
     .ui-tabs .ui-tabs-nav li.ui-tabs-active { /*active tab border*/
-        border-color: var(--white_1);
+        border-color: var(--white_1 !important);
     }
     .ui-tabs .ui-tabs-nav li.ui-tabs-active a { /*active tab*/
         background: var(--grey_2);
