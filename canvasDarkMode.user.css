@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.7.8
+@version        1.7.9
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -824,6 +824,29 @@
     }
     .ag-header-controls .tooltip_link {
         color: var(--white_1);
+    }
+
+    /*Hover tooltip*/
+    .dqmEK_ejeM, .dqmEK_ejeM::after { /*tooltip triangle border*/
+        border-color: var(--white_1);
+    }
+    .dqmEK_edfl.dqmEK_ejeM::after,
+    .dqmEK_ZLAK.dqmEK_ejeM::after,
+    .dqmEK_ftdy.dqmEK_ejeM::after,
+    .dqmEK_cjte.dqmEK_ejeM::after { /*tooltip triangle background*/
+        border-top-color: var(--grey_2);
+    }
+    
+    .dqmEK_dBdm.dqmEK_ejeM::after,
+    .dqmEK_ePhw.dqmEK_ejeM::after,
+    .dqmEK_bDBw.dqmEK_ejeM::after,
+    .dqmEK_dHiK.dqmEK_ejeM::after { /*tooltip triangle background*/
+        border-bottom-color: var(--grey_2);
+    }
+    .fOyUs_fzxW, .fOyUs_elGp { /*tooltip triangle box*/
+        background: var(--grey_2);
+        color: var(--white_1);
+        border: 1px solid var(--white_1);
     }
     
     .accessible-toggler {
