@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.7.9
+@version        1.7.10
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -1859,6 +1859,10 @@
     }
     .download-button--button:hover { /*download button hover*/
         background-color: var(--grey_3);
+    }
+    .ViewerControls--current-page { /*current page item*/
+        background-color: var(--white_1);
+        color: var(--grey_2);
     }
     .AnnotationControlButton {
         color: var(--white_1);
