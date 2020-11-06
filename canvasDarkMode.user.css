@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.7.10
+@version        1.7.11
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		AGPL-3.0-only
@@ -51,6 +51,8 @@
         --fNHEA-labelColor: var(--white_1);
         --MlJlv-textColor: var(--white_1);
         --yyQPt-hoverBorderColor: var(--white_1);
+
+        --enRcg-secondaryColor: var(--white_2);
     }
     
     a { /*link color*/
