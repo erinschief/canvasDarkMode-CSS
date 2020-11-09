@@ -1,10 +1,10 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.7.11
+@version        1.8.0
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
-@license		AGPL-3.0-only
+@license		GPL-3.0-only
 @homepageURL	https://github.com/erinschief/canvasDarkMode-CSS
 @updateURL		https://raw.githubusercontent.com/erinschief/canvasDarkMode-CSS/master/canvasDarkMode.user.css
 @advanced       color   user-accent "Accent color"  #8B1F41
@@ -18,7 +18,6 @@
         --grey_1: rgb(44, 44, 44); /*main bg*/
         --grey_2: rgb(55, 55, 55); /*secondary bg*/
         --grey_3: rgb(66, 66, 66); /*tertiary bg*/
-        --grey_4: rgb(77, 77, 77); /*quaternary bg*/
 
         --white_1: rgb(255, 255, 255); /*pure white*/
         --white_2: rgb(215, 215, 215); /*secondary white*/
@@ -53,8 +52,28 @@
         --yyQPt-hoverBorderColor: var(--white_1);
 
         --enRcg-secondaryColor: var(--white_2);
+        
+        --fhWLw-background
+
+        /*canvas has a ton of weird font variables for some reason so let's consolidate those too*/
+        --default-fontfam: Lato,"Helvetica Neue",Helvetica,sans-serif;
+	
+        --fbyHH-fontFamily: var(--default-fontfam);
+        --dxCCp-fontFamily: var(--default-fontfam);
+        --tTloz-fontFamily: var(--default-fontfam);
+        --emyav-fontFamily: var(--default-fontfam);
+        --MYpOQ-fontFamily: var(--default-fontfam);
+        --bDzpk-fontFamily: var(--default-fontfam);
+        --fQfxa-fontFamily: var(--default-fontfam);
+        --cjUyb-fontFamily: var(--default-fontfam);
+        --fOyUs-fontFamily: var(--default-fontfam);
+        --eHiXd-fontFamily: var(--default-fontfam);
+        --uDC3CpZuTTaC-fontFamily: var(--default-fontfam);
+
+        /*also here's their custom monospace font fam var in case that comes in handy later*/
+        /*--cjUyb-fontFamilyMonospace: Menlo,Consolas,Monaco,"Andale Mono",monospace;*/
     }
-    
+
     a { /*link color*/
         color: var(--white_1);
     }
@@ -72,6 +91,7 @@
         min-height: 100vh;
         background: var(--grey_1) !important;
         color: var(--white_1) !important;
+        font-family: var(--default-fontfam) !important;
     }
     h1 {
         color: var(--white_1) !important;
@@ -359,6 +379,9 @@
     }
 
     /*Global announcements*/
+    #announcementWrapper { /*dashboard announcement banner top padding*/
+        padding-top: 8px;
+    }
     .XBLto_ddES {
         background: var(--grey_2);
     }
@@ -382,7 +405,10 @@
         border-color: var(--white_1);
     }
     .ColorPicker__Container {
-        background: none;
+        background: var(--grey_2);
+    }
+    .ColorPicker__Container.with-border {
+        border: 1px solid var(--white_1);
     }
     .fOyUs_fZwI, .fOyUs_kXoP { /*popover menu background*/
         background: var(--grey_2);
@@ -596,7 +622,7 @@
         background-color: var(--accent);
     }
     .mini_calendar .day:hover, .mini_calendar .day.related, .mini_calendar .day.drop_target {
-        background: var(--grey_4);
+        background: var(--grey_3);
         opacity: .7;
     }
     .mini_calendar .day.has_event {
@@ -732,6 +758,7 @@
     }
     .ui-tabs .ui-tabs-nav { /*bottom of tabs border*/
         border-bottom-color: var(--white_1);
+        background: var(--grey_1);
     }
     .ui-tabs .ui-tabs-nav li { /*unselected tabs background*/
         border-color: var(--white_1);
@@ -912,7 +939,7 @@
         color: var(--white_1);
     }
     .fhWLw_bGBk { /*use high contrast UI toggle*/
-        --fhWLw-background: none;
+        --fhWLw-background: none !important;
         --fhWLw-borderColor: var(--white_1) !important;
     }
     
@@ -1284,8 +1311,8 @@
     }
     .ui-dialog .ui-dialog-titlebar-close span { /*submission preview titlebar*/
         transition: none;
-        background: url("https://raw.githubusercontent.com/erinschief/canvasDarkMode-CSS/master/icon-x-white.svg") 50% 50% no-repeat;
-        background-size: 10px;
+        background: url("https://raw.githubusercontent.com/erinschief/canvasDarkMode-CSS/master/icon-x-white.svg") 50% 50% no-repeat !important;
+        background-size: 10px !important;
         opacity: 1;
     }
     .ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable { /*pdf preview viewer box*/
@@ -1405,6 +1432,24 @@
     }
     #calendar-app .fc-event, #calendar-drag-and-drop-container .fc-event {
         background: none;
+    }
+    /*Event details popup*/
+    .event-details-header, .event-details-content, .event-details-footer {
+        border-bottom-color: var(--white_1);
+    }
+
+    /*Create new event popup*/
+    #edit_event .ui-tabs .ui-tabs-nav li.ui-state-hover a, #edit_event .ui-tabs .ui-tabs-nav li:hover a { /*new event tab hover*/
+        color: var(--white_1);
+    }
+    .group_course_116227, .group_course_116227:hover, .group_course_116227:focus { /*create new event tabs*/
+        color: var(--grey_1);
+        border-color: var(--grey_1);
+        background-color: var(--grey_1);
+    }
+    .ag_contexts_menu { /*add event select couse menu*/
+        background: var(--grey_2);
+        border: 1px solid var(--white_1);
     }
     
     /*Week view*/
@@ -1815,7 +1860,6 @@
         --grey_1: rgb(44, 44, 44); /*main bg*/
         --grey_2: rgb(55, 55, 55); /*secondary bg*/
         --grey_3: rgb(66, 66, 66); /*tertiary bg*/
-        --grey_4: rgb(77, 77, 77); /*quaternary bg*/
 
         --white_1: rgb(255, 255, 255); /*pure white*/
         --white_2: rgb(215, 215, 215); /*secondary white*/
@@ -1823,16 +1867,12 @@
     }
 
     .btn, .Button, .ui-button {
-        padding: 9px !important;
+        padding: 8px !important;
     }
-
-    .event-details { /*event details popover*/
+    .event-details { /*event details popover; messes with dashboard right side if made univeral*/
         border: 1.5px solid var(--white_1);
         background: var(--grey_2);
         box-shadow: 2px 2px 10px rgba(0,0,0,0.6) !important;
-    }
-    .event-details-header, .event-details-content, .event-details-footer {
-        border-bottom-color: var(--white_1);
     }
 }
 
@@ -1845,7 +1885,6 @@
         --grey_1: rgb(44, 44, 44); /*main bg*/
         --grey_2: rgb(55, 55, 55); /*secondary bg*/
         --grey_3: rgb(66, 66, 66); /*tertiary bg*/
-        --grey_4: rgb(77, 77, 77); /*quaternary bg*/
 
         --white_1: rgb(255, 255, 255); /*pure white*/
         --white_2: rgb(215, 215, 215); /*secondary white*/
@@ -1961,7 +2000,6 @@
         --grey_1: rgb(44, 44, 44); /*main bg*/
         --grey_2: rgb(55, 55, 55); /*secondary bg*/
         --grey_3: rgb(66, 66, 66); /*tertiary bg*/
-        --grey_4: rgb(77, 77, 77); /*quaternary bg*/
         
         --white_1: rgb(255, 255, 255); /*pure white*/
         --white_2: rgb(215, 215, 215); /*secondary white*/
