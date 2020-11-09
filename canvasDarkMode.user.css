@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.8.0
+@version        1.8.1
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		GPL-3.0-only
@@ -53,8 +53,6 @@
 
         --enRcg-secondaryColor: var(--white_2);
         
-        --fhWLw-background
-
         /*canvas has a ton of weird font variables for some reason so let's consolidate those too*/
         --default-fontfam: Lato,"Helvetica Neue",Helvetica,sans-serif;
 	
@@ -767,7 +765,7 @@
         color: var(--white_1);
     }
     .ui-tabs .ui-tabs-nav li.ui-tabs-active { /*active tab border*/
-        border-color: var(--white_1 !important);
+        border-color: var(--white_1) !important;
     }
     .ui-tabs .ui-tabs-nav li.ui-tabs-active a { /*active tab*/
         background: var(--grey_2);
