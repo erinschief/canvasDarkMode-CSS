@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.8.9
+@version        1.8.10
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		GPL-3.0-only
@@ -1107,7 +1107,6 @@
         background: var(--grey_3);
     }
     .collapsable:hover::before, .collapsable:focus::before { /*collapse thread triangle (un-collapsed)*/
-        border-style: none;
         border-color: transparent transparent var(--accent);
     }
     .collapsed .collapsable::before { /*collapse thread triangle (collapsed)*/
