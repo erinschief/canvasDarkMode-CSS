@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.8.8
+@version        1.8.9
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		GPL-3.0-only
@@ -116,7 +116,7 @@
     .btn, .Button, .ui-button {
         background: none;
         color: var(--white_1);
-        padding: 0px;
+        padding: 6px;
         border: none;
     }
     .btn, .Button[type="submit"] {
@@ -137,7 +137,7 @@
         color: var(--grey_2) !important;
     }
     .btn-block, .Button--block {
-        padding: 6;
+        padding: 6px;
     }
     .btn.disabled, .btn[disabled], .Button.disabled, .disabled.ui-button, .ui-button.ui-state-disabled, .Button[disabled], [disabled].ui-button {
         background: none !important;
@@ -154,6 +154,9 @@
         filter: brightness(1.25);
         color: var(--white_1) !important;
         background: var(--accent) !important;
+    }
+    #courseMenuToggle { /*left side hamburger button padding fix*/
+        padding: 0px !important;
     }
     
     /*Nav bar*/
@@ -1000,6 +1003,10 @@
     .esvoZ_bGBk:hover { /*svg hover fill*/
         fill: var(--white_2);
     }
+    .new-and-total-badge .total-items { /*discussion thread unread & message count bubble*/
+        background-color: var(--white_1);
+        color: var(--grey_2);
+    }
 
     /*create new discussion*/
     .published-status.unpublished {
@@ -1098,6 +1105,13 @@
     }
     .showMore:hover {
         background: var(--grey_3);
+    }
+    .collapsable:hover::before, .collapsable:focus::before { /*collapse thread triangle (un-collapsed)*/
+        border-style: none;
+        border-color: transparent transparent var(--accent);
+    }
+    .collapsed .collapsable::before { /*collapse thread triangle (collapsed)*/
+        border-color: var(--accent) transparent transparent;
     }
     
     /*Quizzes*/
@@ -1883,9 +1897,6 @@
         --white_3: rgb(200, 200, 200); /*tertiary white*/
     }
 
-    .btn, .Button, .ui-button {
-        padding: 8px !important;
-    }
     .event-details { /*event details popover; messes with dashboard right side if made univeral*/
         border: 1.5px solid var(--white_1);
         background: var(--grey_2);
@@ -1964,6 +1975,9 @@
         border-right: 1px solid var(--white_1);
         border-left: 1px solid var(--white_1);
         background-color: var(--grey_2);
+    }
+    select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+        padding: 6px;
     }
     .CommentGroup-textarea {
         background: var(--grey_2);
