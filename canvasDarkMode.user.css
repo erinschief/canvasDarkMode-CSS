@@ -1112,6 +1112,9 @@
     .collapsed .collapsable::before { /*collapse thread triangle (collapsed)*/
         border-color: var(--accent) transparent transparent;
     }
+    .showMore a::after { /*"show more" arrow*/
+        border-color: var(--accent) transparent transparent;
+    }
     
     /*Quizzes*/
     .ig-list .ig-row .ig-empty-msg {
@@ -1570,6 +1573,9 @@
         background: var(--grey_1);
         border-bottom: 1px solid var(--white_1);
     }
+    #conversation_filter_select { /*dropdown filter select*/
+        height: 34px;
+    }
     .dropdown-toggle {
         border: 1px solid var(--white_1);
     }
@@ -1589,6 +1595,7 @@
         color: var(--white_1);
     }
     .ac-input-box {
+        height: 34px;
         background: var(--grey_1);
         border: 1px solid var(--white_1);
     }
@@ -1882,7 +1889,7 @@
     }
 }
     
-@-moz-document regexp("https://canvas.*edu/(calendar|conversations).*") {
+@-moz-document regexp("https://canvas.*edu/calendar.*") {
     :root {
         /*Custom colors*/
         --accent: /*[[user-accent]]*/; /*main accent*/
