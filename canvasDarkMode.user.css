@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.8.12
+@version        1.8.13
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		GPL-3.0-only
@@ -116,12 +116,12 @@
     .btn, .Button, .ui-button {
         background: none;
         color: var(--white_1);
-        padding: 6px;
+        padding: 6px !important;
         border: none;
     }
     .btn, .Button[type="submit"] {
         color: var(--white_1);
-        padding: 6px;
+        padding: 6px !important;
         border: 1px solid var(--white_1);
     }
     .btn:active, .Button:active, .ui-button:active {
@@ -919,6 +919,10 @@
         color: var(--white_1);
         text-decoration: underline;
     }
+    .ef-item-row .btn-link { /*file three dots button hover size fix*/
+        border-width: initial;
+    }
+
     
     /*My media*/
     .ic-Login-confirmation__header {
