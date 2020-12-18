@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.8.14
+@version        1.9.0
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		GPL-3.0-only
@@ -102,6 +102,9 @@
         color: var(--accent);
         text-decoration: none;
     }
+    body.Underline-All-Links__enabled .btn-link, body.Underline-All-Links__enabled .Button--link { /*make inline button links not giant*/
+        padding: 1px !important;
+    }
     p span, h1 span, h2 span, h3 span, h4 span, table tbody tr td ul li span { /*html themed black text fix*/
         color: var(--white_1) !important;
     }
@@ -147,19 +150,18 @@
     .btn-primary, .Button--primary {
         background: var(--accent) !important;
         color: var(--white_1) !important;
-        border: none !important;
-        padding: 6px;
+        border: 1px solid var(--white_1) !important;
     }
     .btn-primary:hover, .Button--primary:hover {
         filter: brightness(1.25);
         color: var(--white_1) !important;
         background: var(--accent) !important;
     }
-    .Button--icon-action, .Button--icon-action-rev { /*action icon hover*/
-        padding: 2px 4px;
-    }
     #courseMenuToggle { /*left side hamburger button padding fix*/
         padding: 0px !important;
+    }
+    .Button--icon-action, .Button--icon-action-rev { /*action button padding*/
+        padding: 2px 6px !important;
     }
     
     /*Nav bar*/
@@ -822,6 +824,9 @@
         width: 220px;
         border: 1px solid var(--white_1);
         background: none;
+    }
+    select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input { /*search box padding fix*/
+        padding: 6px;
     }
     .form-actions {
         border-color: var(--white_1);
@@ -1734,11 +1739,26 @@
     .ally-accessible-versions > .ally-prominent-af-download-button { /*other versions button*/
         background-image: url(https://raw.githubusercontent.com/erinschief/canvasDarkMode-CSS/master/alt-formats-icon-white.svg);
     }
+    #ally-accessible-versions-toolbar { /*files tab acccessible version button*/
+        background-image: url("https://raw.githubusercontent.com/erinschief/canvasDarkMode-CSS/master/alt-formats-icon-white.svg") !important;
+        background-repeat: no-repeat !important;
+        vertical-align: bottom !Important;
+    }
+    #ally-accessible-versions-toolbar:hover { /*files tab accessible version hover*/
+        background-image: url("https://prod.ally.ac/static/ally-icon.78a0c71b27148737c613d436de48aa9d.png") !important;
+        background-position: 50% !important;
+        background-size: 20px !Important;
+    }
     .ui-icon { /*external link icon*/
         background-image: url(https://raw.githubusercontent.com/erinschief/canvasDarkMode-CSS/master/external-link-icon-white.svg);
     }
     .ui-icon-extlink {
         background-position: 0px 0px;
+    }
+    #discussion_container .ally-grey-arrow-download-button.ally-user-content-dropdown > a, #discussion_container .ally-grey-arrow-download-button.ally-user-content-dropdown > a:hover, .ally-grey-arrow-download-button.ally-user-content-dropdown > a, .ally-grey-arrow-download-button.ally-user-content-dropdown > a:hover { /*custom themed download button*/
+        background-image: url("https://github.com/erinschief/canvasDarkMode-CSS/raw/master/download-icon-white.svg");
+        width: 11px;
+        height: 13px;
     }
 
     /*Teacher View*/
