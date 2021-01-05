@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.9.0
+@version        1.9.1
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		GPL-3.0-only
@@ -721,6 +721,8 @@
     }
     div#rubric_holder { /*window border*/
         border: 1px solid var(--white_1) !important;
+        background: var(--grey_2) !important;
+        width: 500px; /*make comment box fit in holder in SG mode*/
     }
     .react-rubric td, .react-rubric th { /*rubric border*/
         border: 1px solid var(--white_1);
@@ -1317,9 +1319,6 @@
     /*submission details*/
     .file-upload-submission {
         background: var(--grey_2);
-    }
-    div#rubric_holder {
-        background: var(--grey_2) !important;
     }
     .fwfoD_fsuY {
         color: var(--white_1)
