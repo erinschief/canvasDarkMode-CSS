@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.9.1
+@version        1.9.2
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		GPL-3.0-only
@@ -1859,6 +1859,17 @@
     }
     #width_resizer.highlight { /*remove yellow width resizer highlight*/
         background: var(--white_2) url("/dist/images/splitpane_handle-ew-1b67cccf0f.gif") no-repeat scroll 50% 50%;
+    }
+    #rubric_holder .hide_rubric_link { /*rubric holder cancel button*/
+        color: var(--white_1);
+        cursor: pointer;
+        border: 1px solid var(--white_1);
+    }
+    .qBMHb_cSXm { /*rubric holder point input box background*/
+        background: none;
+    }
+    .qBMHb_cwos, input[type].qBMHb_cwos { /*rubric holder point input box text*/
+        color: var(--white_1);
     }
     
     /*TV: Grades Table*/
