@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.9.2
+@version        1.10.0
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		GPL-3.0-only
@@ -52,6 +52,7 @@
         --yyQPt-hoverBorderColor: var(--white_1);
 
         --enRcg-secondaryColor: var(--white_2);
+        --eqmZq-selectedBackground: var(--grey_2); /*submission attempt selection dropdown*/
         
         /*canvas has a ton of weird font variables for some reason so let's consolidate those too*/
         --default-fontfam: Lato,"Helvetica Neue",Helvetica,sans-serif;
@@ -406,6 +407,7 @@
     }
     .XBLto_ddES {
         background: var(--grey_2);
+        border-radius: 3px;
     }
     .bdYPe_ddES[aria-selected] {
         font-weight: bold;
@@ -882,6 +884,36 @@
         color: var(--white_1);
     }
 
+    /*Assignment timeline*/
+    .EGevE_fZRY { /*assignment title*/
+        font-weight: bold;
+    }
+    .progression { /*timeline line*/
+        background: var(--white_2);
+    }
+    .in-progress .step-item-label { /*step label*/
+        color: var(--white_1);
+    }
+    .assignment-student-header-sticky { /*new assignment header*/
+        background: var(--grey_1);
+        border-bottom: 1px solid var(--white_1);
+    }
+    .in-progress .step-item-pin { /*in progress step pin*/
+        width: 24px !important;
+        height: 24px !important;
+        background: var(--grey_2);
+    }
+    .in-progress .step-item-pin::before { /*in progress step pin animation*/
+        transform: scale(0.35);
+        animation-iteration-count: 2;
+    }
+    .step-item-pin { /*other step item pins*/
+        background: var(--grey_2);
+        border: .5px solid var(--white_2);
+        width: 20px !important;
+        height: 20px !important;
+    }
+
     /*Hover tooltip*/
     .dqmEK_ejeM, .dqmEK_ejeM::after { /*tooltip triangle border*/
         border-color: var(--white_1);
@@ -921,6 +953,9 @@
     }
     .ftPBL_bGBk:not(.ftPBL_bGiS) { /*drop files here to upload*/
         background-color: var(--grey_2);
+    }
+    .ftPBL_elxg { /*upload subtext*/
+        color: var(--white_2);
     }
     .ELpHc_bGBk.ELpHc_fpfC, input.ELpHc_bGBk[type].ELpHc_fpfC { /*or choose files*/
         color: var(--white_1);
@@ -1325,6 +1360,9 @@
     }
     .submission-details-comments .comments {
         background-color: var(--grey_2);
+    }
+    #sidebar_content .details .content .comments { /*submission comment*/
+        color: var(--white_2);
     }
     .comment div { /*submission comments subtext*/
         color: var(--white_2) !important;
@@ -1734,6 +1772,120 @@
         background: aliceblue;
     }
 
+    /*New RCE interface*/
+    .canvas-rce__skins--root { /*main background*/
+        background-color: var(--grey_2);
+    }
+    .tox path { /*svg fill*/
+        fill: var(--white_1);
+    }
+    .tox .tox-tbtn:hover svg { /*svg hover fill*/
+        fill: var(--white_1);
+    }
+    .tox .tox-menubar { /*toolbar first row background*/
+        background-color: var(--grey_2);
+    }
+    .tox .tox-mbtn { /*button text*/
+        color: var(--white_1);
+    }
+    .tox .tox-mbtn--active { /*active button*/
+        background: var(--grey_3);
+        color: var(--white_1);
+    }
+    .tox .tox-mbtn:hover:not(:disabled) { /*enabled button hover*/
+        background: var(--grey_3);
+        color: var(--white_1);
+        border: 1px solid var(--white_1);
+    }
+    .tox .tox-mbtn:hover:not(:disabled):not(.tox-mbtn--active) { /*enabled active active button hover*/
+        background: var(--grey_3);
+        box-shadow: none;
+        color: var(--white_1);
+        border: 1px solid var(--white_1);
+    }
+    .tox .tox-menu { /*dropdown menu background*/
+        background-color: var(--grey_3);
+        border-color: var(--white_1);
+        border: 1px solid var(--white_1);
+    }
+    .tox .tox-collection__item { /*dropdown menu text*/
+        color: var(--white_1);
+    }
+    .tox .tox-collection__item-accessory { /*keyboard shortcut text*/
+        color: var(--white_2);
+    }
+    .tox .tox-insert-table-picker__label { /*table picker text*/
+        color: var(--white_2);
+    }
+    .tox .tox-collection--list .tox-collection__item--enabled { /*selected item*/
+        color: var(--grey_3);
+    }
+    .tox:not(.tox-tinymce-inline) .tox-editor-header { /*weird overflow background*/
+        background: none;
+    }
+    .tox .tox-toolbar, .tox .tox-toolbar__overflow, .tox .tox-toolbar__primary { /*second row fill*/
+        background: var(--grey_2);
+    }
+    .tox .tox-tbtn { /*button text*/
+        color: var(--white_1);
+        border: none !Important;
+    }
+    .tox .tox-tbtn:active { /*active button*/
+        background: var(--grey_3);
+        color: var(--white_1);
+        border: 1px solid var(--white_1) !important;
+    }
+    .tox .tox-split-button .tox-tbtn.tox-split-button__chevron { /*split button chevron background*/
+        background: none;
+    }
+    .tox .tox-tbtn:hover, .tox .tox-split-button:hover, .tox .tox-tbtn.tox-tbtn--enabled:hover, .tox .tox-split-button .tox-tbtn.tox-split-button__chevron:hover { /*chevron hover*/
+        background: var(--grey_3);
+        color: var(--white_1);
+        border: 1px solid var(--white_1) !important;
+    }
+    .tox:not([dir="rtl"]) .tox-toolbar__group:not(:last-of-type) { /*fix bar dividers*/
+        border-right: none;
+    }
+    [dir="ltr"] .tox-toolbar .tox-toolbar__group::after, [dir="ltr"] .tox-toolbar-overlord .tox-toolbar__group::after, [dir="ltr"] .tox-toolbar__overflow .tox-toolbar__group::after, [dir="ltr"] .tox-tinymce-aux .tox-toolbar .tox-toolbar__group::after { /*actual bar divider*/
+        border-right: 1px solid var(--white_1);
+    }
+    .tox.tox-tinymce-aux .tox-toolbar__overflow { /*overflow menu*/
+        background-color: var(--grey_2);
+        border: 1px solid var(--white_1);
+    }
+
+    /*Fullscreen color picker*/
+    .tox .tox-dialog-wrap__backdrop { /*picker backdrop*/
+        background-color: rgba(0, 0, 0, 0.75);
+    }
+    .tox .tox-dialog__header { /*picker header*/
+        background-color: var(--grey_2);
+        color: var(--white_1);
+    }
+    .tox .tox-dialog { /*picker body*/
+        background-color: var(--grey_2);
+        border-color: var(--white_1);
+    }
+    .tox .tox-rgb-form div { /*R,G,B text*/
+        color: var(--white_1);
+    }
+    .tox .tox-textfield, .tox .tox-selectfield select, .tox .tox-textarea, .tox .tox-toolbar-textfield { /*text boxes*/
+        background-color: var(--grey_2);
+        border-color: var(--white_1);
+        color: var(--white_1);
+    }
+    .tox .tox-button--naked.tox-button--icon:hover:not(:disabled) { /*x icon*/
+        background: none;
+    }
+    .tox .tox-dialog__footer { /*picker footer*/
+        background-color: var(--grey_2);
+        border-top: 1px solid var(--white_1);
+    }
+    .tox .tox-button { /*button*/
+        background: none !important;
+        line-height: 1.5;
+    }
+
     /*Custom icons*/
     .ally-accessible-versions > .ally-prominent-af-download-button { /*other versions button*/
         background-image: url(https://raw.githubusercontent.com/erinschief/canvasDarkMode-CSS/master/alt-formats-icon-white.svg);
@@ -1797,6 +1949,10 @@
     }
     .chpSa_blLZ { /*add comment box*/
         background: var(--grey_2);
+    }
+    .chpSa_blLZ::placeholder { /*comment box placeholder text*/
+        color: var(--white_2);
+        opacity: 1;
     }
     #right_side div.comment.draft { /*comment draft*/
         background: var(--grey_2);
@@ -2119,5 +2275,63 @@
     .btn.btn-primary { /*download button*/
         background-color: var(--accent);
         border: 1px solid var(--accent);
+    }
+}
+
+@-moz-document regexp(".*quiz-lti-iad-prod.instructure.com.*") {
+    /*New Quiz Container 2021*/
+    :root {
+        /*Custom colors*/
+        --accent: /*[[user-accent]]*/; /*main accent*/
+        
+        --grey_1: rgb(44, 44, 44); /*main bg*/
+        --grey_2: rgb(55, 55, 55); /*secondary bg*/
+        --grey_3: rgb(66, 66, 66); /*tertiary bg*/
+        
+        --white_1: rgb(255, 255, 255); /*pure white*/
+        --white_2: rgb(215, 215, 215); /*secondary white*/
+        --white_3: rgb(200, 200, 200); /*tertiary white*/
+    }
+
+    .PageHeader-styles__header { /*header*/
+        background-color: var(--grey_1);
+        border-bottom: var(--white_1);
+        transition: none;
+    }
+    .caADp_gasz { /*body background*/
+        background-color: var(--grey_1);
+        transition: none;
+    }
+    .cqBsX_caGd { /*main quiz box*/
+        background-color: var(--grey_2);
+        box-shadow: none;
+        transition: none;
+    }
+    .eQMwa_ddES .eQMwa_fqzO { /*results percentage*/
+        color: var(--white_1);
+    }
+    .cjUyb_bGBk.cjUyb_eQnG, input.cjUyb_bGBk[type].cjUyb_eQnG {
+        color: var(--white_2);
+    }
+    .tONnG_cMxE { /*"your answers" title*/
+        border-bottom: 1px solid var(--white_1);
+    }
+    .hgbnX_cESy { /*question number box*/
+        background-color: var(--grey_3);
+        border-radius: 2px;
+        border: 1px solid var(--white_1);
+        border-left: none;
+    }
+    .cQHeE_cwte { /*question points*/
+        color: var(--white_2);
+    }
+    .eRBXN_caGd { /*question text*/
+        color: var(--white_1);
+    }
+    .SMtSf_cpHn { /*question answer response box*/
+        background-color: var(--grey_2);
+    }
+    .SMtSf_ecTz { /*correct answer*/
+        padding-top: 10px;
     }
 }
