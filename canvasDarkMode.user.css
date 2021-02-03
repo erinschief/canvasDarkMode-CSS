@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.10.1
+@version        1.10.2
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		GPL-3.0-only
@@ -2291,6 +2291,9 @@
         --white_1: rgb(255, 255, 255); /*pure white*/
         --white_2: rgb(215, 215, 215); /*secondary white*/
         --white_3: rgb(200, 200, 200); /*tertiary white*/
+
+        --default-fontfam: Lato,"Helvetica Neue",Helvetica,sans-serif;
+    	--eRBXN-contentFontFamily: var(--default-fontfam);
     }
 
     .PageHeader-styles__header { /*header*/
@@ -2350,10 +2353,19 @@
     .cwwgG_doeu, .cwwgG_esVF { /*question number text*/
         color: var(--white_1);
     }
+    .fQfxa_bGBk:active .fQfxa_caGd.fQfxa_dqAF.fQfxa_eCSh { /*submit quiz button clicked*/
+        background: var(--accent);
+        box-shadow: none;
+    }
+    .eHiXd_bXiG:active, .eHiXd_bXiG:hover, a.eHiXd_bXiG:active, a.eHiXd_bXiG:hover, button.eHiXd_bXiG:active, button.eHiXd_bXiG:hover, button.eHiXd_bXiG[type="button"]:active, button.eHiXd_bXiG[type="button"]:hover, button.eHiXd_bXiG[type="reset"]:active, button.eHiXd_bXiG[type="reset"]:hover, button.eHiXd_bXiG[type="submit"]:active, button.eHiXd_bXiG[type="submit"]:hover { /*confirm submission submit button hover*/
+        background: var(--accent);
+        filter: brightness(1.25);
+        box-shadow: none;
+    }
     .eQMwa_ddES .eQMwa_fqzO { /*results percentage*/
         color: var(--white_1);
     }
-    .cjUyb_bGBk.cjUyb_eQnG, input.cjUyb_bGBk[type].cjUyb_eQnG { /**/
+    .cjUyb_bGBk.cjUyb_eQnG, input.cjUyb_bGBk[type].cjUyb_eQnG { /*results text*/
         color: var(--white_1);
     }
     .tONnG_cMxE { /*"your answers" title*/
