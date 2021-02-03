@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.10.0
+@version        1.10.1
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		GPL-3.0-only
@@ -2307,11 +2307,54 @@
         box-shadow: none;
         transition: none;
     }
+    .enRcg_bGBk.enRcg_qFsi, input.enRcg_bGBk[type].enRcg_qFsi { /*time limit, due date large text*/
+        color: var(--white_1);
+    }
+    .fQfxa_dqAF.fQfxa_eCSh { /*begin quiz button*/
+        background: var(--accent);
+        color: var(--fQfxa-primaryColor);
+        border: 1px solid var(--white_1);
+    }
+    .fQfxa_bGBk:hover .fQfxa_dqAF.fQfxa_eCSh { /*begin quiz button hover*/
+        filter: brightness(1.25);
+        color: var(--white_1);
+        background: var(--accent);
+    }
+    .ePXXM_cwte { /*question point count*/
+        color: var(--white_2);
+    }
+    .qBMHb_cwos::placeholder, input[type].qBMHb_cwos::placeholder { /*search bar placeholder text*/
+        color: var(--white_2);
+    }
+    .bKGpR_bObp { /*quiz sidebar*/
+        background-color: var(--grey_2);
+        border-top: none;
+        border-left: none;
+        border-right: 1px solid var(--white_1);
+    }
+    .bKGpR_fwEb { /*sidebar selected item*/
+        background-color: var(--grey_3);
+    }
+    .bKGpR_difO { /*sidebar section title text*/
+        color: var(--white_2);
+    }
+    .cwwgG_cdGL { /*sidebar question subtext*/
+        color: var(--white_2);
+    }
+    .bKGpR_eeTU:hover { /*sidebar section right border hover highlight*/
+        border-right: 4px solid var(--accent);
+    }
+    .cwwgG_kQJA:hover { /*sidebar question right border hover highlight*/
+        border-right: 4px solid var(--accent);
+    }
+    .cwwgG_doeu, .cwwgG_esVF { /*question number text*/
+        color: var(--white_1);
+    }
     .eQMwa_ddES .eQMwa_fqzO { /*results percentage*/
         color: var(--white_1);
     }
-    .cjUyb_bGBk.cjUyb_eQnG, input.cjUyb_bGBk[type].cjUyb_eQnG {
-        color: var(--white_2);
+    .cjUyb_bGBk.cjUyb_eQnG, input.cjUyb_bGBk[type].cjUyb_eQnG { /**/
+        color: var(--white_1);
     }
     .tONnG_cMxE { /*"your answers" title*/
         border-bottom: 1px solid var(--white_1);
