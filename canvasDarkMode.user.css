@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.10.2
+@version        1.10.3
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		GPL-3.0-only
@@ -1912,6 +1912,109 @@
         height: 13px;
     }
 
+    /*Inline Viewer*/
+    .Pages {
+        background-color: var(--grey_3) !important;
+    }
+    .ViewerControls { /*viewer toolbar*/
+        background-color: var(--grey_2);
+        color: var(--white_1);
+    }
+    .download-button--button:hover { /*download button hover*/
+        background-color: var(--grey_3);
+    }
+    .ViewerControls--current-page { /*current page item*/
+        background-color: var(--white_1);
+        color: var(--grey_2);
+    }
+    .AnnotationControlButton {
+        color: var(--white_1);
+        background: none;
+    }
+    .AnnotationControlButton-outer {
+        border: none;
+    }
+    .AnnotationControlButton:hover:enabled { /*tool hover*/
+        background-color: var(--grey_3);
+    }
+    .AnnotationControlButton.selected .AnnotationControlButton-outer { /*selected tool color*/
+        color: var(--grey_2);
+    }
+    .SecondaryControls {
+        top: 48px;
+        background-color: var(--grey_2);
+        border-bottom: 1px solid var(--white_1);
+    }
+    .ViewerControls--with-annotations {
+        height: 48px;
+    }
+    .ColorButton {
+        background: none;
+    }
+    .SecondaryControls-label {
+        color: var(--white_2);
+    }
+
+    /*pages*/
+    .Page { /*page margins*/
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    /*doc viewer comments*/
+    .PageContainerComments {
+        color: var(--white_1);
+    }
+    .Comment {
+        border-right: 1px solid var(--white_1);
+        border-left: 1px solid var(--white_1);
+        background-color: var(--grey_2);
+    }
+    select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+        padding: 6px;
+    }
+    .CommentGroup-textarea {
+        background: var(--grey_2);
+        -webkit-text-fill-color: var(--white_1) !important;
+    }
+    .Comment:first-of-type, .Comment-root-comment {
+        border-top: 1px solid var(--white_1);
+    }
+    .Comment-isAtBottom, .Comment-isReplyForm {
+        border-bottom: 1px solid var(--white_1);
+    }
+    .CommentGroup .Comment2, .CommentGroup .Comment3, .CommentGroup .Comment4, .CommentGroup .Comment4 {
+        border: .5px solid var(--white_1);
+        background-color: var(--grey_3);
+    }
+    .Comment-reply-number {
+        color: var(--white_2);
+        font-weight: inherit;
+        text-decoration: underline;
+    }
+    .CommentReplyForm {
+        background: var(--grey_2);
+    }
+    .CommentReplyForm .CommentReplyForm-inner {
+        border-top: 1px solid var(--white_1);
+        border-bottom: 1px solid var(--white_1);
+        border-right: 1px solid var(--white_1);
+        border-left: 1px solid var(--white_1);
+    }
+    .inst-button {
+        background-color: var(--grey_3);
+        border: 1px solid var(--white_1);
+        color: var(--white_1);
+    }
+    .inst-button:hover {
+        background-color: var(--white_1);
+        border-color: var(--white_1);
+        color: var(--grey_2);
+    }
+    .CommentGroup-textarea:focus {
+        border: none;
+    }
+
     /*Teacher View*/
     .yyQPt_cjfS .yyQPt_blJt { /*checked label color*/
         color: var(--white_1);
@@ -2100,124 +2203,6 @@
         border: 1.5px solid var(--white_1);
         background: var(--grey_2);
         box-shadow: 2px 2px 10px rgba(0,0,0,0.6) !important;
-    }
-}
-
-@-moz-document regexp("https://canvadocs.instructure.com.*") {
-    /*Inline viewer*/
-    :root {
-        /*Custom colors*/
-        --accent: /*[[user-accent]]*/; /*main accent*/
-
-        --grey_1: rgb(44, 44, 44); /*main bg*/
-        --grey_2: rgb(55, 55, 55); /*secondary bg*/
-        --grey_3: rgb(66, 66, 66); /*tertiary bg*/
-
-        --white_1: rgb(255, 255, 255); /*pure white*/
-        --white_2: rgb(215, 215, 215); /*secondary white*/
-        --white_3: rgb(200, 200, 200); /*tertiary white*/
-    }
-
-    .Pages {
-        background-color: var(--grey_3) !important;
-    }
-    .ViewerControls { /*viewer toolbar*/
-        background-color: var(--grey_2);
-        color: var(--white_1);
-    }
-    .download-button--button:hover { /*download button hover*/
-        background-color: var(--grey_3);
-    }
-    .ViewerControls--current-page { /*current page item*/
-        background-color: var(--white_1);
-        color: var(--grey_2);
-    }
-    .AnnotationControlButton {
-        color: var(--white_1);
-        background: none;
-    }
-    .AnnotationControlButton-outer {
-        border: none;
-    }
-    .AnnotationControlButton:hover:enabled { /*tool hover*/
-        background-color: var(--grey_3);
-    }
-    .AnnotationControlButton.selected .AnnotationControlButton-outer { /*selected tool color*/
-        color: var(--grey_2);
-    }
-    .SecondaryControls {
-        top: 48px;
-        background-color: var(--grey_2);
-        border-bottom: 1px solid var(--white_1);
-    }
-    .ViewerControls--with-annotations {
-        height: 48px;
-    }
-    .ColorButton {
-        background: none;
-    }
-    .SecondaryControls-label {
-        color: var(--white_2);
-    }
-
-    /*pages*/
-    .Page { /*page margins*/
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    /*doc viewer comments*/
-    .PageContainerComments {
-        color: var(--white_1);
-    }
-    .Comment {
-        border-right: 1px solid var(--white_1);
-        border-left: 1px solid var(--white_1);
-        background-color: var(--grey_2);
-    }
-    select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
-        padding: 6px;
-    }
-    .CommentGroup-textarea {
-        background: var(--grey_2);
-        -webkit-text-fill-color: var(--white_1) !important;
-    }
-    .Comment:first-of-type, .Comment-root-comment {
-        border-top: 1px solid var(--white_1);
-    }
-    .Comment-isAtBottom, .Comment-isReplyForm {
-        border-bottom: 1px solid var(--white_1);
-    }
-    .CommentGroup .Comment2, .CommentGroup .Comment3, .CommentGroup .Comment4, .CommentGroup .Comment4 {
-        border: .5px solid var(--white_1);
-        background-color: var(--grey_3);
-    }
-    .Comment-reply-number {
-        color: var(--white_2);
-        font-weight: inherit;
-        text-decoration: underline;
-    }
-    .CommentReplyForm {
-        background: var(--grey_2);
-    }
-    .CommentReplyForm .CommentReplyForm-inner {
-        border-top: 1px solid var(--white_1);
-        border-bottom: 1px solid var(--white_1);
-        border-right: 1px solid var(--white_1);
-        border-left: 1px solid var(--white_1);
-    }
-    .inst-button {
-        background-color: var(--grey_3);
-        border: 1px solid var(--white_1);
-        color: var(--white_1);
-    }
-    .inst-button:hover {
-        background-color: var(--white_1);
-        border-color: var(--white_1);
-        color: var(--grey_2);
-    }
-    .CommentGroup-textarea:focus {
-        border: none;
     }
 }
 
