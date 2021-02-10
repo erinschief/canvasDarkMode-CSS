@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.10.3
+@version        1.10.4
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		GPL-3.0-only
@@ -405,8 +405,9 @@
     #announcementWrapper { /*dashboard announcement banner top padding*/
         padding-top: 8px;
     }
-    .XBLto_ddES {
+    .XBLto_ddES { /*announcement & assignment submission holder*/
         background: var(--grey_2);
+        border: 1px solid var(--white_1);
         border-radius: 3px;
     }
     .bdYPe_ddES[aria-selected] {
@@ -1384,6 +1385,13 @@
     html body.with-left-side.course-menu-expanded.assignments.Underline-All-Links__enabled.primary-nav-expanded.context-course_113042.responsive_admin_settings.responsive_awareness.responsive_misc.webkit.safari.ff.no-touch div#application.ic-app div#wrapper.ic-Layout-wrapper div#main.ic-Layout-columns div#not_right_side.ic-app-main-content div#content-wrapper.ic-Layout-contentWrapper div#content.ic-Layout-contentMain.padless div.submission-details-container div.submission-details-comments div div.comments div#add_comment_form div.button-container button.Button.Button--primary.save_comment_button {
         background: var(--accent);
         padding: 5px;
+    }
+    div.fOyUs_bGBk.fOyUs_EMjX.dpCPB_caGd.eJkkQ_bEpV div div { /*assignment submission pdf holder*/
+        margin-left: 0rem !important;
+        margin-right: 0rem !important;
+    }
+    span.dHGMZ_ffgL:nth-child(1) > div:nth-child(1) > iframe:nth-child(2) { /*assignment submission pdf holder border*/
+        border: none !Important;
     }
     .ui-widget-overlay { /*submission details pdf viewer background*/
         background: rgba(0,0,0,0.5);
