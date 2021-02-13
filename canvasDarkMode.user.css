@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.10.5
+@version        1.10.6
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		GPL-3.0-only
@@ -52,7 +52,7 @@
         --yyQPt-hoverBorderColor: var(--white_1);
 
         --enRcg-secondaryColor: var(--white_2);
-        --eqmZq-selectedBackground: var(--grey_2); /*submission attempt selection dropdown*/
+        --eqmZq-selectedBackground: var(--grey_1); /*submission attempt selection dropdown*/
         
         /*canvas has a ton of weird font variables for some reason so let's consolidate those too*/
         --default-fontfam: Lato,"Helvetica Neue",Helvetica,sans-serif;
@@ -316,7 +316,6 @@
     }
     .bNerA_bGBk.bNerA_DpxJ.bNerA_eFno, .bNerA_bGBk.bNerA_cKZZ, .bNerA_dTOw { /*upload file box*/
         margin-bottom: 0px;
-        padding-right: 24px;
     }
     .eJkkQ_diPG, .eJkkQ_fEMB, .eJkkQ_eOlt, .eJkkQ_fvoZ, .eJkkQ_bIuM, .eJkkQ_fyZW, .eJkkQ_cuyj, .eJkkQ_gaix {
         background: var(--grey_2);
@@ -978,6 +977,23 @@
     .ef-item-row .btn-link { /*file three dots button hover size fix*/
         border: none;
     }
+    /*file select popup*/
+    .file-select-item::before {
+        border: 0.125rem solid var(--white_1);
+    }
+    .file-select-item:hover {
+        background-color: var(--grey_3);
+    }
+    .file-select-item:hover span {
+        color: var(--white_1) !important;
+    }
+    .file-select-item-selected {
+        background-color: var(--white_2) !important;
+        font-weight: bold;
+    }
+    .file-select-item-selected span {
+        color: var(--grey_2) !important;
+    }
 
     
     /*My media*/
@@ -1418,6 +1434,10 @@
     .ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable { /*pdf preview viewer box*/
         top: 55px !important;
         height: 90% !important;
+    }
+    .dpCPB_caGd, .dpCPB_bGBk { /*assignment submission box margins*/
+        margin-left: 8px;
+        margin-right: 18px;
     }
     
     /*Calendar*/
