@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.10.6
+@version        1.10.7
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		GPL-3.0-only
@@ -1434,10 +1434,6 @@
     .ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable { /*pdf preview viewer box*/
         top: 55px !important;
         height: 90% !important;
-    }
-    .dpCPB_caGd, .dpCPB_bGBk { /*assignment submission box margins*/
-        margin-left: 8px;
-        margin-right: 18px;
     }
     
     /*Calendar*/
