@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.10.7
+@version        1.10.8
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		GPL-3.0-only
@@ -2240,6 +2240,13 @@
         border: 1.5px solid var(--white_1);
         background: var(--grey_2);
         box-shadow: 2px 2px 10px rgba(0,0,0,0.6) !important;
+    }
+}
+
+@-moz-document regexp("https://canvas.*edu/.*assignments.*") {
+    .fOyUs_EMjX { /*assignment submission box padding*/
+        padding-left: 12px !important;
+        padding-right: 12px !important;
     }
 }
 
