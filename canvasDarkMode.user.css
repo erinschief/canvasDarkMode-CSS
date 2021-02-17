@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.10.9
+@version        1.10.10
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		GPL-3.0-only
@@ -196,12 +196,12 @@
     }
     
     /*Right Sidebar*/
-    #right-side { /*todo bar aligns with dashboard top line. this is different for each org???*/
-		margin-top: -4px;
+    #right-side { /*todo bar alignment with dashboard top line*/
+		margin-top: 20px;
     }
     .ic-sidebar-logo { /*remove sidebar logo image*/
-        display: none;
-        margin-bottom: none;
+        display: none !important;
+        margin-bottom: 0px !important;
     }
     #right-side .details .header {
         color: var(--white_1);
