@@ -40,6 +40,79 @@
         --ic-link-color-darkened-10: var(--accent);
         --ic-link-color-lightened-10: var(--accent);
         --ic-brand-global-nav-bgd: var(--accent);
+        --ic-brand-button--primary-bgd-darkened-5: var(--accent);
+        --ic-brand-button--primary-bgd-darkened-15: var(--accent);
+        --ic-brand-global-nav-logo-bgd: var(--accent);
+        --ic-brand-Login-body-bgd-color: var(--accent);
+        --ic-brand-Login-body-bgd-shadow-color: var(--accent);
+        
+        --bbhNB-color: var(--accent);
+        --bdYPe-secondaryColor: var(--accent);
+        --bdYPe-defaultSelectedBorderColor: var(--accent);
+        --cDEpT-hoverBorderColor: var(--accent);
+        --cDEpT-acceptedColor: var(--accent);
+        --chpSa-focusOutlineColor: var(--accent);
+        --cjUyb-brandColor: var(--accent);
+        --cnWSA-colorPrimary: var(--accent);
+        --eHiXd-ghostBorderColor: var(--accent);
+        --eHiXd-ghostColor: var(--accent);
+        --eHiXd-linkColor: var(--accent);
+        --eHiXd-linkHoverColor: var(--accent);
+        --eHiXd-iconHoverColor: var(--accent);
+        --eHiXd-primaryBackground: var(--accent);
+        --eHiXd-primaryBorderColor: var(--accent);
+        --eHiXd-primaryHoverBackground: var(--accent);
+        --eHiXd-primaryActiveBackground: var(--accent);
+        --eHiXd-circlePrimaryBackground: var(--accent);
+        --eHiXd-circlePrimaryBorderColor: var(--accent);
+        --eHiXd-circlePrimaryHoverBackground: var(--accent);
+        --eHiXd-circlePrimaryActiveBackground: var(--accent);
+        --eHQDY-color: var(--accent);
+        --eIQkd-hoverBorderColor: var(--accent);
+        --emyav-brandColor: var(--accent);
+        --enRcg-brandColor: var(--accent);
+        --eqmZq-highlightedBackground: var(--accent);
+        --esvoZ-brandColor: var(--accent);
+        --fOyUs-borderColorBrand: var(--accent);
+        --fOyUs-borderColorInfo: var(--accent);
+        --fOyUs-backgroundBrand: var(--accent);
+        --fOyUs-backgroundInfo: var(--accent);
+        --fOyUs-focusColorInfo: var(--accent);
+        --fQfxa-primaryBorderColor: var(--accent);
+        --fQfxa-primaryBackground: var(--accent);
+        --fQfxa-primaryHoverBackground: var(--accent);
+        --fQfxa-primaryActiveBackground: var(--accent);
+        --fQfxa-primaryGhostColor: var(--accent);
+        --fQfxa-primaryGhostBorderColor: var(--accent);
+        --ftPBL-iconHoverColor: var(--accent);
+        --ftPBL-messageColorClickable: var(--accent);
+        --ftPBL-clickableActiveBg: var(--accent);
+        --LTQwMDM5-primaryBorderColor: var(--accent);
+        --LTQwMDM5-primaryBackground: var(--accent);
+        --LTQwMDM5-primaryHoverBackground: var(--accent);
+        --LTQwMDM5-primaryActiveBackground: var(--accent);
+        --LTQwMDM5-primaryGhostColor: var(--accent);
+        --LTQwMDM5-primaryGhostBorderColor: var(--accent);
+        --MlJlv-toggleFocusBorderColor: var(--accent);
+        --MYpOQ-borderColorBrand: var(--accent);
+        --MYpOQ-borderColorInfo: var(--accent);
+        --MYpOQ-backgroundBrand: var(--accent);
+        --MYpOQ-backgroundInfo: var(--accent);
+        --MYpOQ-focusColorInfo: var(--accent);
+        --qBMHb-focusOutlineColor: var(--accent);
+        --sJGfW-activeBackground: var(--accent);
+        --ueKCDGfnLUKU-primaryBorderColor: var(--accent);
+        --ueKCDGfnLUKU-primaryBackground: var(--accent);
+        --ueKCDGfnLUKU-primaryHoverBackground: var(--accent);
+        --ueKCDGfnLUKU-primaryActiveBackground: var(--accent);
+        --ueKCDGfnLUKU-primaryGhostColor: var(--accent);
+        --ueKCDGfnLUKU-primaryGhostBorderColor: var(--accent);
+        --uTkOVzHsYxyK-primaryBorderColor: var(--accent);
+        --uTkOVzHsYxyK-primaryBackground: var(--accent);
+        --uTkOVzHsYxyK-primaryHoverBackground: var(--accent);
+        --uTkOVzHsYxyK-primaryActiveBackground: var(--accent);
+        --uTkOVzHsYxyK-primaryGhostColor: var(--accent);
+        --uTkOVzHsYxyK-primaryGhostBorderColor: var(--accent);
 
         --ic-brand-font-color-dark: var(--white_1);
         --ic-brand-font-color-dark-lightened-15: var(--white_1);
@@ -306,7 +379,7 @@
         background: none;
         color: var(--white_1);
     }
-    .dyUpz_bPWd.dyUpz_fGhm { /*TODO: what is this shit*/
+    .dyUpz_bPWd.dyUpz_fGhm { /*TODO: what is this shit. answer: idfk but I didn't comment half of this shit so idk about any of that either*/
         background-color: var(--accent);
         border-radius: var(--dfDow-borderRadius);
         color: var(--dfDow-selectedColor);
@@ -719,6 +792,9 @@
     }
     #grades_summary td.details a { /*remove grade details underline*/
         text-decoration: none;
+    }
+    #show_all_details_button { /*show all grade details button*/
+        border: 1px solid var(--white_1);
     }
     
     /*Rubric*/
@@ -1443,6 +1519,15 @@
     .ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable { /*pdf preview viewer box*/
         top: 55px !important;
         height: 90% !important;
+    }
+    .fQfxa_dqAF.fQfxa_eCSh { /*new attempt button*/
+        background: var(--accent);
+        border: none;
+        color: var(--white_1);
+    }
+    .fQfxa_bGBk:hover .fQfxa_dqAF.fQfxa_eCSh { /*new attempt button hover*/
+        background: var(--accent);
+        filter: brightness(1.25);
     }
     
     /*Calendar*/
@@ -2399,6 +2484,9 @@
         background: var(--accent);
         filter: brightness(1.25);
         box-shadow: none;
+    }
+    .eQMwa_cDWE { /*results circle coloring*/
+        stroke: var(--accent);
     }
     .eQMwa_ddES .eQMwa_fqzO { /*results percentage*/
         color: var(--white_1);
