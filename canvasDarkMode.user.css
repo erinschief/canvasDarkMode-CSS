@@ -1,19 +1,21 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.10.10
+@version        1.11.0
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		GPL-3.0-only
 @homepageURL	https://github.com/erinschief/canvasDarkMode-CSS
 @updateURL		https://raw.githubusercontent.com/erinschief/canvasDarkMode-CSS/master/canvasDarkMode.user.css
-@advanced       color   user-accent "Accent color"  #8B1F41
+@advanced       color   user-accent "Universal accent color"    #8B1F41
+@advanced       color   nav-accent  "Nav bar accent color"      #8B1F41
 ==/UserStyle== */
 
 @-moz-document regexp("https://canvas.*edu.*") {
     :root {
         /*Custom colors*/
         --accent: /*[[user-accent]]*/; /*main accent*/
+        --navAccent: /*[[nav-accent]]*/; /*nav accent*/
 
         --grey_1: rgb(44, 44, 44); /*main bg*/
         --grey_2: rgb(55, 55, 55); /*secondary bg*/
@@ -170,7 +172,7 @@
     
     /*Nav bar*/
     .ic-app-header { /*universal left toolbar*/
-        background-color: var(--accent);
+        background: var(--navAccent);
     }
     body.primary-nav-expanded .ic-app-header__logomark { /*nav bar expanded logomark*/
         display: none;
@@ -376,7 +378,13 @@
         /* padding-bottom: 12; */
         margin-bottom: 6px;
     }
-    .ic-notification__content {
+    .ic-notification { /*global notif border*/
+		border: 2px solid var(--navAccent);
+	}
+	.ic-notification__icon { /*notif side icon space*/
+		background: var(--navAccent);
+	}
+    .ic-notification__content { /*global notif content background*/
         background: var(--grey_1);
     }
     .ic-flash-info, .ic-flash-success, .ic-flash-warning, .ic-flash-error {/*green notification*/
