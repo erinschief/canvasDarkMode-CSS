@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.11.0
+@version        1.11.1
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		GPL-3.0-only
@@ -1472,8 +1472,7 @@
     .Submission__Link--has-icon .icon-rubric, .Submission__Link--has-icon .icon-check, .Submission__Link--has-icon .icon-warning, .Submission__List .icon-rubric, .Submission__List .icon-check, .Submission__List .icon-warning {
         color: var(--white_1);
     }
-    /*submission details*/
-    .file-upload-submission {
+    .file-upload-submission { /*submission details*/
         background: var(--grey_2);
     }
     .fwfoD_fsuY {
@@ -1525,6 +1524,10 @@
     .ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable { /*pdf preview viewer box*/
         top: 55px !important;
         height: 90% !important;
+    }
+    button#submit-button.fOyUs_bGBk.eHiXd_bGBk.eHiXd_bXiG.eHiXd_ycrn.eHiXd_bNlk.eHiXd_cuTS:hover { /*submission submit button hover*/
+        filter: brightness(1.25);
+        background: var(--accent);
     }
     .fQfxa_dqAF.fQfxa_eCSh { /*new attempt button*/
         background: var(--accent);
