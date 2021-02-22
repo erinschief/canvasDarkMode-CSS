@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.11.1
+@version        1.11.2
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		GPL-3.0-only
@@ -2093,6 +2093,9 @@
     }
     .SecondaryControls-label {
         color: var(--white_2);
+    }
+    .InstUISpinner-circleSpin { /*inline viewer spinner*/
+        stroke: var(--accent);
     }
 
     /*pages*/
