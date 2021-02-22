@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.11.2
+@version        1.11.3
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		GPL-3.0-only
@@ -54,6 +54,7 @@
         --chpSa-focusOutlineColor: var(--accent);
         --cjUyb-brandColor: var(--accent);
         --cnWSA-colorPrimary: var(--accent);
+        --eHiXd-focusBorder: var(--accent);
         --eHiXd-ghostBorderColor: var(--accent);
         --eHiXd-ghostColor: var(--accent);
         --eHiXd-linkColor: var(--accent);
