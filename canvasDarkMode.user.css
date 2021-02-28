@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.11.3
+@version        1.11.4
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		GPL-3.0-only
@@ -233,7 +233,7 @@
         border: 1px solid var(--white_1) !important;
     }
     .btn-primary:hover, .Button--primary:hover {
-        filter: brightness(1.25);
+        filter: brightness(.85);
         color: var(--white_1) !important;
         background: var(--accent) !important;
     }
@@ -1350,7 +1350,7 @@
     }
     #submit_quiz_form .button-container .btn, #submit_quiz_form #submit_quiz_button:hover { /*submit quiz button hover*/
         background: var(--accent) !important;
-        filter: brightness(1.25);
+        filter: brightness(.85);
         color: var(--white_1) !important;
     }
     ul#question_list li i {
@@ -1527,7 +1527,7 @@
         height: 90% !important;
     }
     button#submit-button.fOyUs_bGBk.eHiXd_bGBk.eHiXd_bXiG.eHiXd_ycrn.eHiXd_bNlk.eHiXd_cuTS:hover { /*submission submit button hover*/
-        filter: brightness(1.25);
+        filter: brightness(.85);
         background: var(--accent);
     }
     .fQfxa_dqAF.fQfxa_eCSh { /*new attempt button*/
@@ -1537,7 +1537,7 @@
     }
     .fQfxa_bGBk:hover .fQfxa_dqAF.fQfxa_eCSh { /*new attempt button hover*/
         background: var(--accent);
-        filter: brightness(1.25);
+        filter: brightness(.85);
     }
     
     /*Calendar*/
@@ -1902,7 +1902,7 @@
     }
     button.Button.Button--icon-action-rev.Button--large.mobile-header-hamburger:hover { /*hamburger hover background*/
         background: var(--accent) !important;
-        filter: brightness(.8);
+        filter: brightness(.85);
     }
 
     /*Equations*/
@@ -2455,7 +2455,7 @@
         border: 1px solid var(--white_1);
     }
     .fQfxa_bGBk:hover .fQfxa_dqAF.fQfxa_eCSh { /*begin quiz button hover*/
-        filter: brightness(1.25);
+        filter: brightness(.85);
         color: var(--white_1);
         background: var(--accent);
     }
@@ -2495,7 +2495,7 @@
     }
     .eHiXd_bXiG:active, .eHiXd_bXiG:hover, a.eHiXd_bXiG:active, a.eHiXd_bXiG:hover, button.eHiXd_bXiG:active, button.eHiXd_bXiG:hover, button.eHiXd_bXiG[type="button"]:active, button.eHiXd_bXiG[type="button"]:hover, button.eHiXd_bXiG[type="reset"]:active, button.eHiXd_bXiG[type="reset"]:hover, button.eHiXd_bXiG[type="submit"]:active, button.eHiXd_bXiG[type="submit"]:hover { /*confirm submission submit button hover*/
         background: var(--accent);
-        filter: brightness(1.25);
+        filter: brightness(.85);
         box-shadow: none;
     }
     .eQMwa_cDWE { /*results circle coloring*/
