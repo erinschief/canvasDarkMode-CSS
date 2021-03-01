@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.11.4
+@version        1.11.5
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		GPL-3.0-only
@@ -49,6 +49,14 @@
         --bbhNB-color: var(--accent);
         --bdYPe-secondaryColor: var(--accent);
         --bdYPe-defaultSelectedBorderColor: var(--accent);
+    	--bulIU-canvasBrandColor: var(--accent);
+        --bulIU-activeMenuItemBackground: var(--accent);
+        --bulIU-tableSelectorHighlightColor: var(--accent);
+        --bulIU-canvasLinkColor: var(--accent);
+        --bulIU-canvasPrimaryButtonBackground: var(--accent);
+        --bulIU-canvasPrimaryButtonHoverBackground: var(--accent);
+        --bulIU-canvasFocusBorderColor: var(--accent);
+        --bulIU-canvasEnabledColor: var(--accent);
         --cDEpT-hoverBorderColor: var(--accent);
         --cDEpT-acceptedColor: var(--accent);
         --chpSa-focusOutlineColor: var(--accent);
@@ -94,6 +102,12 @@
         --LTQwMDM5-primaryActiveBackground: var(--accent);
         --LTQwMDM5-primaryGhostColor: var(--accent);
         --LTQwMDM5-primaryGhostBorderColor: var(--accent);
+        --MjU0MTc3-primaryBorderColor: var(--accent);
+        --MjU0MTc3-primaryBackground: var(--accent);
+        --MjU0MTc3-primaryHoverBackground: var(--accent);
+        --MjU0MTc3-primaryActiveBackground: var(--accent);
+        --MjU0MTc3-primaryGhostColor: var(--accent);
+        --MjU0MTc3-primaryGhostBorderColor: var(--accent);
         --MlJlv-toggleFocusBorderColor: var(--accent);
         --MYpOQ-borderColorBrand: var(--accent);
         --MYpOQ-borderColorInfo: var(--accent);
