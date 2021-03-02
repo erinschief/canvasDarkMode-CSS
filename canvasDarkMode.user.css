@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.11.5
+@version        1.11.6
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license		GPL-3.0-only
@@ -28,7 +28,7 @@
         --alert-red: rgb(235, 50, 50);
         --highlight-blue: rgb(75, 120, 220);
         
-        /*Rethemed canvas colors*/
+        /*Rethemed canvas color variables*/
         --ic-brand-primary: var(--accent); /*this is an important one as it affects many other canvas variables*/
         --ic-brand-primary-darkened-5: var(--accent);
         --ic-brand-primary-darkened-10: var(--accent);
@@ -57,6 +57,7 @@
         --bulIU-canvasPrimaryButtonHoverBackground: var(--accent);
         --bulIU-canvasFocusBorderColor: var(--accent);
         --bulIU-canvasEnabledColor: var(--accent);
+        --cAqHo-focusBorderColor: var(--accent); /*dashboard view popup focus border*/
         --cDEpT-hoverBorderColor: var(--accent);
         --cDEpT-acceptedColor: var(--accent);
         --chpSa-focusOutlineColor: var(--accent);
@@ -96,6 +97,12 @@
         --ftPBL-iconHoverColor: var(--accent);
         --ftPBL-messageColorClickable: var(--accent);
         --ftPBL-clickableActiveBg: var(--accent);
+        --LTE2OTY5-primaryBorderColor: var(--accent);
+        --LTE2OTY5-primaryBackground: var(--accent);
+        --LTE2OTY5-primaryHoverBackground: var(--accent);
+        --LTE2OTY5-primaryActiveBackground: var(--accent);
+        --LTE2OTY5-primaryGhostColor: var(--accent);
+        --LTE2OTY5-primaryGhostBorderColor: var(--accent);
         --LTQwMDM5-primaryBorderColor: var(--accent);
         --LTQwMDM5-primaryBackground: var(--accent);
         --LTQwMDM5-primaryHoverBackground: var(--accent);
@@ -128,6 +135,12 @@
         --uTkOVzHsYxyK-primaryActiveBackground: var(--accent);
         --uTkOVzHsYxyK-primaryGhostColor: var(--accent);
         --uTkOVzHsYxyK-primaryGhostBorderColor: var(--accent);
+        --uyYHLuuuygGO-primaryBorderColor: var(--accent);
+        --uyYHLuuuygGO-primaryBackground: var(--accent);
+        --uyYHLuuuygGO-primaryHoverBackground: var(--accent);
+        --uyYHLuuuygGO-primaryActiveBackground: var(--accent);
+        --uyYHLuuuygGO-primaryGhostColor: var(--accent);
+        --uyYHLuuuygGO-primaryGhostBorderColor: var(--accent);    
 
         --ic-brand-font-color-dark: var(--white_1);
         --ic-brand-font-color-dark-lightened-15: var(--white_1);
