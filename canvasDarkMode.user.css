@@ -1,10 +1,10 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.12.1
+@version        1.12.2
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
-@license		GPL-3.0-only
+@license        GPL-3.0-only
 @homepageURL	https://github.com/erinschief/canvasDarkMode-CSS
 @updateURL		https://raw.githubusercontent.com/erinschief/canvasDarkMode-CSS/master/canvasDarkMode.user.css
 @advanced       color   user-accent "Universal accent color"    #8B1F41
@@ -2084,6 +2084,9 @@
         background-image: url("https://github.com/erinschief/canvasDarkMode-CSS/raw/master/download-icon-white.svg");
         width: 11px;
         height: 13px;
+    }
+    a.file_download_btn img { /*new download button*/
+        background-image: url("https://raw.githubusercontent.com/erinschief/canvasDarkMode-CSS/master/new-download-icon-white.svg");
     }
 
     /*Inline Viewer*/
