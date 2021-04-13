@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.12.3
+@version        1.12.4
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license        GPL-3.0-only
@@ -121,6 +121,8 @@
         --MYpOQ-backgroundBrand: var(--accent);
         --MYpOQ-backgroundInfo: var(--accent);
         --MYpOQ-focusColorInfo: var(--accent);
+        --ofhgV-defaultSelectedBorderColor: var(--accent);
+        --ofhgV-secondaryColor: var(--accent);
         --qBMHb-focusOutlineColor: var(--accent);
         --sJGfW-activeBackground: var(--accent);
         --ueKCDGfnLUKU-primaryBorderColor: var(--accent);
@@ -129,6 +131,13 @@
         --ueKCDGfnLUKU-primaryActiveBackground: var(--accent);
         --ueKCDGfnLUKU-primaryGhostColor: var(--accent);
         --ueKCDGfnLUKU-primaryGhostBorderColor: var(--accent);
+        --umHGjbDUCfaY-primaryBorderColor: var(--accent);
+        --umHGjbDUCfaY-primaryBackground: var(--accent);
+        --umHGjbDUCfaY-primaryHoverBackground: var(--accent);
+        --umHGjbDUCfaY-primaryActiveBackground: var(--accent);
+        --umHGjbDUCfaY-primaryActiveBoxShadow: inset 0 0 0.1875rem 0.0625rem var(--accent);
+        --umHGjbDUCfaY-primaryGhostColor: var(--accent);
+        --umHGjbDUCfaY-primaryGhostBorderColor: var(--accent);
         --uTkOVzHsYxyK-primaryBorderColor: var(--accent);
         --uTkOVzHsYxyK-primaryBackground: var(--accent);
         --uTkOVzHsYxyK-primaryHoverBackground: var(--accent);
