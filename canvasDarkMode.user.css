@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.12.4
+@version        1.12.5
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license        GPL-3.0-only
@@ -79,6 +79,8 @@
         --eHiXd-circlePrimaryActiveBackground: var(--accent);
         --eHQDY-color: var(--accent);
         --eIQkd-hoverBorderColor: var(--accent);
+        --emSEn-hoverBorderColor: var(--accent);
+        --emSEn-acceptedColor: var(--accent);
         --emyav-brandColor: var(--accent);
         --enRcg-brandColor: var(--accent);
         --eqmZq-highlightedBackground: var(--accent);
@@ -131,11 +133,16 @@
         --ueKCDGfnLUKU-primaryActiveBackground: var(--accent);
         --ueKCDGfnLUKU-primaryGhostColor: var(--accent);
         --ueKCDGfnLUKU-primaryGhostBorderColor: var(--accent);
+        --ujO6OmUjmGT3-primaryBorderColor: var(--accent);
+        --ujO6OmUjmGT3-primaryBackground: var(--accent);
+        --ujO6OmUjmGT3-primaryHoverBackground: var(--accent);
+        --ujO6OmUjmGT3-primaryActiveBackground: var(--accent);
+        --ujO6OmUjmGT3-primaryGhostColor: var(--accent);
+        --ujO6OmUjmGT3-primaryGhostBorderColor: var(--accent);
         --umHGjbDUCfaY-primaryBorderColor: var(--accent);
         --umHGjbDUCfaY-primaryBackground: var(--accent);
         --umHGjbDUCfaY-primaryHoverBackground: var(--accent);
         --umHGjbDUCfaY-primaryActiveBackground: var(--accent);
-        --umHGjbDUCfaY-primaryActiveBoxShadow: inset 0 0 0.1875rem 0.0625rem var(--accent);
         --umHGjbDUCfaY-primaryGhostColor: var(--accent);
         --umHGjbDUCfaY-primaryGhostBorderColor: var(--accent);
         --uTkOVzHsYxyK-primaryBorderColor: var(--accent);
@@ -149,7 +156,8 @@
         --uyYHLuuuygGO-primaryHoverBackground: var(--accent);
         --uyYHLuuuygGO-primaryActiveBackground: var(--accent);
         --uyYHLuuuygGO-primaryGhostColor: var(--accent);
-        --uyYHLuuuygGO-primaryGhostBorderColor: var(--accent);    
+        --uyYHLuuuygGO-primaryGhostBorderColor: var(--accent);
+        --wIZqC-meterColorBrand: var(--accent);
 
         --ic-brand-font-color-dark: var(--text_1);
         --ic-brand-font-color-dark-lightened-15: var(--text_1);
