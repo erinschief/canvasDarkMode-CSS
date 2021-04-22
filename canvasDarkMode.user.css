@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.12.5
+@version        1.12.6
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license        GPL-3.0-only
@@ -157,6 +157,12 @@
         --uyYHLuuuygGO-primaryActiveBackground: var(--accent);
         --uyYHLuuuygGO-primaryGhostColor: var(--accent);
         --uyYHLuuuygGO-primaryGhostBorderColor: var(--accent);
+        --uYz2mnZDC2Tk-primaryBorderColor: var(--accent);
+        --uYz2mnZDC2Tk-primaryBackground: var(--accent);
+        --uYz2mnZDC2Tk-primaryHoverBackground: var(--accent);
+        --uYz2mnZDC2Tk-primaryActiveBackground: var(--accent);
+        --uYz2mnZDC2Tk-primaryGhostColor: var(--accent);
+        --uYz2mnZDC2Tk-primaryGhostBorderColor: var(--accent);
         --wIZqC-meterColorBrand: var(--accent);
 
         --ic-brand-font-color-dark: var(--text_1);
@@ -176,18 +182,24 @@
         
         /*canvas has a ton of weird font variables for some reason so let's consolidate those too*/
         --default-fontfam: Lato,"Helvetica Neue",Helvetica,sans-serif;
-	
-        --fbyHH-fontFamily: var(--default-fontfam);
-        --dxCCp-fontFamily: var(--default-fontfam);
-        --tTloz-fontFamily: var(--default-fontfam);
-        --emyav-fontFamily: var(--default-fontfam);
-        --MYpOQ-fontFamily: var(--default-fontfam);
+        
         --bDzpk-fontFamily: var(--default-fontfam);
-        --fQfxa-fontFamily: var(--default-fontfam);
+        --bjXfh-fontFamily: var(--default-fontfam);
+        --chpSa-fontFamily: var(--default-fontfam);
         --cjUyb-fontFamily: var(--default-fontfam);
-        --fOyUs-fontFamily: var(--default-fontfam);
+        --dLyYq-fontFamily: var(--default-fontfam);
+        --dxCCp-fontFamily: var(--default-fontfam);
         --eHiXd-fontFamily: var(--default-fontfam);
+        --emyav-fontFamily: var(--default-fontfam);
+        --enRcg-fontFamily: var(--default-fontfam);
+        --fbyHH-fontFamily: var(--default-fontfam);
+        --fOyUs-fontFamily: var(--default-fontfam);
+        --fQfxa-fontFamily: var(--default-fontfam);
+        --MYpOQ-fontFamily: var(--default-fontfam);
+        --sJGfW-fontFamily: var(--default-fontfam);
+        --tTloz-fontFamily: var(--default-fontfam);
         --uDC3CpZuTTaC-fontFamily: var(--default-fontfam);
+        --uYz2mnZDC2Tk-fontFamily: var(--default-fontfam);
 
         /*also here's their custom monospace font fam var in case that comes in handy later*/
         /*--cjUyb-fontFamilyMonospace: Menlo,Consolas,Monaco,"Andale Mono",monospace;*/
@@ -2230,7 +2242,8 @@
     }
     
     /*TV: Speedgrader*/
-    #gradebook_header { /*header min width resizes below 960px*/
+    #gradebook_header { /*speedgrader nav bar min width resizes below 960px & uses nav accent color*/
+        background: var(--navAccent);
         min-width: 0px;
     }
     #full_width_container { /*main view width resizes below 960px*/
@@ -2285,11 +2298,8 @@
     .not_submitted .ui-selectmenu-item-header {
         color: var(--text_2);
     }
-    #prev-student-button.Button.Button--icon-action.gradebookMoveToNext.prev:hover .icon-arrow-left.prev { /*previous student button hover*/
-        color: var(--accent);
-    }
-    #next-student-button.Button.Button--icon-action.gradebookMoveToNext.next:hover .icon-arrow-right.next { /*next student button hover*/
-        color: var(--accent);
+    #prev-student-button.Button.Button--icon-action.gradebookMoveToNext.prev:hover .icon-arrow-left.prev, #next-student-button.Button.Button--icon-action.gradebookMoveToNext.next:hover .icon-arrow-right.next { /*speedgrader prev/next student buttons hover use nav accent*/
+        color: var(--navAccent);
     }
     .ui-selectmenu-menu .ui-state-focus, .ui-selectmenu-menu .ui-state-hover {
         background: var(--bkgd_3);
