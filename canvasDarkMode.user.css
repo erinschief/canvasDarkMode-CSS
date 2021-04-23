@@ -1,12 +1,12 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.12.6
+@version        1.12.7
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license        GPL-3.0-only
 @homepageURL	https://github.com/erinschief/canvasDarkMode-CSS
-@updateURL		https://raw.githubusercontent.com/erinschief/canvasDarkMode-CSS/master/canvasDarkMode.user.css
+@updateURL		https://raw.githubusercontent.com/erinschief/canvasDarkMode-CSS/main/canvasDarkMode.user.css
 @advanced       color   user-accent "Universal accent color"    #8B1F41
 @advanced       color   nav-accent  "Nav bar accent color"      #8B1F41
 ==/UserStyle== */
@@ -28,7 +28,7 @@
         --alert-red: rgb(235, 50, 50);
         --highlight-blue: rgb(75, 120, 220);
         
-        /*Rethemed canvas color variables*/
+        /*Rethemed main canvas color variables*/
         --ic-brand-primary: var(--accent); /*this is an important one as it affects many other canvas variables*/
         --ic-brand-primary-darkened-5: var(--accent);
         --ic-brand-primary-darkened-10: var(--accent);
@@ -46,10 +46,14 @@
         --ic-brand-Login-body-bgd-color: var(--accent);
         --ic-brand-Login-body-bgd-shadow-color: var(--accent);
         
+        /*rethemed etc canvas color variables*/
+        --bBFwJ-iconColor: var(--accent);
         --bbhNB-color: var(--accent);
+        --bDBte-groupColor: var(--accent);
+        --bDBte-titleColor: var(--accent);
         --bdYPe-secondaryColor: var(--accent);
         --bdYPe-defaultSelectedBorderColor: var(--accent);
-    	--bulIU-canvasBrandColor: var(--accent);
+        --bulIU-canvasBrandColor: var(--accent);
         --bulIU-activeMenuItemBackground: var(--accent);
         --bulIU-tableSelectorHighlightColor: var(--accent);
         --bulIU-canvasLinkColor: var(--accent);
@@ -63,6 +67,7 @@
         --chpSa-focusOutlineColor: var(--accent);
         --cjUyb-brandColor: var(--accent);
         --cnWSA-colorPrimary: var(--accent);
+        --cRLeC-colorPrimary: var(--accent);
         --eHiXd-focusBorder: var(--accent);
         --eHiXd-ghostBorderColor: var(--accent);
         --eHiXd-ghostColor: var(--accent);
@@ -85,6 +90,8 @@
         --enRcg-brandColor: var(--accent);
         --eqmZq-highlightedBackground: var(--accent);
         --esvoZ-brandColor: var(--accent);
+        --feqxT-background: var(--accent);
+        --feqxT-backgroundHover: var(--accent);
         --fOyUs-borderColorBrand: var(--accent);
         --fOyUs-borderColorInfo: var(--accent);
         --fOyUs-backgroundBrand: var(--accent);
@@ -99,6 +106,12 @@
         --ftPBL-iconHoverColor: var(--accent);
         --ftPBL-messageColorClickable: var(--accent);
         --ftPBL-clickableActiveBg: var(--accent);
+        --LTE1MTA1-primaryBorderColor: var(--accent);
+        --LTE1MTA1-primaryBackground: var(--accent);
+        --LTE1MTA1-primaryHoverBackground: var(--accent);
+        --LTE1MTA1-primaryActiveBackground: var(--accent);
+        --LTE1MTA1-primaryGhostColor: var(--accent);
+        --LTE1MTA1-primaryGhostBorderColor: var(--accent);
         --LTE2OTY5-primaryBorderColor: var(--accent);
         --LTE2OTY5-primaryBackground: var(--accent);
         --LTE2OTY5-primaryHoverBackground: var(--accent);
@@ -127,6 +140,12 @@
         --ofhgV-secondaryColor: var(--accent);
         --qBMHb-focusOutlineColor: var(--accent);
         --sJGfW-activeBackground: var(--accent);
+        --uDezyZ72mDLs-primaryBorderColor: var(--accent);
+        --uDezyZ72mDLs-primaryBackground: var(--accent);
+        --uDezyZ72mDLs-primaryHoverBackground: var(--accent);
+        --uDezyZ72mDLs-primaryActiveBackground: var(--accent);
+        --uDezyZ72mDLs-primaryGhostColor: var(--accent);
+        --uDezyZ72mDLs-primaryGhostBorderColor: var(--accent);
         --ueKCDGfnLUKU-primaryBorderColor: var(--accent);
         --ueKCDGfnLUKU-primaryBackground: var(--accent);
         --ueKCDGfnLUKU-primaryHoverBackground: var(--accent);
@@ -163,6 +182,7 @@
         --uYz2mnZDC2Tk-primaryActiveBackground: var(--accent);
         --uYz2mnZDC2Tk-primaryGhostColor: var(--accent);
         --uYz2mnZDC2Tk-primaryGhostBorderColor: var(--accent);
+        --yyQPt-focusBorderColor: var(--accent);
         --wIZqC-meterColorBrand: var(--accent);
 
         --ic-brand-font-color-dark: var(--text_1);
@@ -170,6 +190,7 @@
         --ic-brand-font-color-dark-lightened-30: var(--text_1);
 
         /*these are weird variables in canvas which have been root recolored for expediency*/
+        --bBFwJ-color: var(--text_2);
         --dLdjY-arrowColor: var(--text_1);
         --eAJaG-secondaryColor: var(--text_1);
         --fCrpb-color: var(--text_1);
@@ -178,6 +199,8 @@
         --yyQPt-hoverBorderColor: var(--text_1);
 
         --enRcg-secondaryColor: var(--text_2);
+        --bBFwJ-secondaryColor: var(--text_2);
+        
         --eqmZq-selectedBackground: var(--bkgd_1); /*submission attempt selection dropdown*/
         
         /*canvas has a ton of weird font variables for some reason so let's consolidate those too*/
@@ -426,6 +449,12 @@
     .Opportunity-styles__due {
         color: var(--text_2);
     }
+    .enRcg_bGBk.enRcg_ycrn, input.enRcg_bGBk[type].enRcg_ycrn { /*zoom online meeting text*/
+        font-size: .9rem;
+        color: var(--text_2);
+        margin-left: 8px;
+    }
+
 
     /*add sidebar*/
     .UpdateItemTray-styles__root {
