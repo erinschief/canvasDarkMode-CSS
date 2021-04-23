@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.12.7
+@version        1.12.8
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license        GPL-3.0-only
@@ -14,19 +14,19 @@
 @-moz-document regexp("https://canvas.*edu.*") {
     :root {
         /*Custom colors*/
-        --accent: /*[[user-accent]]*/; /*main accent*/
-        --navAccent: /*[[nav-accent]]*/; /*nav accent*/
+        --accent: /*[[user-accent]]*/; /*main accent color*/
+        --navAccent: /*[[nav-accent]]*/; /*nav bar accent color*/
 
-        --bkgd_1: rgb(44, 44, 44); /*main bg (grey-1)*/
-        --bkgd_2: rgb(55, 55, 55); /*secondary bg (grey-2)*/
-        --bkgd_3: rgb(66, 66, 66); /*tertiary bg (grey-3)*/
+        --bkgd_1: rgb(44, 44, 44); /*main bg color*/
+        --bkgd_2: rgb(55, 55, 55); /*secondary bg color*/
+        --bkgd_3: rgb(66, 66, 66); /*tertiary bg color*/
 
         --text_1: rgb(255, 255, 255); /*default text color*/
         --text_2: rgb(215, 215, 215); /*secondary text color*/
         --text_3: rgb(200, 200, 200); /*tertiary text color*/
 
-        --alert-red: rgb(235, 50, 50);
-        --highlight-blue: rgb(75, 120, 220);
+        --alert-red: rgb(235, 50, 50); /*danger color*/
+        --highlight-blue: rgb(75, 120, 220); /*highlighted item color*/
         
         /*Rethemed main canvas color variables*/
         --ic-brand-primary: var(--accent); /*this is an important one as it affects many other canvas variables*/
@@ -51,139 +51,152 @@
         --bbhNB-color: var(--accent);
         --bDBte-groupColor: var(--accent);
         --bDBte-titleColor: var(--accent);
-        --bdYPe-secondaryColor: var(--accent);
         --bdYPe-defaultSelectedBorderColor: var(--accent);
-        --bulIU-canvasBrandColor: var(--accent);
+        --bdYPe-secondaryColor: var(--accent);
         --bulIU-activeMenuItemBackground: var(--accent);
-        --bulIU-tableSelectorHighlightColor: var(--accent);
+        --bulIU-canvasBrandColor: var(--accent);
+        --bulIU-canvasEnabledColor: var(--accent);
+        --bulIU-canvasFocusBorderColor: var(--accent);
         --bulIU-canvasLinkColor: var(--accent);
         --bulIU-canvasPrimaryButtonBackground: var(--accent);
         --bulIU-canvasPrimaryButtonHoverBackground: var(--accent);
-        --bulIU-canvasFocusBorderColor: var(--accent);
-        --bulIU-canvasEnabledColor: var(--accent);
+        --bulIU-tableSelectorHighlightColor: var(--accent);
         --cAqHo-focusBorderColor: var(--accent); /*dashboard view popup focus border*/
-        --cDEpT-hoverBorderColor: var(--accent);
         --cDEpT-acceptedColor: var(--accent);
+        --cDEpT-hoverBorderColor: var(--accent);
+        --cDEpT-focusBorderColor: var(--accent);
         --chpSa-focusOutlineColor: var(--accent);
         --cjUyb-brandColor: var(--accent);
         --cnWSA-colorPrimary: var(--accent);
         --cRLeC-colorPrimary: var(--accent);
-        --eHiXd-focusBorder: var(--accent);
-        --eHiXd-ghostBorderColor: var(--accent);
-        --eHiXd-ghostColor: var(--accent);
-        --eHiXd-linkColor: var(--accent);
-        --eHiXd-linkHoverColor: var(--accent);
-        --eHiXd-iconHoverColor: var(--accent);
-        --eHiXd-primaryBackground: var(--accent);
-        --eHiXd-primaryBorderColor: var(--accent);
-        --eHiXd-primaryHoverBackground: var(--accent);
-        --eHiXd-primaryActiveBackground: var(--accent);
+        --eHiXd-circlePrimaryActiveBackground: var(--accent);
         --eHiXd-circlePrimaryBackground: var(--accent);
         --eHiXd-circlePrimaryBorderColor: var(--accent);
         --eHiXd-circlePrimaryHoverBackground: var(--accent);
-        --eHiXd-circlePrimaryActiveBackground: var(--accent);
+        --eHiXd-focusBorder: var(--accent);
+        --eHiXd-ghostBorderColor: var(--accent);
+        --eHiXd-ghostColor: var(--accent);
+        --eHiXd-iconHoverColor: var(--accent);
+        --eHiXd-linkColor: var(--accent);
+        --eHiXd-linkHoverColor: var(--accent);
+        --eHiXd-primaryActiveBackground: var(--accent);
+        --eHiXd-primaryBackground: var(--accent);
+        --eHiXd-primaryBorderColor: var(--accent);
+        --eHiXd-primaryHoverBackground: var(--accent);
         --eHQDY-color: var(--accent);
         --eIQkd-hoverBorderColor: var(--accent);
-        --emSEn-hoverBorderColor: var(--accent);
         --emSEn-acceptedColor: var(--accent);
+        --emSEn-hoverBorderColor: var(--accent);
         --emyav-brandColor: var(--accent);
         --enRcg-brandColor: var(--accent);
         --eqmZq-highlightedBackground: var(--accent);
         --esvoZ-brandColor: var(--accent);
         --feqxT-background: var(--accent);
         --feqxT-backgroundHover: var(--accent);
-        --fOyUs-borderColorBrand: var(--accent);
-        --fOyUs-borderColorInfo: var(--accent);
+        --feqxT-focusRingColor: var(--accent);
         --fOyUs-backgroundBrand: var(--accent);
         --fOyUs-backgroundInfo: var(--accent);
-        --fOyUs-focusColorInfo: var(--accent);
-        --fQfxa-primaryBorderColor: var(--accent);
-        --fQfxa-primaryBackground: var(--accent);
-        --fQfxa-primaryHoverBackground: var(--accent);
+        --fOyUs-borderColorBrand: var(--accent);
+        --fOyUs-borderColorInfo: var(--accent);
+        --fOyUs-focusColorInfo: var(--accent); /*main focus border color*/
         --fQfxa-primaryActiveBackground: var(--accent);
-        --fQfxa-primaryGhostColor: var(--accent);
+        --fQfxa-primaryBackground: var(--accent);
+        --fQfxa-primaryBorderColor: var(--accent);
         --fQfxa-primaryGhostBorderColor: var(--accent);
+        --fQfxa-primaryGhostColor: var(--accent);
+        --fQfxa-primaryHoverBackground: var(--accent);
+        --ftPBL-clickableActiveBg: var(--accent);
         --ftPBL-iconHoverColor: var(--accent);
         --ftPBL-messageColorClickable: var(--accent);
-        --ftPBL-clickableActiveBg: var(--accent);
-        --LTE1MTA1-primaryBorderColor: var(--accent);
-        --LTE1MTA1-primaryBackground: var(--accent);
-        --LTE1MTA1-primaryHoverBackground: var(--accent);
         --LTE1MTA1-primaryActiveBackground: var(--accent);
-        --LTE1MTA1-primaryGhostColor: var(--accent);
+        --LTE1MTA1-primaryBackground: var(--accent);
+        --LTE1MTA1-primaryBorderColor: var(--accent);
         --LTE1MTA1-primaryGhostBorderColor: var(--accent);
-        --LTE2OTY5-primaryBorderColor: var(--accent);
-        --LTE2OTY5-primaryBackground: var(--accent);
-        --LTE2OTY5-primaryHoverBackground: var(--accent);
+        --LTE1MTA1-primaryGhostColor: var(--accent);
+        --LTE1MTA1-primaryHoverBackground: var(--accent);
         --LTE2OTY5-primaryActiveBackground: var(--accent);
-        --LTE2OTY5-primaryGhostColor: var(--accent);
+        --LTE2OTY5-primaryBackground: var(--accent);
+        --LTE2OTY5-primaryBorderColor: var(--accent);
         --LTE2OTY5-primaryGhostBorderColor: var(--accent);
-        --LTQwMDM5-primaryBorderColor: var(--accent);
-        --LTQwMDM5-primaryBackground: var(--accent);
-        --LTQwMDM5-primaryHoverBackground: var(--accent);
+        --LTE2OTY5-primaryGhostColor: var(--accent);
+        --LTE2OTY5-primaryHoverBackground: var(--accent);
         --LTQwMDM5-primaryActiveBackground: var(--accent);
-        --LTQwMDM5-primaryGhostColor: var(--accent);
+        --LTQwMDM5-primaryBackground: var(--accent);
+        --LTQwMDM5-primaryBorderColor: var(--accent);
         --LTQwMDM5-primaryGhostBorderColor: var(--accent);
-        --MjU0MTc3-primaryBorderColor: var(--accent);
-        --MjU0MTc3-primaryBackground: var(--accent);
-        --MjU0MTc3-primaryHoverBackground: var(--accent);
+        --LTQwMDM5-primaryGhostColor: var(--accent);
+        --LTQwMDM5-primaryHoverBackground: var(--accent);
         --MjU0MTc3-primaryActiveBackground: var(--accent);
-        --MjU0MTc3-primaryGhostColor: var(--accent);
+        --MjU0MTc3-primaryBackground: var(--accent);
+        --MjU0MTc3-primaryBorderColor: var(--accent);
         --MjU0MTc3-primaryGhostBorderColor: var(--accent);
+        --MjU0MTc3-primaryGhostColor: var(--accent);
+        --MjU0MTc3-primaryHoverBackground: var(--accent);
         --MlJlv-toggleFocusBorderColor: var(--accent);
-        --MYpOQ-borderColorBrand: var(--accent);
-        --MYpOQ-borderColorInfo: var(--accent);
         --MYpOQ-backgroundBrand: var(--accent);
         --MYpOQ-backgroundInfo: var(--accent);
+        --MYpOQ-borderColorBrand: var(--accent);
+        --MYpOQ-borderColorInfo: var(--accent);
         --MYpOQ-focusColorInfo: var(--accent);
         --ofhgV-defaultSelectedBorderColor: var(--accent);
         --ofhgV-secondaryColor: var(--accent);
         --qBMHb-focusOutlineColor: var(--accent);
         --sJGfW-activeBackground: var(--accent);
-        --uDezyZ72mDLs-primaryBorderColor: var(--accent);
-        --uDezyZ72mDLs-primaryBackground: var(--accent);
-        --uDezyZ72mDLs-primaryHoverBackground: var(--accent);
         --uDezyZ72mDLs-primaryActiveBackground: var(--accent);
-        --uDezyZ72mDLs-primaryGhostColor: var(--accent);
+        --uDezyZ72mDLs-primaryBackground: var(--accent);
+        --uDezyZ72mDLs-primaryBorderColor: var(--accent);
         --uDezyZ72mDLs-primaryGhostBorderColor: var(--accent);
-        --ueKCDGfnLUKU-primaryBorderColor: var(--accent);
-        --ueKCDGfnLUKU-primaryBackground: var(--accent);
-        --ueKCDGfnLUKU-primaryHoverBackground: var(--accent);
+        --uDezyZ72mDLs-primaryGhostColor: var(--accent);
+        --uDezyZ72mDLs-primaryHoverBackground: var(--accent);
         --ueKCDGfnLUKU-primaryActiveBackground: var(--accent);
-        --ueKCDGfnLUKU-primaryGhostColor: var(--accent);
+        --ueKCDGfnLUKU-primaryBackground: var(--accent);
+        --ueKCDGfnLUKU-primaryBorderColor: var(--accent);
         --ueKCDGfnLUKU-primaryGhostBorderColor: var(--accent);
-        --ujO6OmUjmGT3-primaryBorderColor: var(--accent);
-        --ujO6OmUjmGT3-primaryBackground: var(--accent);
-        --ujO6OmUjmGT3-primaryHoverBackground: var(--accent);
+        --ueKCDGfnLUKU-primaryGhostColor: var(--accent);
+        --ueKCDGfnLUKU-primaryHoverBackground: var(--accent);
         --ujO6OmUjmGT3-primaryActiveBackground: var(--accent);
-        --ujO6OmUjmGT3-primaryGhostColor: var(--accent);
+        --ujO6OmUjmGT3-primaryBackground: var(--accent);
+        --ujO6OmUjmGT3-primaryBorderColor: var(--accent);
         --ujO6OmUjmGT3-primaryGhostBorderColor: var(--accent);
-        --umHGjbDUCfaY-primaryBorderColor: var(--accent);
-        --umHGjbDUCfaY-primaryBackground: var(--accent);
-        --umHGjbDUCfaY-primaryHoverBackground: var(--accent);
+        --ujO6OmUjmGT3-primaryGhostColor: var(--accent);
+        --ujO6OmUjmGT3-primaryHoverBackground: var(--accent);
         --umHGjbDUCfaY-primaryActiveBackground: var(--accent);
-        --umHGjbDUCfaY-primaryGhostColor: var(--accent);
+        --umHGjbDUCfaY-primaryBackground: var(--accent);
+        --umHGjbDUCfaY-primaryBorderColor: var(--accent);
         --umHGjbDUCfaY-primaryGhostBorderColor: var(--accent);
-        --uTkOVzHsYxyK-primaryBorderColor: var(--accent);
-        --uTkOVzHsYxyK-primaryBackground: var(--accent);
-        --uTkOVzHsYxyK-primaryHoverBackground: var(--accent);
+        --umHGjbDUCfaY-primaryGhostColor: var(--accent);
+        --umHGjbDUCfaY-primaryHoverBackground: var(--accent);
+        --unD73PgTHHD6-primaryActiveBackground: var(--accent);
+        --unD73PgTHHD6-primaryBackground: var(--accent);
+        --unD73PgTHHD6-primaryBorderColor: var(--accent);
+        --unD73PgTHHD6-primaryGhostBorderColor: var(--accent);
+        --unD73PgTHHD6-primaryGhostColor: var(--accent);
+        --unD73PgTHHD6-primaryHoverBackground: var(--accent);
         --uTkOVzHsYxyK-primaryActiveBackground: var(--accent);
-        --uTkOVzHsYxyK-primaryGhostColor: var(--accent);
+        --uTkOVzHsYxyK-primaryBackground: var(--accent);
+        --uTkOVzHsYxyK-primaryBorderColor: var(--accent);
         --uTkOVzHsYxyK-primaryGhostBorderColor: var(--accent);
-        --uyYHLuuuygGO-primaryBorderColor: var(--accent);
-        --uyYHLuuuygGO-primaryBackground: var(--accent);
-        --uyYHLuuuygGO-primaryHoverBackground: var(--accent);
+        --uTkOVzHsYxyK-primaryGhostColor: var(--accent);
+        --uTkOVzHsYxyK-primaryHoverBackground: var(--accent);
         --uyYHLuuuygGO-primaryActiveBackground: var(--accent);
-        --uyYHLuuuygGO-primaryGhostColor: var(--accent);
+        --uyYHLuuuygGO-primaryBackground: var(--accent);
+        --uyYHLuuuygGO-primaryBorderColor: var(--accent);
         --uyYHLuuuygGO-primaryGhostBorderColor: var(--accent);
-        --uYz2mnZDC2Tk-primaryBorderColor: var(--accent);
-        --uYz2mnZDC2Tk-primaryBackground: var(--accent);
-        --uYz2mnZDC2Tk-primaryHoverBackground: var(--accent);
+        --uyYHLuuuygGO-primaryGhostColor: var(--accent);
+        --uyYHLuuuygGO-primaryHoverBackground: var(--accent);
         --uYz2mnZDC2Tk-primaryActiveBackground: var(--accent);
-        --uYz2mnZDC2Tk-primaryGhostColor: var(--accent);
+        --uYz2mnZDC2Tk-primaryBackground: var(--accent);
+        --uYz2mnZDC2Tk-primaryBorderColor: var(--accent);
         --uYz2mnZDC2Tk-primaryGhostBorderColor: var(--accent);
-        --yyQPt-focusBorderColor: var(--accent);
+        --uYz2mnZDC2Tk-primaryGhostColor: var(--accent);
+        --uYz2mnZDC2Tk-primaryHoverBackground: var(--accent);
         --wIZqC-meterColorBrand: var(--accent);
+        --yyQPt-focusBorderColor: var(--accent);
+
+        /*rethemed danger color variables*/
+        --dLyYq-dangerColor: var(--alert-red);
+
+        /*TODO: add focus border toggle*/
 
         --ic-brand-font-color-dark: var(--text_1);
         --ic-brand-font-color-dark-lightened-15: var(--text_1);
@@ -344,7 +357,7 @@
     }
     
     /*Header*/
-    .ic-Dashboard-header__layout { /*HDashboard header*/
+    .ic-Dashboard-header__layout { /*Dashboard header*/
         background: var(--bkgd_1);
         border-bottom: 1px solid var(--text_1);
     }
@@ -449,10 +462,17 @@
     .Opportunity-styles__due {
         color: var(--text_2);
     }
-    .enRcg_bGBk.enRcg_ycrn, input.enRcg_bGBk[type].enRcg_ycrn { /*zoom online meeting text*/
+    .enRcg_bGBk.enRcg_ycrn, input.enRcg_bGBk[type].enRcg_ycrn { /*zoom online meeting text & my grades courses*/
         font-size: .9rem;
-        color: var(--text_2);
+        color: var(--text_1);
         margin-left: 8px;
+    }
+    .dLyYq_bXiG { /*submitted/graded bubble*/
+        border-color: var(--text_1);
+        color: var(--text_1);
+    }
+    .dLyYq_eWKC { /*submitted/graded text*/
+        font-size: .7rem;
     }
 
 
@@ -666,6 +686,9 @@
     }
     #syllabus tr.date.related td, #syllabus tr.date.related th, #syllabus tr.date.selected td, #syllabus tr.date.selected th { /*course summary*/
         background: var(--bkgd_2);
+    }
+    .cRLeC_bXiG { /*unread announcement bubble*/
+        background-color: var(--highlight-blue);
     }
     
     /*Modules container*/
@@ -890,6 +913,15 @@
     }
     #show_all_details_button { /*show all grade details button*/
         border: 1px solid var(--text_1);
+    }
+    .dLyYq_bGBk { /*missing assignment bubble*/
+        background: none;
+    }
+    .dLyYq_eWKC { /*missing assignment text*/
+        font-size: .7rem;
+    }
+    .unread-grade { /*unread grade*/
+        background-color: var(--highlight-blue);
     }
     
     /*Rubric*/
