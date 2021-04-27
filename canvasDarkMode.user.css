@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.12.10
+@version        1.12.11
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license        GPL-3.0-only
@@ -870,9 +870,6 @@
         background: none;
         color: var(--text_1);
     }
-    .cCAhm_bGBk.cCAhm_ycrn { /*course & arrange by dropdowns padding*/
-        padding-right: 18px;
-    }
     .fOyUs_bGBk.dJCgj_bGBk { /*apply button padding fix*/
         margin: 0px !important;
     }
@@ -1600,7 +1597,7 @@
         background: var(--bkgd_2);
     }
     .cCAhm_bGBk.cCAhm_ycrn { /*fixed assignment header alignment*/
-        padding-right: none;
+        padding-right: none !important;
     }    
     .fwfoD_fsuY {
         color: var(--text_1)
