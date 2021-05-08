@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.12.11
+@version        1.12.12
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license        GPL-3.0-only
@@ -63,12 +63,13 @@
         --bulIU-tableSelectorHighlightColor: var(--accent);
         --cAqHo-focusBorderColor: var(--accent); /*dashboard view popup focus border*/
         --cDEpT-acceptedColor: var(--accent);
-        --cDEpT-hoverBorderColor: var(--accent);
         --cDEpT-focusBorderColor: var(--accent);
+        --cDEpT-hoverBorderColor: var(--accent);
         --chpSa-focusOutlineColor: var(--accent);
         --cjUyb-brandColor: var(--accent);
         --cnWSA-colorPrimary: var(--accent);
         --cRLeC-colorPrimary: var(--accent);
+        --deLCD-meterColorBrand: var(--accent); /*student grade overview slider*/
         --eHiXd-circlePrimaryActiveBackground: var(--accent);
         --eHiXd-circlePrimaryBackground: var(--accent);
         --eHiXd-circlePrimaryBorderColor: var(--accent);
@@ -91,6 +92,9 @@
         --enRcg-brandColor: var(--accent);
         --eqmZq-highlightedBackground: var(--accent);
         --esvoZ-brandColor: var(--accent);
+        --fbyHH-color: var(--accent);
+        --fbyHH-focusOutlineColor: var(--accent);
+        --fbyHH-hoverColor: var(--accent);
         --feqxT-background: var(--accent);
         --feqxT-backgroundHover: var(--accent);
         --feqxT-focusRingColor: var(--accent);
@@ -154,6 +158,12 @@
         --ueKCDGfnLUKU-primaryGhostBorderColor: var(--accent);
         --ueKCDGfnLUKU-primaryGhostColor: var(--accent);
         --ueKCDGfnLUKU-primaryHoverBackground: var(--accent);
+        --ufaxPCbyKZpj-primaryActiveBackground: var(--accent);
+        --ufaxPCbyKZpj-primaryBackground: var(--accent);
+        --ufaxPCbyKZpj-primaryBorderColor: var(--accent);
+        --ufaxPCbyKZpj-primaryGhostBorderColor: var(--accent);
+        --ufaxPCbyKZpj-primaryGhostColor: var(--accent);
+        --ufaxPCbyKZpj-primaryHoverBackground: var(--accent);
         --ujO6OmUjmGT3-primaryActiveBackground: var(--accent);
         --ujO6OmUjmGT3-primaryBackground: var(--accent);
         --ujO6OmUjmGT3-primaryBorderColor: var(--accent);
@@ -203,7 +213,8 @@
         --ic-brand-font-color-dark-lightened-30: var(--text_1);
 
         /*these are weird variables in canvas which have been root recolored for expediency*/
-        --bBFwJ-color: var(--text_2);
+        --HwBsD-valueColor: var(--text_1); /*big grade missing late text*/
+        --HwBsD-labelColor: var(--text_1); /*little grade missing late text*/    
         --dLdjY-arrowColor: var(--text_1);
         --eAJaG-secondaryColor: var(--text_1);
         --fCrpb-color: var(--text_1);
@@ -211,6 +222,7 @@
         --MlJlv-textColor: var(--text_1);
         --yyQPt-hoverBorderColor: var(--text_1);
 
+        --bBFwJ-color: var(--text_2);
         --enRcg-secondaryColor: var(--text_2);
         --bBFwJ-secondaryColor: var(--text_2);
         
@@ -463,7 +475,6 @@
         color: var(--text_2);
     }
     .enRcg_bGBk.enRcg_ycrn, input.enRcg_bGBk[type].enRcg_ycrn { /*zoom online meeting text & my grades courses*/
-        font-size: .9rem;
         color: var(--text_1);
         margin-left: 8px;
     }
@@ -1586,9 +1597,10 @@
         border-bottom-color: var(--bkgd_2);
     }
     
-    /*Submission*/
-    .dCppM_ddES { /*submission box background*/
+    /*Assignment submission page*/
+    .dCppM_ddES { /*assignment attempt submission box*/
         background: var(--bkgd_2);
+        border-radius: 10px !important;
     }
     .Submission__Link--has-icon .icon-rubric, .Submission__Link--has-icon .icon-check, .Submission__Link--has-icon .icon-warning, .Submission__List .icon-rubric, .Submission__List .icon-check, .Submission__List .icon-warning {
         color: var(--text_1);
@@ -1664,6 +1676,22 @@
     .fQfxa_bGBk:hover .fQfxa_dqAF.fQfxa_eCSh { /*new attempt button hover*/
         background: var(--accent);
         filter: brightness(.85);
+    }
+    #assignments-student-footer { /*assignment resubmit footer*/
+        background: var(--bkgd_2) !Important;
+        border-color: var(--text_1) !important;
+    }
+    .fQfxa_bGBk:hover .fQfxa_dqAF.fQfxa_buuG { /*view feedback hover*/
+        background: var(--bkgd_4);
+    }
+    .fOyUs_bGBk.ofhgV_bGBk.ofhgV_ddES { /*bold attempt number*/
+        font-weight: bold;
+    }
+    .fOyUs_bGBk.eHiXd_bGBk.eHiXd_brAJ.eHiXd_ycrn.eHiXd_bNlk.eHiXd_cuTS { /*hide assignments text above assignment*/
+        display: none;
+    }
+    span.fOyUs_bGBk.fOyUs_desw.bDzpk_bGBk.bDzpk_busO.bDzpk_cQFX.bDzpk_bZNM { /*hide assignments text margin*/
+        margin: 0px !important;
     }
     
     /*Calendar*/
@@ -2306,6 +2334,17 @@
     /*Teacher View*/
     .yyQPt_cjfS .yyQPt_blJt { /*checked label color*/
         color: var(--text_1);
+    }
+
+    /*TV: Student Overview Popover*/
+    .deLCD_eCSh .deLCD_IjKP { /*student grade slider bottom border*/
+        border-bottom-color: none;
+    }
+    .bpunF_bGBk { /*big avatar background*/
+        background-color: var(--bkgd_3);
+    }
+    .bpunF_eYKj { /*big avatar initials*/
+        color: var(--text_2);
     }
     
     /*TV: Speedgrader*/
