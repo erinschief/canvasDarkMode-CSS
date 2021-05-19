@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.13.00
+@version        1.13.01
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license        GPL-3.0-only
@@ -11,7 +11,8 @@
 @advanced       color   nav-accent  "Nav bar accent color"      #8B1F41
 ==/UserStyle== */
 
-@-moz-document regexp("https://canvas.*edu.*", "https://profdev-lms.tlos.*.edu.*") {
+@-moz-document  regexp("https://canvas.*edu.*"),
+                regexp("https://profdev-lms.tlos.*.edu.*") {
     :root {
         /*Custom colors*/
         --accent: /*[[user-accent]]*/; /*main accent color*/
