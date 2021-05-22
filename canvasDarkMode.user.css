@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Canvas Dark Mode
 @namespace      https://github.com/erinschief
-@version        1.14.1
+@version        1.14.2
 @description    Custom dark mode for Canvas.edu created from scratch for Stylus!
 @author         Erin Schiefelbein
 @license        GPL-3.0-only
@@ -1127,10 +1127,11 @@
     .in-progress .step-item-label { /*step label*/
         color: var(--text_1);
     }
-    .assignment-student-header { /*remove non sticky assignment header background*/
-        background: none;
+    .assignment-student-header { /*assignment header background*/
+        background: var(--bkgd_1);
+        border-bottom: 1px solid var(--text_1);
     }
-    .assignment-student-header-sticky { /*new assignment header*/
+    .assignment-student-header-sticky { /*assignment header*/
         background: var(--bkgd_1);
         border-bottom: 1px solid var(--text_1);
     }
